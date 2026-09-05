@@ -2,6 +2,8 @@
 
 > **The first known static recompilation of an original Xbox game into a native PC executable.**
 
+> **This fork:** independent reverse-engineering research on this exact retail binary lives in [`research/`](research/) and [`docs/decomp-atlas/`](docs/decomp-atlas/function-atlas.html) (a Ghidra function atlas, cross-referenced against other Burnout 3 recompilation/reimplementation efforts — see [research/ROADMAP.md](research/ROADMAP.md) for the history of how it got here). No upstream code is modified by this addition. Note: this repository has no stated license, so treat contributions here accordingly (fork/PR, don't assume redistribution rights).
+
 This project takes the original Xbox binary of **Burnout 3: Takedown** (2004, Criterion Games / EA) — all 2.73 MB of raw x86 machine code — and translates every single function into native C code that compiles and runs on modern Windows. No emulation. No interpreter. Just 22,097 recompiled functions executing as a native x86-64 binary.
 
 ![Title intro video playing through the boot sequence](docs/screenshots/title.png)
