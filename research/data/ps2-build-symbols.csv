@@ -1,0 +1,116 @@
+class,method_signature,source_file
+C2dObjectBoostBar,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,GtMathPs2::CGtV4d,CB3HUDBoostBar::CBoostBarObjectD",B3HUDBoostBar.cpp
+C2dObjectBoostBar,"_RenderParticles(const B3HUDParticleParamsTag*,const CGt2dObject::CGt2dObjectSpace&,const CB3HUDBoostBar::CB",B3HUDBoostBar.cpp
+C2dObjectBoostBarMessage,"_BuildBatchData(const CGt2dObject::CGt2dObjectSpace&,const GtMathPs2::CGtV2d&,const C2dObjectBoostBar",B3HUDBoostBar.cpp
+CB32dObjectGradient,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,GtMathPs2::CGtV4d,GtMat",B32dObjectGradient.cpp
+CB32dObjectOffscreenImage,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,GtMathPs2::CGtV4d",B32dObjectOffscreenImage.cpp
+CB3AIAvoidanceMap,"AddCarToMap(EAIAvoidanceRisk,float,float,float,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathP",B3AIAvoidance.cpp
+CB3AIAvoidanceMap,"CheckVehicle(const GtMathPs2::CGtMatrix3x4&,GtMathPs2::CGtV3d,bool,bool,EAIAvoidanceRisk,const CGtAxisAligne",B3AIAvoidance.cpp
+CB3AITarget,"FindNextCorner(const CB3AILane*,unsigned short,unsigned short*,unsigned short*,unsigned short*,float*,float*,float",B3AITarget.cpp
+CB3AITargetSpline,"CalculateSpline(int*,CB3AILane*,float*,GtMathPs2::CGtV3d*,GtMathPs2::CGtV3d*,GtMathPs2::CGtV3d*,GtMathPs2::C",B3AITarget.cpp
+CB3BehaviourInterpolate,"SetParameters(EB3PlayerCameraBehaviour,EB3PlayerCameraBehaviour,EB3PlayerCameraBehaviour,EB3PlayerCame",B3BehaviourInterpolate.cpp
+CB3BehaviourInterpolate,"SetParameters(EB3PlayerCameraBehaviour,EB3PlayerCameraBehaviour,float,EB3InterpolationType,EB3Interpol",B3BehaviourInterpolate.cpp
+CB3Bloom,"FirstDownsample(unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned i",B3BloomPS2.cpp
+CB3BurningText2dObject,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,float,const CGt2dFont*,const unsigned short*,",B3BurningText2dObject.cpp
+CB3CameraUtils,"CollisionIsCameraInVehicle(GtMathPs2::CGtV3d,const CGtAxisAlignedBox&,const GtMathPs2::CGtMatrix3x4&,const GtMa",B3CameraUtils.cpp
+CB3CameraUtils,"LineOfSight(const CGtLine&,GtMathPs2::CGtV3d,const CGtAxisAlignedBox&,const GtMathPs2::CGtMatrix3x4&,GtMathPs2:",B3CameraUtils.cpp
+CB3CarViewerGameMode,"SetArrowVertices(CB3Im3dVertex*,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,G",B3CarViewerGameMode.cpp
+CB3ClusterRig,"PrepareRotate(EB3RigType,EB3FocusType,CB3ChildBody*,float,float,GtMathPs2::CGtV3d,float,float,float,const GtMath",B3BehaviourCluster.cpp
+CB3CollidingBody,"CalculateCollisionImpulseWithBody(CB3CollidingBody&,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtM",B3PhysicsManager.cpp
+CB3CollidingBody,"CalculateCollisionImpulseWithInanimateObject(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,float,GtMa",B3CollidingBody.cpp
+CB3CollidingBody,"CalculateCollisionImpulseWithTraffic(CB3TrafficVehicle*,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d",B3CollidingBody.cpp
+CB3ConvexHullCollide,"BuildClippedEdgeList(GtMathPs2::CGtV3d*,unsigned int*,GtMathPs2::CGtV3d,const CB3ConvexHull*,GtMathPs2::C",B3ConvexHullCollide.cpp
+CB3ConvexHullCollide,"GetHullPenetration(int*,unsigned char,CB3ConvexHullPlane*,GtMathPs2::CGtPlane*,GtMathPs2::CGtV3d,GtMathPs",B3ConvexHullCollide.cpp
+CB3EffectsManager,"DoCrazyBodyBodySparks(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,const CB3SparkSpawnParams*,float",B3EffectsManager.cpp
+CB3EffectsManager,"HandleBodyBodyCollisionEffects(CB3CollidingBody*,CB3CollidingBody*,const CB3CollidingPair*,EB3PropType,EB3Pr",B3EffectsManager.cpp
+CB3EffectsManager,"RenderCoronaType(const CB3VehicleEssentialParams&,EB3VehicleTags,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathP",B3EffectsManager.cpp
+CB3EffectsManager,"SpawnDebrisFromPoint(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,float,float,con",B3EffectsManager.cpp
+CB3EffectsManager,"SpawnParticleShowerFromPoint(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,EParticleSpawnType,float,",B3EffectsManager.cpp
+CB3EffectsManager,"SpawnParticlesAlongLine(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,EParticleSpawnType,float,float",B3EffectsManager.cpp
+CB3EffectsManager,"SpawnParticlesFromPoint(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,EParticleSpawnType,float,const",B3EffectsManager.cpp
+CB3EffectsManager,"SpawnPopcornFromPoint(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d*,GtMathPs2::CG",B3EffectsManager.cpp
+CB3EffectsManager,"SpawnSparksFromPoint(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,float,float,boo",B3EffectsManager.cpp
+CB3EffectsManager,"UpdateWheelEffects(CB3VehiclePhysics*,unsigned int,const GtMathPs2::CGtMatrix3x4*,const CB3EffectsManager::C",B3EffectsManager.cpp
+CB3FlashText2dObject,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,float,GtMathPs2::CGtV4d,const CGt2dFont*,const ",B3FlashText2dObject.cpp
+CB3Fog,"RenderIndexedFog(GtMathPs2::CGtV3d,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsign",B3FogPS2.cpp
+CB3GradientText2dObject,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,float,GtMathPs2::CGtV4d,const CGt2dFont*,con",B3GradientText2dObject.cpp
+CB3HUDBackground2dObject,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,GtMathPs2::CGtV4d,",B3HUDBackground2dObject.cpp
+CB3HUDPrimaryMessageHandler,"ShowMessage(const GtMathPs2::CGtV2d&,CGt2dFrame*,const unsigned short*,CB3HUDPrimaryMessageHandler",B3HUDPrimaryMessageHandler.cpp
+CB3HUDScore,"UpdateMessageGeneric(CB3HUDScore::CScoreMessage*,CB3HUDPrimaryMessage::EMessageType,int,const unsigned short*,floa",B3HUDScore.cpp
+CB3HingedPart,"CalculateCollisionImpulseWithInanimateObject(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,float,GtMathP",B3VehiclePhysics.cpp
+CB3Icon2dObject,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,GtMathPs2::CGtV4d,float,int",B3SatNavComponent.cpp
+CB3ImageReward2dObject,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,GtMathPs2::CGtV4d,EB",B3ImageReward2dObject.cpp
+CB3ImageReward2dObject,"PrepareCarSelect(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,GtMathPs2::",B3ImageReward2dObject.cpp
+CB3ImageVignette2dObject,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,float,float,const ",B3ImageVignette2dObject.cpp
+CB3NetworkRaceUpdateMessage,"AddCrashingTraffic(unsigned char,const GtMathPs2::CGtMatrix3x4*,const GtMathPs2::CGtV3d*,const GtM",B3NetworkRaceUpdateMessage.cpp
+CB3NetworkRaceUpdateMessage,"Prepare(const GtMathPs2::CGtMatrix3x4*,const GtMathPs2::CGtV3d*,const GtMathPs2::CGtV3d*,const CNe",B3NetworkRaceUpdateMessage.cpp
+CB3NetworkRaceUpdateMessage,"Retrieve(GtMathPs2::CGtMatrix3x4*,GtMathPs2::CGtV3d*,GtMathPs2::CGtV3d*,CNetworkControls*,CUpdateM",B3NetworkRaceUpdateMessage.cpp
+CB3NetworkRaceUpdateMessage,"RetrieveCrashingTraffic(unsigned char*,GtMathPs2::CGtMatrix3x4*,GtMathPs2::CGtV3d*,GtMathPs2::CGtV",B3NetworkRaceUpdateMessage.cpp
+CB3OnScreenKeyboardComponent,"RenderBox(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFrame&,con",B3OnScreenKeyboardComponent.cpp
+CB3OnScreenKeyboardComponent,"RenderCell(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFrame&,co",B3OnScreenKeyboardComponent.cpp
+CB3OnScreenKeyboardComponent,"RenderCellWithTriangle(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CG",B3OnScreenKeyboardComponent.cpp
+CB3OnlineLobbyPage,"_RenderImage(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFrame&,const void",B3OnlineLobbyPage.cpp
+CB3RacePosition,"DrawPositionMarker(GtMathPs2::CGtV3d,const unsigned short*,int,CB3RaceCar*,CB3RaceCar*,float,bool,bool,bool,fl",B3RacePosition.cpp
+CB3ResultsPage,"RenderStylisedText(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFrame&,const vo",B3ResultsPage.cpp
+CB3RoadRageResultsPage,"RenderMultipleImages(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFrame",B3RoadRageResultsPage.cpp
+CB3RotatingImage2dObject,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,GtMathPs2::CGtV4d,",B3HeadingComponent.cpp
+CB3Score2dObject,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,float,GtMathPs2::CGtV4d,const CGt2dFont*,const unsi",B3HUDPrimaryMessageHandler.cpp
+CB3ScrapeSystem,"AddScrapeSegment(CB3ScrapeEmitterData*,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,EB3ScrapeType,const GtMathPs2::CGtM",B3ScrapeSystem.cpp
+CB3ScrollVSelectComponent,"Prepare(const CB3MenuComponentSelectionData*,const CB3ScrollVSelectComponentEntryData*,CB3ScrollVSel",B3ScrollVSelectComponent.cpp
+CB3ScrollingText2dObject,"_BuildBatchData(const GtMathPs2::CGtV2d&,GtMathPs2::CGtV2d*,const unsigned short**,const CGt2dObject:",B3HelpBarComponent.cpp
+CB3ShadowRenderer,"RenderAmbientVehicleShadow(const GtMathPs2::CGtMatrix3x4&,const CGtAxisAlignedBox&,const CGtAxisAlignedBox&,",B3ShadowRendererPS2.cpp
+CB3SoundSkidModel,"Update(const CB3Wheel**,float,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,CGtSoundVirtualVoice**,GtMathPs2::CGtV3d,b",B3SoundSkidModel.cpp
+CB3StylisedText2dObject,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,GtMathPs2::CGtV4d,CB3StylisedText2dObject::E",B3StylisedText2dObject.cpp
+CB3StylisedText2dObject,"_DispatchLRGradient(GtMathPs2::CGtV4d,GtMathPs2::CGtV4d,GtMathPs2::CGtV4d,const GtMathPs2::CGtV2d&,con",B3StylisedText2dObject.cpp
+CB3StylisedText2dObject,"_DispatchMetallic(GtMathPs2::CGtV4d,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d*,const GtMathPs2:",B3StylisedText2dObject.cpp
+CB3TableComponent,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const CGt2dObjectTableDat",B3TableComponent.cpp
+CB3TableComponent,"PrepareRowBackgrounds(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,bool,const ",B3TableComponent.cpp
+CB3TableComponent,"PrepareSplitBackground(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const CGt2",B3TableComponent.cpp
+CB3TableComponent,"RenderCarIcon(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFrame&,const void",B3TableComponent.cpp
+CB3TableComponent,"RenderConnection(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFrame&,const v",B3TableComponent.cpp
+CB3TableComponent,"RenderImageAndText(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFrame&,const",B3TableComponent.cpp
+CB3TextComponent,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,c",B3TextComponent.cpp
+CB3TextComponent,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const unsigned short*,float,bool,float,unsigned int",B3TextComponent.cpp
+CB3TipText2dObject,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,float,GtMathPs2::CGtV4d,const CGt2dFont*,const un",B3BackgroundComponent.cpp
+CB3TrackRenderer,"BeginInstanceRender(const CB3InstanceMesh*,const CGtAxisAlignedBox*,const CB3TrackMaterial&,float,float,EB3In",B3TrackRendererRuntimePS2.cpp
+CB3TrafficSystem,"Generate(ETrafficVehicleCategories,unsigned long,ETrafficVehicleCategories,unsigned long,CB3TrafficLane*,floa",B3TrafficSystem.cpp
+CB3TrailSystem,"AddTrailSegment(CB3TrailEmitterData*,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,EB3TrailType,const GtMathPs2::CGtMatri",B3TrailSystem.cpp
+CB3VOptionsSelectComponentEntryData,"SetNumberListData(EGlobalStrings,const CB3VOptionsSelectComponentEntryNumberRange*,bool,co",B3CreateAccount2MenuPage.cpp
+CB3VOptionsSelectComponentEntryData,"SetNumberListData(const unsigned short*,const CB3VOptionsSelectComponentEntryNumberRange*,",B3CreateAccount2MenuPage.cpp
+CB3VOptionsSelectComponentEntryData,"SetOptionListData(const unsigned short*,const EGlobalStrings*,unsigned char,bool,const boo",B3CreateAccount2MenuPage.cpp
+CB3VehicleDeform,"GetHullPoints(GtMathPs2::CGtV3d*,GtMathPs2::CGtV3d*,GtMathPs2::CGtV3d*,GtMathPs2::CGtV3d*,GtMathPs2::CGtV3d*,",B3VehicleDeform.cpp
+CB3VehicleDeform,"Impact(CB3VehiclePhysics*,CB3VehicleEssentialParams*,CB3VehicleParams*,ETrafficVehicleCategories,EB3ActiveBod",B3VehicleDeform.cpp
+CB3VehicleDeform,"NearestPointOnTriangle(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGt",B3VehicleDeform.cpp
+CB3VehicleDeform,"SetArrowVertices(CB3Im3dVertex*,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMat",B3VehicleDeform.cpp
+CB3VehicleRenderer,"RenderDeformedObject(EB3VehicleRenderType,const GtMathPs2::CGtMatrix3x4&,CB3VehicleObject*,float,unsigned s",B3VehicleRendererRuntimePS2.cpp
+CB3VehicleRenderer,"RenderObject(EB3VehicleRenderType,const GtMathPs2::CGtMatrix3x4&,CB3VehicleObject*,float,unsigned short,uns",B3VehicleRendererRuntimePS2.cpp
+CB3WrongWayWall,"AddTristrip(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV4d,GtMathPs",B3WrongWayWall.cpp
+CBlit,"BuildPacket(unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned int,unsigned long,boo",B3GraphicsManagerPS2.cpp
+CGt2dBezierCurve,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,GtMathPs2::CGtV4d,CGtBezierCurveRenderData*,float,C",Gt2dBezierCurve.cpp
+CGt2dBezierCurve,"_DrawBezierSpline(const CGt2dObject::CGt2dObjectSpace&,const void*,CGtBezierSection*,CGtTexture*,GtMathPs2::C",Gt2dBezierCurve.cpp
+CGt2dBezierCurve,"_RenderCurveSection(const CGt2dObject::CGt2dObjectSpace&,const void*,CGtBezierSection*,CGtTexture*,GtMathPs2:",Gt2dBezierCurve.cpp
+CGt2dObjectComboText,"_BuildBatchData(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const unsigned short*,const CGt2dObject",B3HUDCrashCombo.cpp
+CGt2dObjectImage,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,GtMathPs2::CGtV4d,CGtTextu",Gt2dObjectImage.cpp
+CGt2dObjectItalicText,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,float,GtMathPs2::CGtV4d,const CGt2dFont*,const",Gt2dObjectItalicText.cpp
+CGt2dObjectItalicText,"PrepareCommonData(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,float,GtMathPs2::CGtV4d,const CGt2dF",Gt2dObjectItalicText.cpp
+CGt2dObjectParagraph,"Prepare(const GtMathPs2::CGtV2d&,float,const GtMathPs2::CGtV2d&,GtMathPs2::CGtV4d,const unsigned short*,c",Gt2dObjectParagraph.cpp
+CGt2dObjectParagraph,"_BuildLineOfText(const CGt2dObject::CGt2dObjectSpace&,const unsigned short**,const CGt2dFont*,float,float",Gt2dObjectParagraph.cpp
+CGt2dObjectTable,"Prepare(const CGt2dObjectTableData*,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d",Gt2dObjectTable.cpp
+CGt2dObjectTable,"RenderItalicText(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFrame&,const vo",Gt2dObjectTable.cpp
+CGt2dObjectTable,"RenderItalicTextNoTruncation(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFra",Gt2dObjectTable.cpp
+CGt2dObjectText,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,float,GtMathPs2::CGtV4d,const CGt2dFont*,const unsig",Gt2dObjectText.cpp
+CGt2dObjectText,"PrepareCommonData(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,float,GtMathPs2::CGtV4d,const CGt2dFont*,c",Gt2dObjectText.cpp
+CGt2dObjectVideoImage,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,GtMathPs2::CGtV4d,CGt",Gt2dObjectVideoImage.cpp
+CGt2dObjectVignette,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,GtMathPs2::CGtV4d,GtMat",Gt2dObjectVignette.cpp
+CGt2dObjectVignette,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,RwRGBA,RwRGBA,CGt2dObje",Gt2dObjectVignette.cpp
+CGtCameraFrustum,"InitialisePerspective(const GtMathPs2::CGtMatrix3x4&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const ",GtCameraFrustumPS2.cpp
+CGtCameraFrustumBase,"InitialisePerspective(const GtMathPs2::CGtMatrix3x4&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,fl",GtCameraFrustumPS2.cpp
+CGtFrustumBuilder,"ConstructPerspective(CGtFrustum*,const GtMathPs2::CGtMatrix3x4&,const GtMathPs2::CGtV2d&,const GtMathPs2::CG",GtFrustumBuilder.cpp
+CGtUnicode,"_FormatString(unsigned short*,const unsigned short*,const unsigned short*,const unsigned short*,const unsigned shor",GtUnicode.cpp
+Gt2dRenderer,"RenderSpritesTex(GtMathPs2::CGtV4d,const GtMathPs2::CGtV2d&,int,const GtMathPs2::CGtV2d*,const GtMathPs2::CGtV2d*",Gt2dRendererPS2.cpp
+Gt2dRenderer,"RenderTriListFlatTex(GtMathPs2::CGtV4d,const GtMathPs2::CGtV2d&,int,const GtMathPs2::CGtV2d*,const GtMathPs2::CGt",Gt2dRendererPS2.cpp
+Gt2dRenderer,"RenderTriStripFlatTex(GtMathPs2::CGtV4d,const GtMathPs2::CGtV2d&,int,const GtMathPs2::CGtV2d*,const GtMathPs2::CG",Gt2dRendererPS2.cpp
+Gt2dRenderer,"RenderTriStripGouraudTex(const GtMathPs2::CGtV2d&,int,const GtMathPs2::CGtV2d*,const GtMathPs2::CGtV2d*,const GtM",Gt2dRendererPS2.cpp
+GtIntersection,"IntersectLineTriangle(const CGtLine&,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,float*,float*,float*",GtIntersectionPS2.cpp
+GtIntersection,"IntersectSphereTriangle(GtMathPs2::CGtSphere,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::C",GtIntersectionPS2.cpp
+GtMathPs2,"CGtMatrix4x4::CGtMatrix4x4(float,float,float,float,float,float,float,float,float,float,float,float,float,float,float",B3AITarget.cpp

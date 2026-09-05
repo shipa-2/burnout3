@@ -14,6 +14,7 @@ recorded here, only findings from studying them.
 | Burnout (original) | 2002 | Xbox (x86) | Limited — no `CB<N>`/`CGt` naming convention present yet |
 | Burnout 2: Point of Impact | 2003 | Xbox (x86) | **Yes** — see below |
 | Burnout 3: Takedown | 2004 | Xbox (x86) | (this project's own target) |
+| Burnout 3: Takedown | 2004 | **PlayStation 2** (MIPS), dev build | **Yes, for naming only** — see below |
 | Burnout Revenge | 2006 | **Xbox 360** (PowerPC) | Wrong architecture — see below |
 | Black | 2005 | Xbox (x86) | No — different naming convention entirely, see below |
 | Burnout Paradise | 2006 | Xbox 360 (PowerPC), pre-alpha | Not investigated further — wrong architecture, not checked |
@@ -30,6 +31,15 @@ strings** than retail (40,036 vs. 23,557) and exposes plaintext gameplay-tuning 
 (`CAMERAFollowFOV`, `CAMERAELBOffsetY`, etc. — camera/physics tuning parameter names, likely from a
 config/tuning system). No `CGt`-prefixed classes found here either — see below, `CGt` looks specific
 to Burnout 3.
+
+### Burnout 3: Takedown, PS2 development build — useful for naming, not for structure
+
+Different CPU architecture (MIPS vs. Xbox's x86) rules out any binary-level cross-reference, but
+this build's linker MAP files store fully-qualified, unmangled C++ symbols — no demangling needed.
+Confirms `CB3*`/`CGt*` at the *same* game generation (not "one game earlier and probably similar"
+like the Burnout 2 case), covering 67 classes across rendering effects, vehicle AI/physics, 2D
+UI/HUD, and frontend pages that the Burnout 2 sweep didn't touch. Full writeup:
+[ps2-build-symbols.md](ps2-build-symbols.md).
 
 **Not yet done:** a full Ghidra pass to see how much of this debug build's exposed naming
 transfers conceptually to Burnout 3's own utility/shared code (same studio, one game apart in time,
