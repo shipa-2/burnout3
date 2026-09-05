@@ -35,6 +35,17 @@
 #include <stddef.h>
 #include <string.h>
 
+/* MinGW's <intrin.h>/<_mingw.h> define __forceinline as
+ * "extern inline __attribute__((always_inline))" to mimic MSVC linkage
+ * semantics. That collides with an explicit leading "static" here
+ * ("more than one storage class specified"). Use our own portable
+ * force-inline macro instead of the raw keyword. */
+#if defined(_MSC_VER)
+#define RECOMP_FORCEINLINE static __forceinline
+#else
+#define RECOMP_FORCEINLINE static inline __attribute__((always_inline))
+#endif
+
 /* ── Memory offset ──────────────────────────────────────── */
 
 /**
@@ -68,6 +79,20 @@ extern ptrdiff_t g_xbox_mem_offset;
  */
 extern uint32_t g_eax, g_ecx, g_edx, g_esp;
 extern uint32_t g_ebx, g_esi, g_edi;
+
+/**
+ * "cr7" - x86 control register operand read.
+ *
+ * `mov r32, crN` is a real, valid x86 opcode, but its one known
+ * occurrence in the generated code (sub_003EAB4E) shows up inside an
+ * otherwise clearly-garbled instruction stream (surrounded by
+ * "insb byte ptr es:[edi], dx" TODOs) - a case of the disassembler
+ * landing on data or a jump-table byte range and decoding it as if it
+ * were code. That function's output isn't meaningful either way, so
+ * this is just a harmless read-as-zero placeholder to let it compile
+ * rather than crash the build.
+ */
+static const uint32_t cr7 = 0;
 
 /**
  * SEH frame pointer bridge.
@@ -106,7 +131,7 @@ void recomp_icall_fail_log(uint32_t va);
  *  This is safe because Xbox mirror views all alias the same physical
  *  memory, so a native pointer to any mirror correctly accesses the
  *  right underlying data. */
-static __forceinline uintptr_t xbox_ptr_resolve(uint32_t addr)
+RECOMP_FORCEINLINE uintptr_t xbox_ptr_resolve(uint32_t addr)
 {
     /* Fast path: most addresses are Xbox VAs below the mapping base.
      * The mapped native region spans [offset, offset + 29*64MB).
@@ -129,7 +154,7 @@ static __forceinline uintptr_t xbox_ptr_resolve(uint32_t addr)
  * that fall within the mapped Xbox memory region.
  * Use this for vtable validation instead of rigid Xbox VA range checks.
  */
-static __forceinline int is_valid_game_ptr(uint32_t val)
+RECOMP_FORCEINLINE int is_valid_game_ptr(uint32_t val)
 {
     /* Xbox VA range (covers .text, .data, .rdata, heap, stack) */
     if (val >= 0x10000 && val < 0x4000000)
@@ -150,7 +175,7 @@ static __forceinline int is_valid_game_ptr(uint32_t val)
  * pointer in the mapped region. Returns the value unchanged if it's
  * already an Xbox VA.
  */
-static __forceinline uint32_t native_to_xbox_va(uint32_t val)
+RECOMP_FORCEINLINE uint32_t native_to_xbox_va(uint32_t val)
 {
     uint32_t offset32 = (uint32_t)g_xbox_mem_offset;
     if (offset32 != 0 && val >= offset32) {

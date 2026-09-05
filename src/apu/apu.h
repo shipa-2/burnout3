@@ -31,6 +31,10 @@ void mcpx_apu_mmio_write(MCPXAPUState *d, uint64_t addr, uint64_t val, unsigned 
  * Directly programs a voice without going through DirectSound. */
 void mcpx_apu_play_test_tone(MCPXAPUState *d);
 
+/* Global APU instance, defined in apu_mmio_hook.c. NULL until
+ * mcpx_apu_init_standalone() succeeds. */
+extern MCPXAPUState *g_apu_state;
+
 /* ============================================================
  * Software mixer - DirectSound buffer bridge
  *

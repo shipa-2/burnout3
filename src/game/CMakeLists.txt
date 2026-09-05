@@ -81,6 +81,7 @@ target_link_libraries(burnout3 PRIVATE
     propsys
     d3d11
     dxgi
+    dwmapi
 )
 
 # Include paths

@@ -32,5 +32,8 @@ if(MSVC)
     )
 endif()
 
-# Link kernel32 for threading, winmm for waveOut fallback, ole32 for CoInitializeEx
-target_link_libraries(apu_emu PRIVATE kernel32 winmm ole32)
+# Link kernel32 for threading, winmm for waveOut fallback, ole32 for
+# CoInitializeEx, xaudio2_9 for XAudio2Create (MinGW ships versioned import
+# libs since Microsoft doesn't provide a single xaudio2.lib the way the
+# #pragma comment(lib, "xaudio2.lib") in apu_xaudio2.c expects).
+target_link_libraries(apu_emu PRIVATE kernel32 winmm ole32 xaudio2_9)

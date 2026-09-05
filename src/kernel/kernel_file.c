@@ -10,6 +10,7 @@
 
 #include "kernel.h"
 #include <string.h>
+#include <wchar.h> /* swprintf_s */
 
 /* ============================================================================
  * Helpers

@@ -13,6 +13,18 @@ add_compile_definitions(
     NOMINMAX
 )
 
+# MinGW's CRT wrappers for the *_s "secure" string functions (swprintf_s,
+# etc.) are gated behind a CRT-version feature test that isn't satisfied by
+# default. Bump it so code written against the MSVC secure CRT API compiles
+# unchanged under MinGW too.
+# 0xE00 (14.00) is the lowest value that also keeps mingw's own _UCRT
+# auto-detection happy (see _mingw.h: _UCRT is auto-defined when
+# __MSVCRT_VERSION__ >= 0xE00 && < 0x1000, or >= 0x1400) - a lower value
+# like 0x0700 disables _UCRT and breaks <cstdlib>'s quick_exit/at_quick_exit.
+if(MINGW)
+    add_compile_definitions(__MSVCRT_VERSION__=0xE00)
+endif()
+
 # ── Compatibility layers (static libraries) ──────────────────
 
 # Xbox kernel replacement (147 imports → Win32)

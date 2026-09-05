@@ -35,9 +35,11 @@ typedef UCHAR KIRQL, *PKIRQL;
 typedef CCHAR KPROCESSOR_MODE;
 typedef LONG KPRIORITY;
 
-/* Processor modes */
-#define KernelMode  0
-#define UserMode    1
+/* Processor modes: KernelMode/UserMode are already provided by the MODE
+ * enum in <winnt.h> (pulled in via <windows.h>) — redefining them as
+ * macros here corrupts that enum's own definition wherever it's parsed
+ * afterwards ("expected identifier or '(' before numeric constant").
+ * Not referenced anywhere else in this codebase, so just don't shadow them. */
 
 /* IRQL levels (Xbox uses same NT IRQL model) */
 #define PASSIVE_LEVEL   0

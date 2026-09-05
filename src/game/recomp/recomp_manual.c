@@ -11,6 +11,7 @@
 #include "gen/recomp_funcs.h"
 #include "../static_textures.h"
 #include "../track_loader.h"
+#include "../../kernel/xbox_memory_layout.h"
 #include <math.h>
 #include <stdio.h>
 
@@ -5219,7 +5220,6 @@ void sub_00011240(void)
                             nread, resource_va);
                 } else {
                     /* Fallback: allocate heap buffer if resource_va is invalid */
-                    extern uint32_t xbox_HeapAlloc(uint32_t size, uint32_t alignment);
                     uint32_t data_va = xbox_HeapAlloc((uint32_t)fsize + 16, 16);
                     if (data_va != 0) {
                         uint8_t *data_ptr = (uint8_t *)XBOX_PTR(data_va);

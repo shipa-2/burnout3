@@ -30,6 +30,7 @@ TEMPLATE = r"""<title>Burnout 3 Function Atlas</title>
     --st-unknown: #c9cfcb;
     --st-identified: #2f6fed;
     --st-known: #8b5cf6;
+    --st-categorized: #4fb3a9;
     --st-progress: #d9822b;
     --st-done: #1f9d55;
     --focus: #2f6fed;
@@ -49,6 +50,7 @@ TEMPLATE = r"""<title>Burnout 3 Function Atlas</title>
       --st-unknown: #2b3330;
       --st-identified: #5b9dff;
       --st-known: #a78bfa;
+      --st-categorized: #57cabf;
       --st-progress: #f2a93b;
       --st-done: #35d9a4;
       --focus: #5b9dff;
@@ -66,6 +68,7 @@ TEMPLATE = r"""<title>Burnout 3 Function Atlas</title>
     --st-unknown: #2b3330;
     --st-identified: #5b9dff;
     --st-known: #a78bfa;
+    --st-categorized: #57cabf;
     --st-progress: #f2a93b;
     --st-done: #35d9a4;
     --focus: #5b9dff;
@@ -151,6 +154,7 @@ TEMPLATE = r"""<title>Burnout 3 Function Atlas</title>
 
   .stat .n.identified { color: var(--st-identified); }
   .stat .n.known { color: var(--st-known); }
+  .stat .n.categorized { color: var(--st-categorized); }
   .stat .n.progress { color: var(--st-progress); }
   .stat .n.done { color: var(--st-done); }
 
@@ -191,6 +195,7 @@ TEMPLATE = r"""<title>Burnout 3 Function Atlas</title>
   .swatch.unknown { background: var(--st-unknown); }
   .swatch.identified { background: var(--st-identified); }
   .swatch.known { background: var(--st-known); }
+  .swatch.categorized { background: var(--st-categorized); }
   .swatch.progress { background: var(--st-progress); }
   .swatch.done { background: var(--st-done); }
 
@@ -284,7 +289,10 @@ TEMPLATE = r"""<title>Burnout 3 Function Atlas</title>
       Grey is untouched. Blue is stock Microsoft XDK library code Cxbx-Reloaded's own database already
       recognizes &mdash; not worth reverse-engineering. Purple is Burnout 3's own game code with a real
       name recovered by the <a href="https://github.com/mxmstr/Burnout3Recomp" target="_blank" rel="noopener">Burnout3Recomp</a>
-      project. Orange is under active investigation right now. Green is reimplemented and confirmed
+      project. Teal is still unnamed but auto-classified into a subsystem (RW driver, game engine,
+      input, render, &hellip;) by this project's own
+      <a href="https://github.com/shipa-2/burnout3/tree/main/tools/func_id" target="_blank" rel="noopener">tools/func_id</a>
+      heuristics. Orange is under active investigation right now. Green is reimplemented and confirmed
       working. See
       <a href="https://github.com/shipa-2/burnout3" target="_blank" rel="noopener">the repository</a>
       for methodology.
@@ -303,6 +311,10 @@ TEMPLATE = r"""<title>Burnout 3 Function Atlas</title>
     <div class="stat">
       <div class="n known">__KNOWN__</div>
       <div class="l">game code, name recovered</div>
+    </div>
+    <div class="stat">
+      <div class="n categorized">__CATEGORIZED__</div>
+      <div class="l">unnamed, auto-classified</div>
     </div>
     <div class="stat">
       <div class="n progress">__PROGRESS__</div>
@@ -324,6 +336,7 @@ TEMPLATE = r"""<title>Burnout 3 Function Atlas</title>
         <span class="item"><span class="swatch unknown"></span>Unknown</span>
         <span class="item"><span class="swatch identified"></span>Library code</span>
         <span class="item"><span class="swatch known"></span>Game code, named</span>
+        <span class="item"><span class="swatch categorized"></span>Auto-classified</span>
         <span class="item"><span class="swatch progress"></span>In progress</span>
         <span class="item"><span class="swatch done"></span>Done</span>
       </div>
@@ -364,25 +377,28 @@ TEMPLATE = r"""<title>Burnout 3 Function Atlas</title>
   var IN_PROGRESS = new Set(__PROGRESS_JSON__);
 
   var data = lines.map(function (line) {
-    // address,name,size,named,source -- name never contains a comma (Ghidra/community identifiers only)
+    // address,name,size,named,source,category -- name never contains a comma (Ghidra/community identifiers only)
     var parts = line.split(",");
     var address = parts[0];
     var name = parts[1];
     var size = parseInt(parts[2], 10);
     var namedFlag = parts[3] === "true";
     var source = parts[4] || "";
+    var category = parts[5] || "";
 
     var status = "unknown";
     if (DONE.has(address)) status = "done";
     else if (IN_PROGRESS.has(address)) status = "progress";
     else if (source === "community") status = "known";
     else if (namedFlag) status = "identified";
+    else if (category) status = "categorized";
 
     return {
       address: address,
       name: name,
       size: isNaN(size) || size <= 0 ? 1 : size,
-      status: status
+      status: status,
+      category: category
     };
   });
 
@@ -467,6 +483,7 @@ TEMPLATE = r"""<title>Burnout 3 Function Atlas</title>
       unknown: cs.getPropertyValue("--st-unknown").trim(),
       identified: cs.getPropertyValue("--st-identified").trim(),
       known: cs.getPropertyValue("--st-known").trim(),
+      categorized: cs.getPropertyValue("--st-categorized").trim(),
       progress: cs.getPropertyValue("--st-progress").trim(),
       done: cs.getPropertyValue("--st-done").trim()
     };
@@ -515,6 +532,7 @@ TEMPLATE = r"""<title>Burnout 3 Function Atlas</title>
     unknown: "unknown",
     identified: "identified (XbSymbolDatabase)",
     known: "name recovered (Burnout3Recomp)",
+    categorized: "unnamed, auto-classified (tools/func_id)",
     progress: "in progress",
     done: "done"
   };
@@ -525,10 +543,12 @@ TEMPLATE = r"""<title>Burnout 3 Function Atlas</title>
     var hit = findAt(px, py);
     if (!hit) { tip.classList.remove("show"); return; }
     var d = hit.d;
+    var statusLine = STATUS_LABEL[d.status];
+    if (d.status === "categorized") statusLine += ": " + d.category;
     tip.textContent =
       d.name + "\n" +
       "0x" + d.address + "  ·  " + d.size + " bytes\n" +
-      STATUS_LABEL[d.status];
+      statusLine;
     tip.style.left = ev.clientX + "px";
     tip.style.top = (ev.clientY - 12) + "px";
     tip.classList.add("show");
@@ -570,21 +590,25 @@ def addr_of(line):
 
 identified = 0
 known = 0
+categorized = 0
 for l in data_lines:
     parts = l.split(",")
     addr = parts[0]
     named_flag = parts[3] == "true"
     source = parts[4] if len(parts) > 4 else ""
+    category = parts[5] if len(parts) > 5 else ""
     if addr in DONE or addr in IN_PROGRESS:
         continue
     if source == "community":
         known += 1
     elif named_flag:
         identified += 1
+    elif category:
+        categorized += 1
 
 done_n = len(DONE)
 progress_n = len(IN_PROGRESS)
-unknown_n = total - identified - known - done_n - progress_n
+unknown_n = total - identified - known - categorized - done_n - progress_n
 identified_pct = round(100 * identified / total, 1)
 
 import json
@@ -594,6 +618,7 @@ out = (TEMPLATE
     .replace("__IDENTIFIED__", f"{identified:,}")
     .replace("__IDENTIFIED_PCT__", str(identified_pct))
     .replace("__KNOWN__", f"{known:,}")
+    .replace("__CATEGORIZED__", f"{categorized:,}")
     .replace("__PROGRESS__", str(progress_n))
     .replace("__DONE__", str(done_n))
     .replace("__UNKNOWN__", f"{unknown_n:,}")
@@ -603,4 +628,4 @@ out = (TEMPLATE
 
 open(out_path, "w", encoding="utf-8").write(out)
 print("wrote", out_path, len(out), "bytes")
-print("total", total, "identified", identified, "known", known, "progress", progress_n, "done", done_n, "unknown", unknown_n)
+print("total", total, "identified", identified, "known", known, "categorized", categorized, "progress", progress_n, "done", done_n, "unknown", unknown_n)

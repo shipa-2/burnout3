@@ -22,6 +22,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <math.h>
+#include <setjmp.h>
 #include <dbghelp.h>
 #include <xinput.h>
 #pragma comment(lib, "dbghelp.lib")
@@ -810,6 +811,41 @@ static LONG WINAPI crash_veh(PEXCEPTION_POINTERS info)
         fflush(stderr);
     }
 
+    return EXCEPTION_CONTINUE_SEARCH;
+}
+
+/*
+ * GCC/MinGW has no equivalent of MSVC's __try/__except SEH extension
+ * (only clang-cl implements it on Windows). We emulate the one __try
+ * block this project needs - wrapping the call into xbe_entry_point() -
+ * with a plain VEH that stashes the exception info and longjmp()s back
+ * out, registered to run *after* crash_veh (appended, not prepended) so
+ * crash_veh's own EXCEPTION_CONTINUE_EXECUTION recoveries (div-by-zero
+ * skip, NV2A MMIO routing, etc.) still get first refusal. Only
+ * exceptions crash_veh gives up on (CONTINUE_SEARCH) reach this one.
+ *
+ * Skipping normal SEH stack unwinding here is fine: this is plain C,
+ * there are no destructors to run, and jmp_buf's automatic longjmp()
+ * restores the native stack pointer/registers directly.
+ */
+static jmp_buf g_entry_point_jmpbuf;
+static DWORD g_entry_point_exc_code;
+static void *g_entry_point_exc_address;
+static ULONG_PTR g_entry_point_exc_info[2];
+
+static LONG WINAPI entry_point_fallback_veh(PEXCEPTION_POINTERS info)
+{
+    g_entry_point_exc_code = info->ExceptionRecord->ExceptionCode;
+    g_entry_point_exc_address = info->ExceptionRecord->ExceptionAddress;
+    if (info->ExceptionRecord->NumberParameters >= 2) {
+        g_entry_point_exc_info[0] = info->ExceptionRecord->ExceptionInformation[0];
+        g_entry_point_exc_info[1] = info->ExceptionRecord->ExceptionInformation[1];
+    } else {
+        g_entry_point_exc_info[0] = 0;
+        g_entry_point_exc_info[1] = 0;
+    }
+    longjmp(g_entry_point_jmpbuf, 1);
+    /* unreachable */
     return EXCEPTION_CONTINUE_SEARCH;
 }
 
@@ -2537,8 +2573,6 @@ void game_frame_pump(void)
                 static int u_key_prev = 0;
                 int u_key_now = (GetAsyncKeyState('U') & 0x8000) ? 1 : 0;
                 if (u_key_now && !u_key_prev) {
-                    extern void mcpx_apu_play_test_tone(void *d);
-                    extern void *g_apu_state;
                     if (g_apu_state) {
                         mcpx_apu_play_test_tone(g_apu_state);
                     } else {
@@ -5136,24 +5170,23 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
     fprintf(stderr, "  JT verify pre-entry: [0x16CC8]=0x%08X (expect 0x000166D1)\n", MEM32(0x16CC8));
     fprintf(stderr, "  RW vtable BEFORE init: 0x36B860=0x%08X 0x36B89C=0x%08X\n",
             MEM32(0x36B860), MEM32(0x36B89C));
-    __try {
-        PUSH32(g_esp, 0); /* simulate 'call' pushing return address */
-        xbe_entry_point();
-        fprintf(stderr, "xbe_entry_point returned normally (g_eax=0x%08X)\n", g_eax);
-    } __except(
-        (fprintf(stderr, "CRASH in xbe_entry_point: exception 0x%08lX\n",
-                 GetExceptionInformation()->ExceptionRecord->ExceptionCode),
-         fprintf(stderr, "  Fault address: 0x%p\n",
-                 GetExceptionInformation()->ExceptionRecord->ExceptionAddress),
-         GetExceptionInformation()->ExceptionRecord->ExceptionCode == EXCEPTION_ACCESS_VIOLATION
-            ? fprintf(stderr, "  Access violation %s address 0x%p\n",
-                      GetExceptionInformation()->ExceptionRecord->ExceptionInformation[0] ? "writing" : "reading",
-                      (void*)GetExceptionInformation()->ExceptionRecord->ExceptionInformation[1])
-            : 0,
-         EXCEPTION_EXECUTE_HANDLER)
-    ) {
-        DWORD code = GetExceptionCode();
-        switch (code) {
+    {
+        PVOID entry_veh_handle = AddVectoredExceptionHandler(0, entry_point_fallback_veh);
+        if (setjmp(g_entry_point_jmpbuf) == 0) {
+            PUSH32(g_esp, 0); /* simulate 'call' pushing return address */
+            xbe_entry_point();
+            fprintf(stderr, "xbe_entry_point returned normally (g_eax=0x%08X)\n", g_eax);
+        } else {
+            fprintf(stderr, "CRASH in xbe_entry_point: exception 0x%08lX\n",
+                    g_entry_point_exc_code);
+            fprintf(stderr, "  Fault address: 0x%p\n", g_entry_point_exc_address);
+            if (g_entry_point_exc_code == EXCEPTION_ACCESS_VIOLATION) {
+                fprintf(stderr, "  Access violation %s address 0x%p\n",
+                        g_entry_point_exc_info[0] ? "writing" : "reading",
+                        (void*)g_entry_point_exc_info[1]);
+            }
+            DWORD code = g_entry_point_exc_code;
+            switch (code) {
         case EXCEPTION_ACCESS_VIOLATION:
             fprintf(stderr, "  Registers: eax=0x%08X ecx=0x%08X edx=0x%08X esp=0x%08X\n",
                     g_eax, g_ecx, g_edx, g_esp);
@@ -5186,7 +5219,9 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
         default:
             fprintf(stderr, "  Exception code: 0x%08lX\n", code);
             break;
+            }
         }
+        RemoveVectoredExceptionHandler(entry_veh_handle);
     }
 
     /* Run the game window loop */
