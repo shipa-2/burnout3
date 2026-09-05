@@ -35,10 +35,12 @@ to Burnout 3.
 ### Burnout 3: Takedown, PS2 development build — useful for naming, not for structure
 
 Different CPU architecture (MIPS vs. Xbox's x86) rules out any binary-level cross-reference, but
-this build's linker MAP files store fully-qualified, unmangled C++ symbols — no demangling needed.
+this build's linker map stores fully-qualified, unmangled C++ symbols — no demangling needed.
 Confirms `CB3*`/`CGt*` at the *same* game generation (not "one game earlier and probably similar"
-like the Burnout 2 case), covering 67 classes across rendering effects, vehicle AI/physics, 2D
-UI/HUD, and frontend pages that the Burnout 2 sweep didn't touch. Full writeup:
+like the Burnout 2 case). **4,588 methods across 672 classes**, address-verified against the actual
+shipped executable (installing a proper PS2 Emotion-Engine Ghidra processor was needed to decompile
+it reliably) and spot-confirmed structurally against the already-known `CB3AsyncDataLoader::Update`
+— same ring buffer, same magic constant, three-way match with both Xbox builds. Full writeup:
 [ps2-build-symbols.md](ps2-build-symbols.md).
 
 **Not yet done:** a full Ghidra pass to see how much of this debug build's exposed naming
