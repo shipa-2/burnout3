@@ -1,0 +1,114 @@
+ps2_real_address,class,method_signature,source_file,profiling_offset
+0012ec60,CB3ControllerMapping,GetBoost(),,192
+0012ee60,CB3ControllerMapping,GetGearDown(),,192
+0012ef20,CB3ControllerMapping,GetGearUp(),,192
+0012f0e0,CB3ControllerMapping,GetAftertouch(),,192
+0012f290,CB3ControllerMapping,GetSteering(),,192
+0012f440,CB3ControllerMapping,GetBrake(),,192
+0012f550,CB3ControllerMapping,GetAccelerator(),,192
+0012f980,CB3DebugManager,"RenderPerfMonDataCallback(const char*,float,float,float,bool)",,192
+00130090,CB3DebugManager,"DrawCross(GtMathPs2::CGtV3d,float,GtMathPs2::CGtV4d)",,208
+00130560,CB3DebugManager,Prepare(),,192
+001305e0,CB3DebugManager,Construct(),,192
+00130c40,CB3FrontEnd,Prepare(),B3FrontEnd.cpp,0
+001312a0,CGtDictionary<CGtTexture>,GetAt(int),,192
+001312c0,CB3Game,Is2PlayerSplitScreen(),,192
+00131380,CB3Game,IsCrashMode(),,192
+00132800,CB3Game,Prepare(),B3Game.cpp,0
+00132f20,CB3Game,Construct(),B3Game.cpp,0
+00133890,CB3GameMode,Prepare(),,208
+00134d20,CB3Player,Prepare(),,208
+00134d70,CB3Player,Construct(int),,208
+00134db0,CB3ProfileManager,Prepare(),B3Profile.cpp,0
+00135470,CB3ProfileManager,Construct(),,208
+00135720,CB3Profile,EvaluateGameCounts(),,208
+00135930,CB3Profile,EvaluateFavourites(),,208
+00135a30,CB3Profile,EvaluateMedals(),,208
+00136480,CB3Profile,WillTrophyUnlock(int),,208
+00136740,CB3Profile,WillCheatUnlock(int),,208
+00136870,CB3Profile,WillPlayerCarUnlock(int),,208
+00136af0,CB3Profile,EvaluateTrackUnlocking(),,208
+00136c40,CB3Profile,EvaluateChallengeUnlocking(),,208
+00137a40,CB3Profile,UnlockAll(),,208
+00137bd0,CB3Profile,Evaluate(),,208
+001388c0,CB3Profile,"GetTakeDownTotal(unsigned long,bool)",,208
+00138af0,CB3Profile,FindStageIDFromProgressionIndex(int),,208
+00139320,CB3ProfileCalcuatedData,Prepare(),,208
+00139500,CB3ProfileStoredData,Prepare(),,208
+001396e0,CB3ProgressionManager,Update(),,192
+00139c70,CB3AsyncDataLoader,"QueueLoadRequest(const char*,bool*,void*,unsigned int)",,208
+00139fd0,CB3AsyncDataLoader,Update(),B3AsyncDataLoader.cpp,0
+0013a190,CB3AsyncDataLoader,Construct(),B3AsyncDataLoader.cpp,0
+00143040,CB3AILane,"WalkLanesToFindPosition(unsigned short*,GtMathPs2::CGtV3d)",,208
+00143c80,CB3AILane,"UpdateSegmentIndex(unsigned short*,signed char)",,208
+00143d90,CB3AILane,"FindClosestAILaneSegment(CB3AILane**,unsigned short*,signed char*,GtMathPs2::CGtV3d,signed char)",,208
+00144400,CB3AILane,"UpdateCurrentAILaneSegment(CB3AILane**,unsigned short*,signed char*,float*,GtMathPs2::CGtV3d,bool)",,208
+001447b0,CB3AILane,"GetAvgForwardsVector(unsigned short,GtMathPs2::CGtV3d*) const",,208
+00144de0,CB3AILane,"IsInSegment(GtMathPs2::CGtV3d,unsigned short) const",,208
+00145730,CB3AILane,"CalculateForwardDistanceInSegment(GtMathPs2::CGtV3d,unsigned short)",,208
+0014afe0,CB3Burn,RegisterStaticVariables(),,208
+0014b1f0,CB3GameData,GetNumSplitTimeCheckpoints(),,208
+0014b210,CB3GameData,GetNumStartLines(),,208
+0014b530,CB3GameData,SetStageID(unsigned long),,192
+0014b540,CB3GameData,SetGameDataFileName(char*),,192
+0014ced0,CB3RaceCar,UpdateLastPositions(),,192
+0014d0f0,CB3RaceCar,Register(),B3RaceCar.cpp,0
+0014d2d0,CB3RaceCar,SetCarID(unsigned long),,192
+0014d330,CB3RaceCar,"ResetCarInAILanes(bool,int,int)",,192
+0014d830,CB3RaceCar,RepositionCarInLane(),,192
+0014dac0,CB3RaceCar,"FindResetPointInSlice(bool,CB3AILane*,int,CB3AILane**,unsigned short*)",,192
+0014dc50,CB3RaceCar,CalcRaceDistFromRaceCars(),,192
+0014e370,CB3RaceCar,UpdateAggressiveReaction(),B3RaceCar.cpp,0
+0014ec10,CB3RaceCar,Update(),B3RaceCar.cpp,0
+0014ef00,CB3RaceCar,Prepare(),B3RaceCar.cpp,0
+00150c50,CB3CrashReplayFrame,RetrieveDrivingControls(CDrivingControls*),,192
+00150d60,CB3CrashReplayFrame,"ArchiveDrivingControls(CDrivingControls*,unsigned char)",,192
+00150e20,CB3ReplayFrame,RetrieveDrivingControls(CDrivingControls*),,192
+00150eb0,CB3ReplayFrame,"ArchiveDrivingControls(CDrivingControls*,unsigned char)",,192
+00151180,CB3ReplaySystem,"NextFrame(CDrivingControls*,bool)",,192
+00151c60,CB3Score,SlammedSomeoneWithinTime(float),,192
+00151ca0,CB3Score,WasSlammedWithinTime(float),,192
+00156130,CB3Score,GetTotalRaceDistFromStartPos(),,176
+0015bfe0,CB3TrafficParam,RemoveFromTrafficLights(),,224
+0015eca0,CB3TrafficSystem,AddToDeadTrafficParamList(CB3TrafficParam*),,256
+00162c00,CB3TrafficVehicle,StartCrashing(),B3TrafficVehicle.cpp,0
+00163080,CB3TrafficVehicle,"ApplyNiceOncomingBehaviour(CB3TrafficRaceCarInfo*,int,float)",B3TrafficVehicle.cpp,0
+00163760,CB3TrafficVehicle,"DoTrafficBehaviour(CB3TrafficRaceCarInfo*,int)",B3TrafficVehicle.cpp,0
+00167be0,CB3World,UpdateSound(),,208
+00197a70,CB3VehiclePhysics,Prepare(),,0
+00197ac0,CB3VehiclePhysics,Construct(),,192
+001d9af0,CB3InputManager,Construct(),,224
+001d9ec0,CGtInputManagerPS2Pad2,SetPause(bool),,208
+001d9f10,CGtInputManagerPS2Pad2,GetPadControls(EGtPS2InputPort),,256
+001d9fe0,CGtInputManagerPS2Pad2,GetConnectedDeviceID(EGtPS2InputPort),,176
+001da290,CGtInputDevicePS2DualShock2,Update(),,144
+001dcaf0,CGtFSM,"StateLeave(CGtState*,void*)",,208
+001dcc80,CGtFSM,Update(),GtFSM.cpp,0
+001dd0c0,Gt2dRenderer,SetTextureAddressMode(Gt2dRenderer::EGt2dRendererTexAddress),,240
+001de170,Gt2dRenderer,"RenderTriStripFlatTex(GtMathPs2::CGtV4d,const GtMathPs2::CGtV2d&,int,const GtMathPs2::CGtV2d*,const GtMathPs2::CG",,208
+001eb3c0,CB3GraphicsManager,SetVideoModeParams(RwSkyVideoMode*),,256
+001f21c0,CGtNATDataManager,UnregisterPlayer(int),,208
+00224500,CB3EffectsManager,Release(),,160
+00227630,CB3Bloom,SetRenderstates(),,240
+002276a0,CB3Bloom,"Render(bool,bool)",,240
+002276d0,CB3Bloom,"Render(bool,bool)",,192
+00227700,CB3Bloom,"Render(bool,bool)",,144
+00242350,CB3SoundCrashManager,"DeformBonnet(GtMathPs2::CGtV3d,float)",,208
+00242460,CB3SoundCrashManager,"DeformBoot(GtMathPs2::CGtV3d,float)",,208
+002a28c0,CB3BehaviourOffset,Prepare(void*),,256
+002a28e0,CB3BehaviourOffset,Prepare(void*),,224
+002a2900,CB3BehaviourOffset,Prepare(void*),,192
+002f12f0,CGtLobbyPS2DirtySock,"_UsersStatsCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*)",,240
+003239d0,CB3OnlineBuddiesMenuPage,UpdateBuddyList(),,256
+003356a0,CB3OnlineRecordsDisplayMenuPage,ScrollUsersCountryAndCarBuffer(int),,176
+00371710,CGtCollisionKDTree,SphereBBoxTest(GtMathPs2::CGtSphere) const,,144
+00376020,CB3CrashNavPage,"UpdateHeadingAndHelpBar(bool,bool)",,176
+0039a300,CB3HardCodedCrashStageList,"IsChallengeOnThisCircuit(EB3TrackRegion,int,int)",,160
+0039a3a0,CB3HardCodedCrashStageList,"IsCorrectRegion(EB3TrackRegion,int)",,240
+0039a420,CB3HardCodedCrashStageList,"GetCrashStageName(int,bool)",,256
+0039a440,CB3HardCodedCrashStageList,"GetCrashStageName(int,bool)",,224
+0039a460,CB3HardCodedCrashStageList,"GetCrashStageName(int,bool)",,192
+0039a480,CB3HardCodedCrashStageList,FindCrashStageName(unsigned long),,192
+0039a4f0,CB3HardCodedCrashStageList,FindCrashStage(unsigned long),,208
+0039a510,CB3HardCodedCrashStageList,FindCrashStage(unsigned long),,176
+0039c1e0,CB3MyBurnoutRecordsState,"Action(EGtStateAction,void*,void*,void*)",,224
