@@ -2,18 +2,36 @@
 
 This is a working plan, not a fixed spec — it gets updated as findings change it. The goal of writing it down: avoid rabbit holes by knowing in advance what "stuck" looks like for each track and what the fallback is, instead of discovering it mid-way.
 
-> **Base switched (post Phase 3).** Everything below through Phase 3 was written and executed against reburn3/Cxbx-Reloaded. Phase 3's own resolution (the "disc check" turned out to be a missing-data setup issue) is what led to actually testing [mxmstr/Burnout3Recomp](https://github.com/mxmstr/Burnout3Recomp) — a real static recompiler for this exact binary, already producing a working native executable. That's now the active base, forked at [shipa-2/Burnout3Recomp](https://github.com/shipa-2/Burnout3Recomp). Phases 1-3 are kept as-is below (accurate history, and Phase 2's Ghidra/naming work is still directly useful); Phase 4 onward now targets the fork instead of reburn3.
+> **Base switched twice.** Phases 1-3: reburn3/Cxbx-Reloaded. Phases 4-5: [mxmstr/Burnout3Recomp](https://github.com/mxmstr/Burnout3Recomp) (forked at [shipa-2/Burnout3Recomp](https://github.com/shipa-2/Burnout3Recomp) — kept public, its recovered generated source is genuinely useful, but no longer the active base). Phase 6 onward: [sp00nznet/burnout3](https://github.com/sp00nznet/burnout3) (forked at [shipa-2/burnout3](https://github.com/shipa-2/burnout3)) — independent, further-along, self-contained toolchain, no missing-file dependency. Each switch is kept below as accurate history; Phase 2's Ghidra/naming work stays useful across all of them since it's about the *binary*, not any particular base.
 
-## Phase 4+ (current): work directly in the Burnout3Recomp fork
+## Phase 6 (current): shipa-2/burnout3 — path to a complete, native build
 
-Track B (reburn3 build/tooling) and the reburn3-specific parts of Phase 4/5 below are superseded —
-kept for history, not being pursued further. Current plan:
+Ranked by actual impact, not by what's easiest:
+
+1. **Regenerate `sub_00351090`** (RW scene traversal — currently a disassembler gap, 0 functions found in that D3D section). This is the single highest-impact remaining item: it's what stands between "menu renders" and "an actual 3D track renders". Everything downstream (item 2) depends on this existing at all.
+2. **Wire RW scene traversal into the live push buffer pipeline** (render list population) — once (1) exists, this is what turns "assets are loaded" into "assets are on screen". This is the moment the project goes from tech demo to actually playable-looking.
+3. **Extend the Burnout 2 Rosetta-stone sweep** ([notes/burnout2-source-tree-map.md](notes/burnout2-source-tree-map.md)) from 6 of 176 source files to the full list. Mechanical (same `GTASSERT` xref method, just needs scripting across all filenames), and directly grows how many of the ~7187 unnamed functions get a real name — which makes every other item on this list easier to work on with confidence instead of guessing from raw disassembly.
+4. **Sub-menu navigation** (New Profile, Save/Load, World Tour selection) — needed to actually reach a race from the UI, not just see the main menu.
+5. **NV2A register combiner emulation** (currently hardcoded to MODULATE blend) — needed for textures/materials to look right once real 3D rendering is on.
+6. **DirectSound → APU voice processor connection** (`sub_00135040`) — the audio engine (MCPX APU emulation, adapted from xemu) already works standalone; this wires the game's own sound calls into it.
+7. **Physics/collision world init** — needed before the game can actually be *driven*, not just watched loading tracks.
+8. **The stated long-term goal: a native Linux binary.** Currently Windows/MSVC-only (D3D11, Media Foundation, XInput are all Windows-specific). This is a genuinely large undertaking — swapping the rendering backend (Vulkan or OpenGL instead of D3D11), video playback (not Media Foundation), and input (SDL or native Linux gamepad support instead of XInput) — realistically comes *after* the game is actually running well on its current platform, not before, so the porting work has a stable target to port rather than a moving one.
+
+**Stuck condition for any of these:** the fix requires deep changes to the auto-generated recompiler output itself (not just the hand-written runtime layer) — that's a much bigger undertaking than it looks, back out and document rather than hand-patching generated code broadly.
+
+---
+
+## Historical: Phases 4-5 (Burnout3Recomp / mxmstr base)
+
+Superseded by Phase 6 above — kept for reference, not being pursued further.
+
+### Phase 4+: work directly in the Burnout3Recomp fork
 
 1. **Fix the loading-screen hang** ([notes/burnout3recomp-loading-hang.md](notes/burnout3recomp-loading-hang.md)) — first real task in the fork, blocks getting past the intro splash at all. Leading hypothesis: `Kern_NtReadFile` is fully synchronous where `CB3AsyncDataLoader::Update` (`0x000110e0`, already documented in [notes/disc-check.md](notes/disc-check.md)) may expect an observable pending→complete transition. Needs a debug build with symbols (or targeted logging) to confirm — the release POC's stripped native exe defeated `winedbg`'s stack walker.
 2. ~~`CB3InputManager`~~ ✅ **Confirmed already handled** — the fork's `hle_xinput.cpp` fully HLEs `XGetDeviceChanges`/`XInputOpen`/`XInputGetState` with real host XInput + keyboard fallback. `CB3InputManager::Update` (`0x00021a50`) is genuine recompiled game code sitting on top; nothing to write. See [notes/input-manager.md](notes/input-manager.md).
-3. **Fill in `sub_XXXXXXXX` placeholders** — most of the ~7187 still-unidentified functions from Phase 2 already exist as correctly-recompiled (if unnamed) code in the fork's `Burnout3RecompLib/x86_func_mapping.cpp`; naming and verifying them is now mostly a documentation/QA task, not new reverse-engineering from scratch.
+3. **Fill in `sub_XXXXXXXX` placeholders** — most of the ~7187 still-unidentified functions from Phase 2 already exist as correctly-recompiled (if unnamed) code in the fork's `Burnout3RecompLib/x86_func_mapping.cpp`; naming and verifying them is now mostly a documentation/QA task, not new reverse-engineering from scratch. (Also true of the current base — see Phase 6 item 3, now via the Burnout 2 cross-reference instead.)
 
-Same fallback principle as below: if a specific piece turns out to be a much bigger rabbit hole than expected, back out, document what was learned, and pick a smaller piece instead of pushing through blind.
+**One concrete win landed here:** the fork's `Burnout3RecompLib` was previously unbuildable from a fresh clone (upstream never committed the generated function bodies); regenerated independently via a from-source build of [shipa-2/XenonRecomp](https://github.com/shipa-2/XenonRecomp) and committed. Kept public for that reason even though it's no longer the active base.
 
 ---
 
