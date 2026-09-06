@@ -645,3 +645,7 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00394100,CB3VehicleDeform,ImpactFlyingBit(CB3VehiclePhysics*,int,float,float),,240
 003949a0,CB3VehicleDeform,DeformBumperLikeThing(EVehicleFlyingBit,EVirtualBoneIndex,EVirtualBoneIndex,EVirtualBoneIndex,float),,224
 003973a0,CB3VehicleDeform,DeformRoof(float,float),,0
+001d9d60,CGtInputManagerPS2Pad2,UnbindFromPort(CGtInputDevicePS2Pad2*,EGtPS2InputPort),,208
+001d9f50,CGtInputManagerPS2Pad2,GetPadControls(EGtPS2InputPort),,192
+001d9ff0,CGtInputManagerPS2Pad2,GetConnectedDeviceID(EGtPS2InputPort),,160
+001da120,CGtInputManagerPS2Pad2,Prepare(),,160
