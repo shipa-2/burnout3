@@ -619,3 +619,9 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00319aa0,CB3CrashCombo,CalcStylePercentage(),,0
 0031a380,CB3CrashCombo,Update(),,144
 0031a3b0,CB3CrashCombo,Release(),,208
+001396f0,CB3TwoPlayerSplitScreenStage,StartReplay(),,208
+00139760,CB3TwoPlayerSplitScreenStage,GetNumLaps(),,176
+001397c0,CB3TwoPlayerSplitScreenStage,Render(),,208
+001398a0,CB3TwoPlayerSplitScreenStage,Update(),,208
+00139b20,CB3TwoPlayerSplitScreenStage,Construct(),,192
+0016ca00,CB3HUDManager,Render(),,224
