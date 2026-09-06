@@ -651,3 +651,8 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001da120,CGtInputManagerPS2Pad2,Prepare(),,160
 0016c990,CB3HUDManager,SetNumPlayers(int),,176
 0016ca70,CB3HUDManager,Release(),,224
+0012fce0,CB3DebugManager,DrawVectorText(const char*,GtMathPs2::CGtV3d,GtMathPs2::CGtMatrix3x4*,float,GtMathPs2::CGtV4d),,192
+001300a0,CB3DebugManager,DrawCross(GtMathPs2::CGtV3d,float,GtMathPs2::CGtV4d),,192
+001301b0,CB3DebugManager,DrawLine(const CGtLine&,GtMathPs2::CGtV4d),,192
+00130320,CB3DebugManager,StopUpdate(void*),,176
+00130430,CB3DebugManager,Update(),,192
