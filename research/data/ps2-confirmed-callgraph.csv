@@ -566,3 +566,4 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0034e9f0,CB3StageLogic,DoRoadRageTooSlowDetection(),,160
 0034f0a0,CB3StageLogic,DamageRaceCar(CB3RaceCar*,CB3RaceCar*,EB3DamageType),,192
 0034f180,CB3StageLogic,CarsBecomeFragileAfterBeingSlammed(),,224
+00133ab0,CB3GameMode,Construct(),,176
