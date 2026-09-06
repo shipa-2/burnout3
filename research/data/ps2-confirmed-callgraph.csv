@@ -554,3 +554,11 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00323dc0,CB3OnlineBuddiesMenuPage,UpdateMainMenu(),,192
 00325130,CB3OnlineBuddiesMenuPage,Prepare(),,160
 0036e440,CGtMalloc,Free(void*),,208
+002d1e20,CB3OnlineLobbyPage,_GetImageSize(GtMathPs2::CGtV2d*,const CGt2dFrame&,const void*),,208
+002d2770,CB3OnlineLobbyPage,CheckCarClassLimit(unsigned long,bool),,192
+002d2880,CB3OnlineLobbyPage,GetCarClass(unsigned long),,192
+002d29c0,CB3OnlineLobbyPage,_BanBuddyCallback(bool,void*),,176
+002d5440,CB3OnlineLobbyPage,UpdateNormalPageMode(),,208
+002d5ba0,CB3OnlineLobbyPage,UpdateNATData(),,176
+002d5ee0,CB3OnlineLobbyPage,ReturnToNormalPageMode(),,256
+002d6a50,CB3OnlineLobbyPage,ChatMessageCallback(char*,char*,void*),,0
