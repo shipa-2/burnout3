@@ -602,3 +602,14 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00152d20,CB3Score,HandleCrashStart(CB3CrashStartInfo*),,192
 00152e10,CB3Score,RegisterNetworkGrinding(CB3RaceCar*),,192
 001564f0,CB3Score,CheckIfNeedRevenge(const CB3Score*) const,,224
+001995f0,CGtFilePS2DVD,Write(const void*,unsigned int),,240
+00199620,CGtFilePS2DVD,Write(const void*,unsigned int),,192
+002cc2d0,CB3MenuChoices,RequestMShowDemoGameMode(),,144
+002cddf0,CB3MenuPageManager,ImmediateLeadOut(EB3MenuFlowFSMEvents),,208
+002cdea0,CB3MenuPageManager,StartLeadOutFore(EB3MenuFlowFSMEvents,bool),,192
+002cdf10,CB3MenuPageManager,StartLeadOut(EB3MenuFlowFSMEvents),,176
+002cdf50,CB3MenuPageManager,SetMenuPage(CB3MenuPageBase*,bool),,208
+002ce640,CB3MenuPageManager,ReleaseCurrentMenu(),,192
+002ce700,CB3MenuPageManager,Prepare(),,160
+002ce7e0,CB3MenuPageManager,Construct(),,192
+002ead60,CB3ChatDisplayComponent,Construct(),,208
