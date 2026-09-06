@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 605 PS2 methods across 238 classes, address-verified
+## Part 1: call-graph crawl — 603 PS2 methods across 238 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -162,9 +162,9 @@ seeds were retained. Two malformed addresses were rejected before recording afte
 they had been created by the batch script rather than independently present in Ghidra's function
 list.
 
-The forty-sixth pass crawled six CB3Score slam, boost, crash, grinding, and revenge methods and reached CB3Burn AddBurn/StopBurn. Eight fresh entries were retained after deduplication.
+The forty-sixth pass crawled six CB3Score slam, boost, crash, grinding, and revenge methods and reached CB3Burn AddBurn/StopBurn. Six fresh entries were retained after deduplication.
 
-The forty-fifth pass crawled seven CB3RacePosition rendering, lifecycle, and setup methods and reached CB3Score::IsAheadOfRoadRage. Eight fresh entries were retained after deduplication.
+The forty-fifth pass crawled seven CB3RacePosition rendering, lifecycle, and setup methods and reached CB3Score::IsAheadOfRoadRage. Six fresh entries were retained after deduplication.
 
 The forty-fourth pass crawled eight CB3InputManager dead-input and menu-control methods. No additional named callees were reached; all eight anchors were independently verified.
 
@@ -176,7 +176,7 @@ The forty-first pass verified the remaining CB3GameMode::Construct() anchor and 
 
 The fortieth pass crawled four CB3StageLogic world, road-rage, damage, and fragility methods and reached ResetCarDamage. Four fresh entries were retained after deduplication.
 
-The thirty-ninth pass crawled eight CB3OnlineLobbyPage image, car-class, NAT, page-mode, and chat methods and reached menu-choice, boost, and profile helpers. Eight fresh entries were retained after deduplication.
+The thirty-ninth pass crawled eight CB3OnlineLobbyPage image, car-class, NAT, page-mode, and chat methods and reached menu-choice, boost, and profile helpers. Six fresh entries were retained after deduplication.
 
 The thirty-eighth pass crawled nine CB3OnlineBuddiesMenuPage callbacks and friend-list update methods and reached boost, spark-bank, input, allocator, and heading helpers. Eleven fresh entries were retained after deduplication.
 
