@@ -523,3 +523,14 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 002f2660,CGtLobbyPS2DirtySock,SendChatMessage(char*),,0
 002f2810,CGtLobbyPS2DirtySock,GetPlayerParams(CGtLobbyJoinGameParams*),,144
 002f2ea0,CGtLobbyPS2DirtySock,JoinLobbyCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*),,256
+0014b140,CB3GameData,GetGameDataThreshold(int*,int*,int*),,224
+0014b1a0,CB3GameData,GetGameDataThreshold(float*,float*,float*),,208
+0014b230,CB3GameData,GetNumSplitTimeCheckpoints(),,144
+0014b580,CB3GameData,Destruct(),,192
+0014b690,CB3GameData,Release(),,192
+0014b820,CB3GameData,Update(),,192
+0014c770,CB3GameData,Construct(),,192
+00159730,CB3StartFinishLine,Prepare(CB3PlanarTriggerStruct*,bool),,144
+0034e060,CB3OfflineStageLogic,OnTakedown(CB3RaceCar*,CB3RaceCar*),,160
+0034e570,CB3OfflineStageLogic,Prepare(),,256
+0034e930,CB3StageLogic,OnPostCrashReset(CB3RaceCarPhysics*),,176
