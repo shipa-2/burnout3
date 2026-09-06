@@ -15,7 +15,8 @@ recorded here, only findings from studying them.
 | Burnout 2: Point of Impact | 2003 | Xbox (x86) | **Yes** — see below |
 | Burnout 3: Takedown | 2004 | Xbox (x86) | (this project's own target) |
 | Burnout 3: Takedown | 2004 | **PlayStation 2** (MIPS), dev build | **Yes, for naming only** — see below |
-| Burnout Revenge | 2006 | **Xbox 360** (PowerPC) | Wrong architecture — see below |
+| Burnout Revenge | 2006 (360 beta) | **Xbox 360** (PowerPC) | Wrong architecture — see below |
+| Burnout Revenge | 2005 (demo), one year earlier | **Original Xbox** (x86) | Same architecture — checked, no source paths, but a surviving tuning-parameter tree — see [burnout-revenge-xbox-tuning.md](burnout-revenge-xbox-tuning.md) |
 | Black | 2005 | Xbox (x86) | No — different naming convention entirely, see below |
 | Burnout Paradise | 2006 | Xbox 360 (PowerPC), pre-alpha | Not investigated further — wrong architecture, not checked |
 

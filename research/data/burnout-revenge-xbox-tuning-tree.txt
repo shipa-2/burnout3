@@ -1,0 +1,198 @@
+AI/Aggressive Driving
+AI/Aggressive Driving/Reactions
+AI/Aggressive Driving/Slam
+AI/Arbitrator
+AI/Avoidance
+AI/Car
+AI/Driver
+AI/Target
+application/x-www-form-urlencoded
+Body Part Deformation/Damage Factors
+Body Part Deformation/Glass Strengths
+Body Part Deformation/Part Strengths
+Body Part Deformation/Random Crumpling Limits
+Body Part Deformation/Wheels
+Camera/Bumper/
+Camera/Follow/
+Camera/Look Back/
+Crash Breakers/Type 0
+Crash Breakers/Type 1
+Crash Breakers/Type 10
+Crash Breakers/Type 2
+Crash Breakers/Type 3
+Crash Breakers/Type 4
+Crash Breakers/Type 5
+Crash Breakers/Type 6
+Crash Breakers/Type 7
+Crash Breakers/Type 8
+Crash Breakers/Type 9
+Crash/HandyCam/
+Data/GlobalDu.bin
+Data/GlobalEn.bin
+Data/GlobalFr.bin
+Data/GlobalGe.bin
+Data/GlobalIt.bin
+Data/GlobalJa.bin
+Data/GlobalSp.bin
+Data/GlobalSw.bin
+Data/Global.txd
+Data/GlobalUs.bin
+Data/HeadDu.bin
+Data/HeadEn.bin
+Data/HeadFr.bin
+Data/HeadGe.bin
+Data/HeadIt.bin
+Data/HeadJa.bin
+Data/HeadSp.bin
+Data/HeadSw.bin
+Data/HeadUs.bin
+Data/PrgData.bin
+Data/stagehed.bin
+Data/vdb.bin
+FakePhysics/BoostKickDown
+FakePhysics/Gear1
+FakePhysics/Gear10
+FakePhysics/Gear2
+FakePhysics/Gear3
+FakePhysics/Gear4
+FakePhysics/Gear5
+FakePhysics/Gear6
+FakePhysics/Gear7
+FakePhysics/Gear8
+FakePhysics/Gear9
+InGame/Effect/Burnout/Angular/
+InGame/Effect/Burnout/Position/
+InGame/Effect/Shake/Angular/
+InGame/Effect/Shake/Position/
+InGame/Effect/Shunt/Angular/
+InGame/Effect/Shunted/Angular/
+InGame/Effect/Shunted/Position/
+InGame/Effect/Shunt/Position/
+InGame/Effect/Slam/Angular/
+InGame/Effect/Slam/Position/
+Language/Fonts/Big.bin
+Language/Fonts/digital.bin
+Language/Fonts/small.bin
+Language/Strings/Main%s.bin
+Left/Right Scale
+Modes/Aggressive Driving
+Modes/Boosting
+Modes/Checking Traffic
+Modes/Crashing
+Modes/Drifting
+Modes/In air
+Modes/Near Miss
+Modes/Normal
+Modes/Oncoming
+Modes/Online Pause
+Modes/Slowmo
+Modes/Spot Duck
+Physics/Aftertouch
+Physics/Aggressive Driving Reaction
+Physics/AI
+Physics/Crashmode Boost Bar
+Physics/Deformation/Body Parts/Glass Strengths/
+Physics/Deformation/Body Parts/Part Strengths/
+Physics/Deformation/Body Parts/Wheels/
+Physics/Deformation/Energy/
+Physics/Deformation/Limits/
+Physics/Deformation/Randomness
+Physics/Deformation/Strength/
+Physics/Drift
+Physics/Race Car/Body Roll
+Physics/Race Car/LSDM
+Physics/Race Car/Misc
+Physics/Shockwave
+Physics/Steering
+Physics/Suspension
+Physics/Suspension/Front
+Physics/Suspension/Rear
+Physics/Transmission/Boost Kick
+Physics/Transmission/Engine
+Physics/Transmission/Gear Ratios
+Physics/Vehicle
+pveh/vlist.bin
+Rumble/Car/Air
+Rumble/Car/Boost
+Rumble/Car/BoostStart
+Rumble/Car/Chain
+Rumble/Car/Explosion
+Rumble/Car/Kerb
+Rumble/Car/Surface
+Rumble/Collision/AIAftertouch
+Rumble/Collision/CarVCar
+Rumble/Collision/CarVTraffic
+Rumble/Collision/CarVWorld
+Rumble/Collision/Crash
+Rumble/Collision/Revenge
+Rumble/Menu
+Score/Boost/Aggressive
+Score/Boost/Air
+Score/Boost/Boost Start
+Score/Boost/Checked Traffic
+Score/Boost/Crash Escape
+Score/Boost/Crashing
+Score/Boost/Drift
+Score/Boost/Near Miss
+Score/Boost/Oncoming
+Score/Boost/Props
+Score/Boost/Takedowns
+Score/BP Categories
+Score/Burnout Points
+Score/CrashBreaker
+Score/Grinding
+Score/PowerSlam
+Score/Shutdown
+Score/Slam
+Score/Tailgating
+Sound/Boost
+Sound/Boost/Feedback1
+Sound/Boost/Feedback2
+Sound/Boost/Feedback3
+Sound/Boost/Jet
+Sound/CheckingTraffic/
+Sound/CheckingTraffic/Skids/
+Sound/Crash
+Sound/Crash/Any car to car
+Sound/CrashingTraffic/Skids/Large
+Sound/CrashingTraffic/Skids/Small
+Sound/Crash/Race car to world
+Sound/Crash/Traffic to world
+Sound/Crowd
+Sound/Deform
+Sound/Doppler
+Sound/DSP/B4XboxFx.bin
+Sound/Esm
+Sound/Glass/Headlights
+Sound/Glass/Windows
+Sound/Glass/Windscreen
+Sound/Hud/Aggressive Driving
+Sound/Hud/General
+Sound/L Train/
+Sound/Misc
+Sound/Misc/Vehicle Volume Tailoff
+Sound/Nudge/Aggressive Driving
+Sound/Nudge/Any car to world
+Sound/Nudge/Checking Traffic
+Sound/Prop/Body parts
+Sound/Prop/Props
+Sound/Pyro/Air rams
+Sound/Pyro/Explosions
+Sound/Radio
+Sound/Remove
+Sound/Scrapes/Car
+Sound/Scrapes/Car/High
+Sound/Scrapes/Car/Low
+Sound/Scrapes/World
+Sound/Scrapes/World/High
+Sound/Scrapes/World/Low
+Sound/Skids
+Sound/Static Passes
+Sound/Static Passes/Boost
+Sound/Static Passes/Global Car Wind
+Sound/Static Passes/Normal
+Sound/Traffic
+Sound/Voice
+Tracks/tlist.bin
+VehicleAudio/Turbo
+Wu/j QP
