@@ -244,3 +244,13 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0037e2d0,CB3CrashScore,CalcPlayerMultiplier(int),,256
 0037e460,CB3CrashScore,CalcCrashCarsScore(int),,240
 0039e6f0,CB3MyBurnoutProfileSavePage,OnKeyboardDone(),,208
+002cfd70,CB3MainMenuState,"Action(EGtStateAction,void*,void*,void*)",,144
+002d8ec0,CB3HeadingComponent,"SetAwardHeadingString(const unsigned short*)",,240
+002eb110,CB3DemoSelectState,"Action(EGtStateAction,void*,void*,void*)",,224
+0031dcc0,CB3StageSelectPage,PrepareChampionshipSelection(int),,176
+0031f0e0,CB3ScoreBonus,OnCrashEscape(int),,176
+00332e00,CB3PlayerCameraStateEditor,"Action(EGtStateAction,void*,void*,void*)",,176
+00357b20,CB3OnlineGameOptionsPage,GenerateRandomJunction(),,144
+003a7600,CB3OnlineEndOfRaceState,"DealWithSecondResultsPageEvent(EGtStateAction,void*,void*,void*)",,208
+003a80b0,CB3OnlineEndOfRaceState,"Action(EGtStateAction,void*,void*,void*)",,256
+003c5f60,CB3MemCardControllerBase,"Save(unsigned int,unsigned short*,int)",,160
