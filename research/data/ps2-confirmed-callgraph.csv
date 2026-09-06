@@ -637,3 +637,11 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 002cc3c0,CB3MenuChoices,RequestPeriodicalGameMode(),,256
 002cdad0,CB3MenuChoices,IsCurrentSelectionCrashMode(),,176
 002cdcd0,CB3MenuChoices,Prepare(),,256
+0038be40,CB3VehicleDeform,RenderClampBoxes(),,144
+0038d670,CB3VehicleDeform,CheckForDeformationRepairing(EVirtualBoneIndex),,224
+0038d7b0,CB3VehicleDeform,AddResidual(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,float),,144
+00391ca0,CB3VehicleDeform,GetPivotPos(EVirtualBoneIndex),,192
+003931f0,CB3VehicleDeform,UpdateFlyingBitsBones(float,float),,144
+00394100,CB3VehicleDeform,ImpactFlyingBit(CB3VehiclePhysics*,int,float,float),,240
+003949a0,CB3VehicleDeform,DeformBumperLikeThing(EVehicleFlyingBit,EVirtualBoneIndex,EVirtualBoneIndex,EVirtualBoneIndex,float),,224
+003973a0,CB3VehicleDeform,DeformRoof(float,float),,0
