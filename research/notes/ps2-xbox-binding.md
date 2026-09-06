@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 185 PS2 methods across 101 classes, address-verified
+## Part 1: call-graph crawl — 206 PS2 methods across 113 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -24,7 +24,7 @@ invocation instead of one per address) and `DecompileAt2.java` (single-address v
 side-by-side comparisons). Both live only in the scratchpad from this session; worth adding to the
 repo's `research/tools/` if this work continues.
 
-**Result**: 185 confirmed `(real PS2 address → Class::method)` pairs across 101 distinct classes.
+**Result**: 206 confirmed `(real PS2 address → Class::method)` pairs across 113 distinct classes.
 Full table: [research/data/ps2-confirmed-callgraph.csv](../data/ps2-confirmed-callgraph.csv). New
 classes beyond what was already known (`CB3AsyncDataLoader`, `CB3InputManager`, `CB3DebugManager`,
 `CB3Game`, `CGtFSM`): `CB3AILane`, `CB3BehaviourOffset`, `CB3Bloom`, `CB3Burn`, `CB3ControllerMapping`,
@@ -83,6 +83,14 @@ provides first method coverage for `CB3StaticTrack`, `CB3RaceFinishedPage`,
 `CB3OnlineLoginToLobbyState`, `CB3CrashAnalyser`, `CB3OnlineOptimatchMenuPage`,
 `CB3Button2dObject`, `CB3SoundDSPDataBlock`, and `CB3SparkRenderer`; 15 previously unseen
 address/name pairs survived deduplication.
+
+The sixth pass reached the online-lobby and SFIO callback branch. It adds three network-login
+callbacks (`SFIOWriteCallback`, `SFIOOpenCallback`, and `SharedNetworkLoginSavePrepare`),
+`CB3OnlineLobbyPage::OnKeyboardShow`, `CB3NetworkManager::ResetDNASStatus`, and both
+`CB3OnlineStage` lifecycle methods. It also identifies `CB3GraphicsManagerBase` viewport/default
+LOD setup, `Gt2dRenderer::EnableZTest`, `CB3MenuChoices::RequestMShowDemoGameMode`, and several
+page/state helpers. This produced 21 fresh address/name pairs across 12 new classes; calls already
+present in the table remained deduplicated.
 
 ## Part 2: binding attempts against Xbox — what worked, what didn't
 

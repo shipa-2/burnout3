@@ -184,3 +184,24 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00342060,CGtSoundManager,StopAll(),,192
 00379480,CB3AwardPresentationState,"Action(EGtStateAction,void*,void*,void*)",,0
 0037be20,CB3PartyCrashSetupState,"Action(EGtStateAction,void*,void*,void*)",,176
+001337d0,CB3GameMode,Destruct(),,192
+00134510,CB3OnlineStage,Release(),,208
+00134600,CB3OnlineStage,Render(),,208
+0016af80,CB3GraphicsManagerBase,SetViewportsSinglePlayer(),,240
+0016b010,CB3GraphicsManagerBase,SetDefaultLODSwitchDistances(),,240
+001dccc0,Gt2dRenderer,EnableZTest(bool),,256
+0022c250,CB3TrafficDataStruct,Fixup(unsigned int),,224
+0022e720,CB3NetworkManager,ResetDNASStatus(),,256
+002cc290,CB3MenuChoices,RequestMShowDemoGameMode(),,208
+002d35d0,CB3OnlineLobbyPage,OnKeyboardShow(),,144
+002ee880,CB3DemoRaceInfoState,"Action(EGtStateAction,void*,void*,void*)",,192
+003097e0,CB3TextComponent,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,c",,208
+00316cc0,CB3SFIOCallbacks,SFIOGetTerritoryCallback(),,224
+00317070,CB3SFIOCallbacks,"SFIOWriteCallback(int,const void*,unsigned int)",,256
+00317330,CB3SFIOCallbacks,"SFIOOpenCallback(const char*,const char*,SFIODeviceE,unsigned int)",,176
+003176e0,CB3SFIOCallbacks,"SharedNetworkLoginSavePrepare(char*,char*)",,160
+00338020,CB3PageTextComponent,HideSelectionBar(),,176
+003793f0,CB3OnePlayerModeSelectState,SetupGameModeSelect(),,256
+0039a3e0,CB3HardCodedCrashStageList,"IsCorrectRegion(EB3TrackRegion,int)",,176
+0039a4a0,CB3HardCodedCrashStageList,"FindCrashStageName(unsigned long)",,160
+0039aa40,CB3HardCodedRaceStageList,"IsChallengeOnThisCircuit(EB3TrackRegion,int,int)",,144
