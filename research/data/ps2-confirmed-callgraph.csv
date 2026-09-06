@@ -543,3 +543,14 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0013bce0,CB3AIAvoidanceMap,CheckVehicle(const GtMathPs2::CGtMatrix3x4&,GtMathPs2::CGtV3d,bool,bool,EAIAvoidanceRisk,const CGtAxisAligne,,208
 0013c190,CB3AIAvoidanceMap,AddCarToMap(EAIAvoidanceRisk,float,float,float,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathP,,208
 0013d4a0,CB3AIAvoidanceMap,Update(bool),,208
+00225e10,CB3SparkArray,CSparkBank::Prepare(),,208
+003216a0,CB3OnlineBuddiesMenuPage,_BuddyRevokeCallback(bool,void*),,0
+003217c0,CB3OnlineBuddiesMenuPage,_SentMailCallback(bool,int,void*),,144
+00321840,CB3OnlineBuddiesMenuPage,_FindUserCallback(bool,void*),,0
+00322200,CB3OnlineBuddiesMenuPage,UpdateBan(),,160
+00322480,CB3OnlineBuddiesMenuPage,UpdateRemove(),,176
+00322af0,CB3OnlineBuddiesMenuPage,UpdateSearch(),,176
+00323a10,CB3OnlineBuddiesMenuPage,UpdateBuddyList(),,192
+00323dc0,CB3OnlineBuddiesMenuPage,UpdateMainMenu(),,192
+00325130,CB3OnlineBuddiesMenuPage,Prepare(),,160
+0036e440,CGtMalloc,Free(void*),,208
