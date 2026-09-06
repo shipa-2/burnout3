@@ -683,3 +683,11 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00151300,CB3ReplaySystem,Prepare(bool),,192
 00151360,CB3ReplaySystem,Construct(),,192
 003239e0,CB3OnlineBuddiesMenuPage,UpdateBuddyList(),,240
+002f1560,CGtLobbyPS2DirtySock,_UsersCountryCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*),,144
+002f1ce0,CGtLobbyPS2DirtySock,ConvertDirtySockError(int),,0
+002f3180,CGtLobbyPS2DirtySock,GetRoomUserIn(char*,bool (*)(bool, char*, char*, int, bool, void*),void*),,256
+002f3570,CGtLobbyPS2DirtySock,SendKeepAlive(),,0
+002f3940,CGtLobbyPS2DirtySock,GetNumPlayersInLobby(),,208
+002f3be0,CGtLobbyPS2DirtySock,ForAllGamesFound(bool (*)(char*, int, int, int, int, int, int, int, int, int, int, int, int, void*),void*,,0
+002f3c90,CGtLobbyPS2DirtySock,SearchForGamesCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*),,256
+002f3e90,CGtLobbyPS2DirtySock,ForAllGames(int,int,int,bool (*)(char*, int, int, int, int, int, int, int, int, int, int, int, int, void*,,144
