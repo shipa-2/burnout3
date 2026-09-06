@@ -751,3 +751,6 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 003393e0,CB3OnlineOptimatchMenuPage,Release(),,224
 0033a140,CB3OnlineOptimatchMenuPage,_GamesListQSortCallback(const void*,const void*),,144
 0033aa00,CB3OnlineOptimatchMenuPage,ForEachNetworkGame(char*,int,int,int,int,int,int,int,int,int,int,int,int,void*),,160
+00134730,CB3OnlineStage,Update(),,208
+00134920,CB3OnlineStage,Prepare(),,208
+00134c40,CB3OnlineStage,Construct(),,208
