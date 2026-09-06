@@ -396,3 +396,13 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00227690,CB3Bloom,SetRenderstates(),,144
 002422b0,CB3SoundCrashManager,DeformRoof(GtMathPs2::CGtV3d,float),,240
 002f12e0,CGtLobbyPS2DirtySock,_UsersStatsCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*),,256
+0014a810,CB3Burn,GetSegmentSizeInBurn(),,160
+0014a8b0,CB3Burn,StopBurn(),,208
+0014a8f0,CB3Burn,StartBurn(CB3RaceCarPhysics*),,208
+0014a990,CB3Burn,SetNumExtraBoostBarSegments(int),,208
+0014aa00,CB3Burn,RemoveSegment(),,208
+0014ab40,CB3Burn,AddSegment(),,208
+0014abf0,CB3Burn,RemoveBurn(float),,208
+0014ac70,CB3Burn,AddBurn(float),,208
+0014ad00,CB3Burn,Update(CB3RaceCar*),,224
+0014ad10,CB3Burn,Release(),,192
