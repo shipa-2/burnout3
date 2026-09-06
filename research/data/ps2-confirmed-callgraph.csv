@@ -576,3 +576,7 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00243890,CB3SoundCrashManager,SmashWindscreen(GtMathPs2::CGtV3d,float,bool),,176
 002466e0,CB3SoundCrashManager,Release(),,240
 00334bb0,CB3ScrapeSystem,Release(),,224
+0012f860,CB3ControllerMapping,Update(),,192
+0012f910,CB3ControllerMapping,Prepare(),,192
+0012f920,CB3ControllerMapping,Construct(unsigned int),,192
+001dd1c0,Gt2dRenderer,SetTextureFilterMode(Gt2dRenderer::EGt2dRendererFilter),,240
