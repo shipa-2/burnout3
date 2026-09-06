@@ -691,3 +691,13 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 002f3be0,CGtLobbyPS2DirtySock,ForAllGamesFound(bool (*)(char*, int, int, int, int, int, int, int, int, int, int, int, int, void*),void*,,0
 002f3c90,CGtLobbyPS2DirtySock,SearchForGamesCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*),,256
 002f3e90,CGtLobbyPS2DirtySock,ForAllGames(int,int,int,bool (*)(char*, int, int, int, int, int, int, int, int, int, int, int, int, void*,,144
+002e7b20,CB3AIAggressionBehaviour,UpdateAggressiveHornBlast(),,224
+002e7bd0,CB3TrafficHullStruct,Fixup(unsigned int),,0
+002e7c40,CB3AIAggressionBehaviour,DoAggressiveHornBlast(EAggressiveHornBlashReason),,160
+002e8150,CB3AIAggressionBehaviour,ClearState(),,0
+002e8260,CB3AIAggressionBehaviour,StopAttacking(bool,bool),,224
+002e8550,CB3AIAggressionBehaviour,MoveToTarget(),,224
+002e8860,CB3AIAggressionBehaviour,UpdateSlam(),,192
+002e90d0,CB3AIAggressionBehaviour,Update(),,0
+002e9fb0,CB3AIAggressionBehaviour,Prepare(CB3AICar*),,256
+003a80d0,CB3OnlineEndOfRaceState,Action(EGtStateAction,void*,void*,void*),,224
