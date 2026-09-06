@@ -326,3 +326,15 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0032fe30,CB3BehaviourInterpolate,Construct(CB3PlayerCameraManager*),,208
 00349760,CB3OnlineCoOpCrashLogic,OnWorldPrepared(),,192
 0039b280,CB3HardCodedVehicleList,"GetRaceVehicleString(int,bool)",,256
+0016c350,CB3HUDImageUVs,"Construct(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&)",,208
+001740a0,CB3NetworkRaceUpdateMessage,"RetrieveCrashingTraffic(unsigned char*,GtMathPs2::CGtMatrix3x4*,GtMathPs2::CGtV3d*,GtMathPs2::CGtV3d*,unsigned char)",,240
+00178df0,CB3CrashActionDirector,"HandleCrashingVehicleWorldCollision(CB3VehiclePhysics*)",,240
+00224f70,CB3SparkRenderer,"CSparkFrameData::Set(const CB3CameraData*,float)",,176
+002b5780,CB3CameraUtils,"CollisionResolveCameraWorld(CB3Viewport*,float,int)",,144
+002c3e50,CB3ShadowMgr,RenderFrontEndShadow(int),,256
+002d95d0,CB3RotatingImage2dObject,"_Render(const CGt2dObject::CGt2dObjectSpace&,const void*)",,208
+0030efb0,CB3BehaviourCluster,Prepare(void*),,160
+0033eca0,CB3Panel2dObject,"_Render(const CGt2dObject::CGt2dObjectSpace&,const void*)",,256
+00373d20,CB3ResultsPage,"RenderStylisedText(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFrame&,const void*)",,160
+0037c840,CB3BehaviourAftermath,"SetRigPosition(CGtCamera*,GtMathPs2::CGtV3d,float,bool)",,144
+0037c890,CB3BehaviourAftermath,IsFinished(),,0
