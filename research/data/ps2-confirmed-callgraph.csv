@@ -727,3 +727,5 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001eb550,CB3GraphicsManager,OpenRenderWare(),,224
 001eb700,CB3GraphicsManager,Prepare(),,208
 001eb800,CB3GraphicsManager,Construct(),,192
+002e0b80,CGtVideoDecoder,Abort(),,160
+002e1620,CGtVideoDecoder,NodataCallback(sceMpeg*,sceMpegCbData*,void*),,192
