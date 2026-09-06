@@ -294,5 +294,16 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00249f70,CB3SoundESMLow,Release(),,240
 002cbff0,CB3MenuComponents,Construct(),,160
 002de3c0,CB3VSelectComponent,"PrepareItem(int,float,bool)",,208
+0014c890,CB3NetworkCar,PrepareSound(),,192
+0016a2f0,CB3WrongWayWall,Prepare(),,192
+0016a9f0,CB3AIArbitrator,Prepare(),,256
+00173e30,CB3NetworkPlayerStartCountdownMessage,"Retrieve(int*,float*,int*)",,224
+002cc260,CB3MenuChoices,RequestMShowDemoGameMode(),,256
+002cc420,CB3TrackMaterial,FixUp(),,224
+003482f0,CB3OfflineRoadRageLogic,"OnRaceCarCollision(ERaceCarCollisionType,CB3RaceCarPhysics*,CB3RaceCarPhysics*,float)",,144
+00348cb0,CB3OnlineCompCrashLogic,"GetGameModeScore(int,const CB3FinishedScore*,int*,int*)",,256
+00349f40,CB3OnlineRoadRageRaceLogic,"OnRaceCarFinished(CB3RaceCar*,EB3ScoreFinishState)",,224
+0034af20,CB3OnlineStageLogic,UpdateAftermath(),,192
+00378860,CB3PostEventRewardsState,"Action(EGtStateAction,void*,void*,void*)",,192
 003a0350,CB3MyBurnoutProgressPage,Prepare(),,208
 003c3550,CB3OnlineUploadResultsPage,Update(),,144
