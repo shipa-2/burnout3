@@ -781,3 +781,7 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 002cad40,CMemoryDevicePS2,GetRunStatus(int),,160
 002cb040,CMemoryDevicePS2,Format(),,160
 002cb0a0,CMemoryDevicePS2,Write(const char*,unsigned int,unsigned int),,224
+00343860,CGtSoundStreamManager,FreeStream(CGtSoundStream*),,160
+00343920,CGtSoundStreamManager,AllocStream(bool),,176
+002f9290,CB3TableComponent,RenderImageAndText(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFrame&,const,,160
+00343ac0,CGtSoundStreamManager,Prepare(void*,int,int),,176
