@@ -746,3 +746,8 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0039a3c0,CB3HardCodedCrashStageList,IsCorrectRegion(EB3TrackRegion,int),,208
 0039a540,CB3HardCodedCrashStageList,Prepare(),,192
 0039a5c0,CB3HardCodedCrashStageList,FindCrashStage(unsigned long),,0
+00338e70,CB3OnlineOptimatchMenuPage,SetMode(int,EB3MenuChoicesOnline),,208
+00339010,CB3OnlineOptimatchMenuPage,SetupTable(),,160
+003393e0,CB3OnlineOptimatchMenuPage,Release(),,224
+0033a140,CB3OnlineOptimatchMenuPage,_GamesListQSortCallback(const void*,const void*),,144
+0033aa00,CB3OnlineOptimatchMenuPage,ForEachNetworkGame(char*,int,int,int,int,int,int,int,int,int,int,int,int,void*),,160
