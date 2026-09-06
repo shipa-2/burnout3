@@ -112,3 +112,15 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0039a4f0,CB3HardCodedCrashStageList,FindCrashStage(unsigned long),,208
 0039a510,CB3HardCodedCrashStageList,FindCrashStage(unsigned long),,176
 0039c1e0,CB3MyBurnoutRecordsState,"Action(EGtStateAction,void*,void*,void*)",,224
+00141c80,CB3AIDriver,CalculateSteerAngle(),,208
+00227680,CB3Bloom,SetRenderstates(),,160
+0022a720,CB3NetworkCarPhysics,Update(float),,144
+00277020,CB3StopJunction,"Update(bool,float)",,208
+0027bcc0,CB3EnvironmentManager,RenderBackdropTexture(),,224
+002ce7f0,CB3MenuPageManager,Construct(),,176
+002cfec0,CB3MenuFlowFSM,SetInitialMenuState(),,208
+002e5580,CB3OnlineJoinGamePage,"Prepare(char*,char*,char*,int,bool)",,144
+002e8c20,CB3AIAggressionBehaviour,FindTarget(),,256
+0031e1e0,CB3StageSelectState,"Action(EGtStateAction,void*,void*,void*)",,256
+0035ea00,CB3ImageVignette2dObject,"_Render(const CGt2dObject::CGt2dObjectSpace&,const void*)",,208
+0039cf40,CB3MyBurnoutProfileLoadPage,"SetMenuOptions(CB3MyBurnoutProfileLoadPage::EMenuOptions,int)",,224

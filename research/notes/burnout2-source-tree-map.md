@@ -136,9 +136,26 @@ macros embed `__FILE__`, so any function with an assert check gets tagged with i
 Only catches functions that actually call `GTASSERT`, so this list is a lower bound per file, not
 exhaustive.)
 
+## Full automated sweep
+
+`research/tools/ghidra-xbe/scripts/BatchSourceFileXrefs.java` now performs the same xref procedure
+for the complete 176-file inventory. It searches each basename, walks back to the start of its
+embedded path (where the code reference points), then records each containing function. The emitted
+evidence is [research/data/burnout2-source-file-xrefs.csv](../data/burnout2-source-file-xrefs.csv):
+1,619 direct string-xref rows, representing 617 distinct function/source-file associations across
+174 source files. `Race/CCheckpoint.cpp` and `Race/CReplay.cpp` have no direct `GTASSERT` xref in
+this build, which is an expected lower-bound result rather than evidence that the files were absent.
+
+Run it against an already-analyzed debug-build Ghidra project as follows:
+
+```bash
+analyzeHeadless <project_dir> <project_name> -process <debug_xbe> -noanalysis \
+  -scriptPath research/tools/ghidra-xbe/scripts \
+  -postScript BatchSourceFileXrefs.java <source-file-list.txt> <output.csv>
+```
+
 ## Next step
 
-Extend this xref-based tagging to the remaining ~170 source files in the list above (not just the
-six checked so far) to build a comprehensive Burnout-2-address → source-file map, then decompile the
-Burnout 3 side of things one subsystem at a time, using the corresponding Burnout 2 function as a
-structural reference rather than starting from raw disassembly. Not yet done for the full file list.
+Use the now-complete lower-bound address-to-source map to decompile the Burnout 3 side one subsystem
+at a time, using the corresponding Burnout 2 function as a structural reference rather than starting
+from raw disassembly.
