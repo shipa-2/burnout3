@@ -562,3 +562,7 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 002d5ba0,CB3OnlineLobbyPage,UpdateNATData(),,176
 002d5ee0,CB3OnlineLobbyPage,ReturnToNormalPageMode(),,256
 002d6a50,CB3OnlineLobbyPage,ChatMessageCallback(char*,char*,void*),,0
+0034e960,CB3StageLogic,OnWorldPrepared(),,192
+0034e9f0,CB3StageLogic,DoRoadRageTooSlowDetection(),,160
+0034f0a0,CB3StageLogic,DamageRaceCar(CB3RaceCar*,CB3RaceCar*,EB3DamageType),,192
+0034f180,CB3StageLogic,CarsBecomeFragileAfterBeingSlammed(),,224
