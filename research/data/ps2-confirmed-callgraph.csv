@@ -759,3 +759,8 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001344b0,CB3OnePlayerStage,Construct(),,176
 001494f0,CB3AITarget,UpdateCurrentSegment(),,208
 00149da0,CB3AITarget,Release(),,208
+00144940,CB3AILane,GetAvgLeftwardsVector(unsigned short,GtMathPs2::CGtV3d*) const,,208
+00144a70,CB3AILane,GetForwardsVector(unsigned short,GtMathPs2::CGtV3d*) const,,208
+00144af0,CB3AILane,GetTotalWidth(unsigned short,unsigned short) const,,208
+00145030,CB3AILane,IsInSegment(GtMathPs2::CGtV3d,unsigned short,float) const,,208
+001453c0,CB3AILane,FindClosestDriveableAILaneSegment(CB3AILane**,unsigned short*,signed char*,GtMathPs2::CGtV3d,signed char),,208
