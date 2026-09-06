@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 771 PS2 methods across 247 classes, address-verified
+## Part 1: call-graph crawl — 770 PS2 methods across 246 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -162,7 +162,7 @@ seeds were retained. Two malformed addresses were rejected before recording afte
 they had been created by the batch script rather than independently present in Ghidra's function
 list.
 
-The seventy-eighth pass verified the unique CB3OnlineRoadRageRaceLogic::OnPostCrashReset() anchor and reached the radial-blur helper. Two fresh entries were retained; shared-address road-rage signatures remain unassigned.
+The seventy-eighth pass verified the unique CB3OnlineRoadRageRaceLogic::OnPostCrashReset() anchor and reached the radial-blur helper. One fresh entry were retained; shared-address road-rage signatures remain unassigned.
 
 The seventy-seventh pass crawled four CGtInputDevicePS2DualShock deadzone, pause, connection, and construct methods and reached Gt2dRenderer::SetTextureAddressMode. Four fresh entries were retained after deduplication.
 
@@ -200,13 +200,13 @@ The sixty-first pass crawled five CB3ReplaySystem header, prepare, and lifecycle
 
 The sixtieth pass verified the final unique CB3AICar::CalcSeparationAlongTrack() anchor. One fresh entry was retained; its vector-heavy body was not used for Xbox naming.
 
-The fifty-ninth pass verified the remaining unique CGtTimer Stop() and GetFrameCount() anchors. Two fresh entries were retained; the other timer map address is shared by multiple signatures and was left ambiguous.
+The fifty-ninth pass verified the remaining unique CGtTimer Stop() and GetFrameCount() anchors. One fresh entry were retained; the other timer map address is shared by multiple signatures and was left ambiguous.
 
 The fifty-eighth pass crawled eight CB3Profile totals, vehicle-usage, profile-name, and prepare methods and reached Evaluate/UnlockAll plus stored/calculated profile-data preparation. Three fresh entries were retained after deduplication.
 
 The fifty-seventh pass crawled eight CB3Profile medal, crash-count, drift, oncoming, and slam-total methods. No additional named callees were reached; all eight anchors were independently verified.
 
-The fifty-sixth pass crawled two CB3Player input/lifecycle methods and reached known controller/profile helpers. Two fresh entries were retained after deduplication.
+The fifty-sixth pass crawled two CB3Player input/lifecycle methods and reached known controller/profile helpers. One fresh entry were retained after deduplication.
 
 The fifty-fifth pass crawled five CB3DebugManager drawing and update methods and reached CB3BehaviourCluster::Interpolate. Four fresh entries were retained; no Xbox labels were inferred from vector-heavy debug rendering.
 
