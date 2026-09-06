@@ -338,3 +338,14 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00373d20,CB3ResultsPage,"RenderStylisedText(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFrame&,const void*)",,160
 0037c840,CB3BehaviourAftermath,"SetRigPosition(CGtCamera*,GtMathPs2::CGtV3d,float,bool)",,144
 0037c890,CB3BehaviourAftermath,IsFinished(),,0
+00146120,CB3AITargetSpline,CalculateSplineVectors(),,208
+00186fb0,CB3RaceCarPhysics,"ApplyNonSpinoutPositionedImpulse(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d)",,160
+0022d2c0,CB3NetworkRaceUpdateMessage,"RetrieveCrashingTraffic(unsigned char*,GtMathPs2::CGtMatrix3x4*,GtMathPs2::CGtV3d*,GtMathPs2::CGtV3d*,unsigned char)",,240
+00249950,CB3HUDSoundManager,Release(),,192
+0024a550,CB3SoundESMHigh,Start(),,208
+002a2a80,CB3BehaviourRaceCarFollow,"Update(CGtCamera*,float)",,192
+002c1b90,CB3PlayerCameraStateReplay,"SetNextCut(CB3PlayerCameraManager*,const CB3CrashCut*)",,176
+002ec8e0,CB3BodyPartPhysics,Update(float),,192
+0030eba0,CB3BehaviourCluster,Interpolate(float),,192
+00333740,CB3BehaviourKeyFrame,"Update(CGtCamera*,float)",,176
+003949b0,CB3VehicleDeform,"DeformBumperLikeThing(EVehicleFlyingBit,EVirtualBoneIndex,EVirtualBoneIndex,EVirtualBoneIndex,float)",,208
