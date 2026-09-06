@@ -162,7 +162,7 @@ seeds were retained. Two malformed addresses were rejected before recording afte
 they had been created by the batch script rather than independently present in Ghidra's function
 list.
 
-The twenty-second pass seeded the controller-mapping input state machine and reached four CGtInputManagerPS2Pad2 methods through verified callees. Eight fresh controller anchors plus four newly discovered input methods were added after address deduplication.
+The twenty-second pass seeded the controller-mapping input state machine and reached four CGtInputManagerPS2Pad2 methods through verified callees. Eight fresh controller anchors plus one newly discovered input method were added after address deduplication.
 
 The twenty-first pass added profile locking, AICar range updates, GameData preparation,
 GraphicsManager video/spheremap setup, network host keepalive, crash-sound preparation, VOptions
