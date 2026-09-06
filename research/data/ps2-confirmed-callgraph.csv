@@ -596,3 +596,9 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00150b80,CB3RacePosition,Prepare(),,256
 00150c40,CB3RacePosition,Construct(),,192
 00156320,CB3Score,IsAheadOfRoadRage(CB3Score*),,224
+001526e0,CB3Score,ConfirmSlam(CB3RaceCarPhysics*,CB3RaceCarPhysics*,float,bool),,192
+00152920,CB3Score,HandleBoostStart(),,192
+00152c60,CB3Score,HandleCrashReset(),,192
+00152d20,CB3Score,HandleCrashStart(CB3CrashStartInfo*),,192
+00152e10,CB3Score,RegisterNetworkGrinding(CB3RaceCar*),,192
+001564f0,CB3Score,CheckIfNeedRevenge(const CB3Score*) const,,224
