@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 357 PS2 methods across 233 classes, address-verified
+## Part 1: call-graph crawl — 366 PS2 methods across 233 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -24,7 +24,7 @@ invocation instead of one per address) and `DecompileAt2.java` (single-address v
 side-by-side comparisons). Both live only in the scratchpad from this session; worth adding to the
 repo's `research/tools/` if this work continues.
 
-**Result**: 357 confirmed `(real PS2 address → Class::method)` pairs across 233 distinct classes.
+**Result**: 366 confirmed `(real PS2 address → Class::method)` pairs across 233 distinct classes.
 Full table: [research/data/ps2-confirmed-callgraph.csv](../data/ps2-confirmed-callgraph.csv). New
 classes beyond what was already known (`CB3AsyncDataLoader`, `CB3InputManager`, `CB3DebugManager`,
 `CB3Game`, `CGtFSM`): `CB3AILane`, `CB3BehaviourOffset`, `CB3Bloom`, `CB3Burn`, `CB3ControllerMapping`,
@@ -161,6 +161,11 @@ behaviour-follow set-car, panel preparation, aftermath stepping, and vehicle-def
 seeds were retained. Two malformed addresses were rejected before recording after the check showed
 they had been created by the batch script rather than independently present in Ghidra's function
 list.
+
+The twenty-first pass added profile locking, AICar range updates, GameData preparation,
+GraphicsManager video/spheremap setup, network host keepalive, crash-sound preparation, VOptions
+update, and CrashNav update. Nine new addresses survived deduplication; StopJunction and
+EnvironmentManager calls were already present.
 
 The nineteenth pass adds behavior-follow/keyframe/cluster updates, AI-target spline calculation,
 camera replay cuts, race-car impulse, network crash retrieval, body-part and vehicle-deform helpers,

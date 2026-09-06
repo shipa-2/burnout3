@@ -344,6 +344,15 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 002ab8f0,CB3BehaviourFlyAround,"SetRaceCar(int,CGtCamera*)",,176
 0033f410,CB3Panel2dObject,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,bool,bool)",,176
 0037c680,CB3BehaviourAftermath,"StepForward(float*,CB3AILane**,unsigned short*,EAISegmentLinkType,float)",,176
+00137340,CB3Profile,LockAll(),,208
+0013ec10,CB3AICar,UpdateOutOfRange(),,208
+0014b910,CB3GameData,Prepare(),,192
+001eb3e0,CB3GraphicsManager,SetVideoModeParams(RwSkyVideoMode*),,224
+001eb9a0,CB3GraphicsManager,PreBuildSpheremapWarpData(),,240
+00230890,CB3NetworkManager,UpdateHostKeepAlive(),,224
+00246e10,CB3SoundCrashManager,Prepare(),,240
+0036fc90,CB3VOptionsSelectComponent,Update(float),,256
+00375440,CB3CrashNavPage,Update(),,208
 0038c460,CB3VehicleDeform,"Reset(CB3VehicleEssentialParams*,CB3VehicleParams*)",,192
 00146120,CB3AITargetSpline,CalculateSplineVectors(),,208
 00186fb0,CB3RaceCarPhysics,"ApplyNonSpinoutPositionedImpulse(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d)",,160
