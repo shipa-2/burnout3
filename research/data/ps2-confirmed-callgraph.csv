@@ -406,3 +406,13 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0014ac70,CB3Burn,AddBurn(float),,208
 0014ad00,CB3Burn,Update(CB3RaceCar*),,224
 0014ad10,CB3Burn,Release(),,192
+00151420,CB3Score,OnTakeDown(CB3RaceCar*),,192
+00151570,CB3Score,OnSlam(CB3RaceCarPhysics*,CB3RaceCarPhysics*,float,bool),,192
+001518f0,CB3Score,OnTradePaint(CB3RaceCarPhysics*,CB3RaceCarPhysics*,float,bool),,192
+00151c20,CB3Score,WasTradingPaintWithinTime(float),,192
+00151ce0,CB3Score,SetNumLives(int),,192
+00151d80,CB3Score,AddScore(int,int),,192
+00151e10,CB3Score,CalculateSlamType(CB3RaceCarPhysics*,CB3RaceCarPhysics*,float),,192
+001521c0,CB3Score,GetCarAtRelativeRacePosition(int),,192
+00152220,CB3Score,ConfirmGrinding(CB3RaceCar*,CB3RaceCar*),,192
+001523e0,CB3Score,ConfirmTradePaint(CB3RaceCarPhysics*,CB3RaceCarPhysics*,float,bool),,192
