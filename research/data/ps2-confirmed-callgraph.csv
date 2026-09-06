@@ -677,3 +677,9 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00199f70,CGtTimer,Stop(),,240
 00335090,CGtTimer,GetFrameCount(),,144
 0013e550,CB3AICar,CalcSeparationAlongTrack(CB3RaceCar*),,256
+00150f50,CB3ReplaySystem,UnpackHeader(),,192
+00150fe0,CB3ReplaySystem,PackHeader(),,192
+00151160,CB3ReplaySystem,Destruct(),,192
+00151300,CB3ReplaySystem,Prepare(bool),,192
+00151360,CB3ReplaySystem,Construct(),,192
+003239e0,CB3OnlineBuddiesMenuPage,UpdateBuddyList(),,240
