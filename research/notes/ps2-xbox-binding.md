@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 703 PS2 methods across 243 classes, address-verified
+## Part 1: call-graph crawl — 702 PS2 methods across 242 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -162,7 +162,7 @@ seeds were retained. Two malformed addresses were rejected before recording afte
 they had been created by the batch script rather than independently present in Ghidra's function
 list.
 
-The sixty-third pass crawled eight CB3AIAggressionBehaviour state, attack, horn, slam, and prepare methods and reached online-join, traffic-hull, and online-end-of-race helpers. Eleven fresh entries were retained after deduplication.
+The sixty-third pass crawled eight CB3AIAggressionBehaviour state, attack, horn, slam, and prepare methods and reached online-join, traffic-hull, and online-end-of-race helpers. Ten fresh entries were retained after deduplication.
 
 The sixty-second pass crawled eight CGtLobbyPS2DirtySock country, error, room, keepalive, player-count, search, and game-enumeration methods and reached bloom, online-crash, menu-FSM, and menu-choice helpers. Eight fresh entries were retained after deduplication.
 
@@ -194,7 +194,7 @@ The forty-ninth pass crawled five CB3TwoPlayerSplitScreenStage replay, lap, rend
 
 The forty-eighth pass crawled six CB3CrashCombo combo-state, pickup, style, update, and lifecycle methods. No additional named callees were reached; all six anchors were independently verified.
 
-The forty-seventh pass crawled seven CB3MenuPageManager FSM, page-switch, and lifecycle methods and reached menu-choice, DVD-write, and chat-display helpers. Eleven fresh entries were retained after deduplication.
+The forty-seventh pass crawled seven CB3MenuPageManager FSM, page-switch, and lifecycle methods and reached menu-choice, DVD-write, and chat-display helpers. Ten fresh entries were retained after deduplication.
 
 The forty-sixth pass crawled six CB3Score slam, boost, crash, grinding, and revenge methods and reached CB3Burn AddBurn/StopBurn. Five fresh entries were retained after deduplication.
 
@@ -212,13 +212,13 @@ The fortieth pass crawled four CB3StageLogic world, road-rage, damage, and fragi
 
 The thirty-ninth pass crawled eight CB3OnlineLobbyPage image, car-class, NAT, page-mode, and chat methods and reached menu-choice, boost, and profile helpers. Five fresh entries were retained after deduplication.
 
-The thirty-eighth pass crawled nine CB3OnlineBuddiesMenuPage callbacks and friend-list update methods and reached boost, spark-bank, input, allocator, and heading helpers. Eleven fresh entries were retained after deduplication.
+The thirty-eighth pass crawled nine CB3OnlineBuddiesMenuPage callbacks and friend-list update methods and reached boost, spark-bank, input, allocator, and heading helpers. Ten fresh entries were retained after deduplication.
 
 The thirty-seventh pass crawled nine CB3AIAvoidanceMap traffic, no-go, crash, and update methods. No additional named callees were reached; all nine anchors were independently verified.
 
-The thirty-sixth pass crawled seven CB3GameData threshold, lifecycle, and update methods and reached start/finish, split-checkpoint, offline-stage, stage-reset, and renderer callees. Eleven fresh entries were retained after deduplication.
+The thirty-sixth pass crawled seven CB3GameData threshold, lifecycle, and update methods and reached start/finish, split-checkpoint, offline-stage, stage-reset, and renderer callees. Ten fresh entries were retained after deduplication.
 
-The thirty-fifth pass crawled ten CGtLobbyPS2DirtySock callback, ranking, chat, and player-parameter methods and reached JoinLobbyCallback plus the input-device update. Eleven fresh entries were retained after deduplication.
+The thirty-fifth pass crawled ten CGtLobbyPS2DirtySock callback, ranking, chat, and player-parameter methods and reached JoinLobbyCallback plus the input-device update. Ten fresh entries were retained after deduplication.
 
 The thirty-fourth pass crawled six CGtNetworkPlayerManager message and host-state methods. No additional named callees were reached; all six anchors were independently verified.
 
@@ -226,9 +226,9 @@ The thirty-third pass crawled nine CB3FrontEnd menu, video, audio, render, and u
 
 The thirty-second pass crawled four CB3RaceCar crash and lifecycle methods and reached CB3AICar::Construct and CB3FinishedScore::Prepare. Four fresh entries were retained after address verification.
 
-The thirty-first pass crawled ten CB3AILane segment and no-go queries and reached GetAvgForwardsVector through a verified lane-vector call. Eleven fresh entries were retained after address verification.
+The thirty-first pass crawled ten CB3AILane segment and no-go queries and reached GetAvgForwardsVector through a verified lane-vector call. Ten fresh entries were retained after address verification.
 
-The thirtieth pass crawled ten CB3AITarget lane-selection and target-position methods and reached CB3AITargetSpline::IsSquareCorner. Eleven fresh entries were retained after address verification.
+The thirtieth pass crawled ten CB3AITarget lane-selection and target-position methods and reached CB3AITargetSpline::IsSquareCorner. Ten fresh entries were retained after address verification.
 
 The twenty-ninth pass crawled ten CB3Profile timestamp, collection, trophy, and completion queries. No additional named callees were reached; all ten anchors were retained after verification.
 
