@@ -205,3 +205,14 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0039a3e0,CB3HardCodedCrashStageList,"IsCorrectRegion(EB3TrackRegion,int)",,176
 0039a4a0,CB3HardCodedCrashStageList,"FindCrashStageName(unsigned long)",,160
 0039aa40,CB3HardCodedRaceStageList,"IsChallengeOnThisCircuit(EB3TrackRegion,int,int)",,144
+002f9300,CB3TableComponent,Release(),,208
+002fb170,CB3PausePage,"UpdateSubStateMakeChoice(CB3ControllerMapping*)",,160
+00309400,CB3OnScreenKeyboardComponent,Construct(),,208
+00309620,CB3TextComponent,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const unsigned short*,float,bool,float,unsigned int",,192
+0030ab70,CB3DNASPage,Prepare(),,240
+00320750,CB3OnlineBuddiesState,"Action(EGtStateAction,void*,void*,void*)",,256
+00332260,CB3CrashResultsPage,Update(),,192
+00337ee0,CB3OnlineCrashRecordsMenuPage,Prepare(int),,176
+003479f0,CB3OfflineLapEliminatorLogic,"OnRaceCarStartNewLap(CB3RaceCar*)",,160
+0036fae0,CB3VOptionsSelectComponent,Release(),,256
+00385ce0,CB3HUDPrimaryMessageHandler,CreateScoreObject(int),,144
