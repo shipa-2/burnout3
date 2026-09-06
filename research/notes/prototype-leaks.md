@@ -33,3 +33,9 @@ Concrete findings (addresses, decompiled logic, which functions correspond to wh
 are fair game to document, same as any other finding in this repo. Two things stay out: the build
 files themselves, and any statement of provenance (filenames, version labels, where/how obtained).
 When citing something found this way, say "an earlier development build" and nothing more specific.
+
+## Index of builds checked
+
+See [prototype-builds-inventory.md](prototype-builds-inventory.md) for the running list of every
+build checked so far, what each was checked *for*, and the outcome — check there before spending
+time re-examining a build that's already been ruled in or out.
