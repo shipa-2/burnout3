@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 286 PS2 methods across 181 classes, address-verified
+## Part 1: call-graph crawl — 297 PS2 methods across 189 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -24,7 +24,7 @@ invocation instead of one per address) and `DecompileAt2.java` (single-address v
 side-by-side comparisons). Both live only in the scratchpad from this session; worth adding to the
 repo's `research/tools/` if this work continues.
 
-**Result**: 286 confirmed `(real PS2 address → Class::method)` pairs across 181 distinct classes.
+**Result**: 297 confirmed `(real PS2 address → Class::method)` pairs across 189 distinct classes.
 Full table: [research/data/ps2-confirmed-callgraph.csv](../data/ps2-confirmed-callgraph.csv). New
 classes beyond what was already known (`CB3AsyncDataLoader`, `CB3InputManager`, `CB3DebugManager`,
 `CB3Game`, `CGtFSM`): `CB3AILane`, `CB3BehaviourOffset`, `CB3Bloom`, `CB3Burn`, `CB3ControllerMapping`,
@@ -129,6 +129,11 @@ The thirteenth pass adds settings/profile page preparation, demo-title state, sc
 buddy mail, offline crash replay, online crash results, and
 `CB3OnlineTurnBasedCrashLogic::GetResultsPageType`. It contributes 11 new pairs; the discovered
 `CB3MenuChoices` call was already present and was deduplicated.
+
+The fourteenth pass added spark-array construction/preparation, race-position and checkpoint/start-
+finish preparation, HUD/menu component setup, low-level sound release, VSelect item preparation,
+and a second verified NAT unregister entry. One malformed seed address was caught before recording
+and intentionally excluded.
 
 ## Part 2: binding attempts against Xbox — what worked, what didn't
 

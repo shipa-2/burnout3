@@ -283,5 +283,16 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 003a3dc0,CB3MyBurnoutSettingsScreenPosPage,Prepare(),,144
 003a44c0,CB3MyBurnoutProfileCreateNewPage,OnKeyboardDone(),,208
 003a9e30,CB3OnlineCrashResultsPage,SetPrompts(unsigned int),,256
+00150920,CB3RacePosition,Update(),,192
+00159520,CB3SplitTimeCheckpoint,Prepare(CB3PlanarTriggerStruct*),,176
+00159720,CB3StartFinishLine,"Prepare(CB3PlanarTriggerStruct*,bool)",,160
+0016bac0,CB3HUDComponent,"Prepare(int,int,int,int,EHUDAlign,int)",,208
+001f21d0,CGtNATDataManager,UnregisterPlayer(int),,192
+00225cb0,CB3SparkArray,Prepare(),,208
+00225d90,CB3SparkArray,Construct(ESparkArrayID),,176
+00225e90,CB3SparkArray,"CSparkBank::Construct(const CB3SparkArrayParams*,bool)",,224
+00249f70,CB3SoundESMLow,Release(),,240
+002cbff0,CB3MenuComponents,Construct(),,160
+002de3c0,CB3VSelectComponent,"PrepareItem(int,float,bool)",,208
 003a0350,CB3MyBurnoutProgressPage,Prepare(),,208
 003c3550,CB3OnlineUploadResultsPage,Update(),,144
