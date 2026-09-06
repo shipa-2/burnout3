@@ -656,3 +656,5 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001301b0,CB3DebugManager,DrawLine(const CGtLine&,GtMathPs2::CGtV4d),,192
 00130320,CB3DebugManager,StopUpdate(void*),,176
 00130430,CB3DebugManager,Update(),,192
+00134c80,CB3Player,ResetLastInputTime(),,192
+00134d80,CB3Player,Construct(int),,192
