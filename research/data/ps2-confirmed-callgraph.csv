@@ -707,3 +707,9 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 003431f0,CGtSoundStream,SetMediaBuffer(void*,int),,208
 00343380,CGtSoundStream,Update(),,0
 00343650,CGtSoundStream,AttachMedia(const char*),,0
+0035ebf0,CB3SatNavComponent,IsCrashJunction(),,192
+0035ede0,CB3SatNavComponent,MoveSelectorLeft(),,224
+0035fb20,CB3SatNavComponent,UpdateTrackOutline(float),,0
+00361b40,CB3SatNavComponent,PrepareCustomLeadIn(),,224
+00362c10,CB3SatNavComponent,UpdateTrackIconsAnim(float),,176
+003644e0,CB3SatNavComponent,Construct(),,0
