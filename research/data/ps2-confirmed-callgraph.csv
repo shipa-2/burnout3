@@ -785,3 +785,5 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00343920,CGtSoundStreamManager,AllocStream(bool),,176
 002f9290,CB3TableComponent,RenderImageAndText(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFrame&,const,,160
 00343ac0,CGtSoundStreamManager,Prepare(void*,int,int),,176
+00250bf0,CB3SoundTurboModel,Release(),,0
+00250f90,CB3SoundCrashedTraffic,UpdateSkidVoices(),,192
