@@ -346,3 +346,7 @@ was negative. The PS2 body loops over sound slots, clears per-slot fields, write
 `0x40800000`, then invokes one cleanup call; Xbox `0x001356a0` instead makes six unrelated-looking
 subsystem calls and has no matching slot loop. The Xbox name remains its prior community label and
 is not counted as a new cross-architecture confirmation.
+
+## Shared-code label audits (September 2026)
+
+Direct decompilation in the Xbox `B3.xbe` Ghidra project rejected several apparent common-code labels. `CGtSoundManager__StopAll` at atlas address `0x001356a0` resolves to function start `0x00135690` whose body selects state tables and updates an object; it does not match the PS2 sound-slot cleanup loop at `0x00342060`. `CGtSoundStream__Play` at `0x001cba10` resolves to `0x001cb9fc`, a parameter/buffer copy helper rather than the PS2 `Play(bool)` method. `CGtVideoDecoder__Update` at `0x001c93d0` resolves to `0x001c938f`, an Xbox HD-key/SHA update routine. `CGtFSM__GetStateFromID` at `0x000146e0` resolves to `0x00014630`, an object/state setup routine. These remain rejected bindings; atlas community labels are not treated as structural evidence.
