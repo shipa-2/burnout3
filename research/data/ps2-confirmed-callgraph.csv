@@ -304,6 +304,15 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00348cb0,CB3OnlineCompCrashLogic,"GetGameModeScore(int,const CB3FinishedScore*,int*,int*)",,256
 00349f40,CB3OnlineRoadRageRaceLogic,"OnRaceCarFinished(CB3RaceCar*,EB3ScoreFinishState)",,224
 0034af20,CB3OnlineStageLogic,UpdateAftermath(),,192
+001505b0,CB3RacePosition,Draw(int),,192
+00150bc0,CB3RacePosition,Prepare(),,192
+0022c1e0,CB3TrafficLanesStruct,Fixup(unsigned int),,192
+0022d900,CB3TrackRenderer,"SetMaterial(const CB3TrackMaterial&)",,208
+0024f290,CB3SoundSkidModelGraph,"CalcVolumeOutput(float,float&) const",,160
+002b7b60,CB3CameraAttribsCar,RegisterVariables(),,160
+002b7d30,CB3CameraAttribsCar,Release(unsigned long),,256
+00309cc0,CB3TableSelectComponent,"Prepare(int,CGt2dObjectTable*,const CB3MenuComponentSelectionData*)",,208
+00334240,CB3NetworkReplayBodyMessage,Retrieve(unsigned char*),,224
 00378860,CB3PostEventRewardsState,"Action(EGtStateAction,void*,void*,void*)",,192
 003a0350,CB3MyBurnoutProgressPage,Prepare(),,208
 003c3550,CB3OnlineUploadResultsPage,Update(),,144
