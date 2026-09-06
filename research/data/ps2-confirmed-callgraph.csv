@@ -633,3 +633,7 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001f2ae0,CGtNATDataManager,NATTestConnectionMessageDeliveredCallback(bool,CGtNetworkMessage*,void*),,240
 001f3370,CGtNATDataManager,SetUpAPortMapping(int,int),,240
 001f3390,CGtNATDataManager,SetUpAPortMapping(int,int),,208
+002cc2c0,CB3MenuChoices,RequestMShowDemoGameMode(),,160
+002cc3c0,CB3MenuChoices,RequestPeriodicalGameMode(),,256
+002cdad0,CB3MenuChoices,IsCurrentSelectionCrashMode(),,176
+002cdcd0,CB3MenuChoices,Prepare(),,256
