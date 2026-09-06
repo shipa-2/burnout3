@@ -506,3 +506,9 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00133a90,CB3GameMode,Construct(),,208
 002d4610,CB3OnlineLobbyPage,Release(),,224
 00337160,CB3OnlineRecordsDisplayMenuPage,UpdateWaitForCurrentUserCountry(),,192
+001f6250,CGtNetworkPlayerManager,IsPlayerListValid(),,176
+001f6400,CGtNetworkPlayerManager,CheckForNack(CGtNetworkMessage*),,256
+001f67b0,CGtNetworkPlayerManager,MessageIsDuplicate(CGtNetworkMessage*),,224
+001f6920,CGtNetworkPlayerManager,ThrowAwayMessage(CGtNetworkMessage*,int,int),,256
+001f6c70,CGtNetworkPlayerManager,FinaliseNATData(float,float,int),,0
+001f6ef0,CGtNetworkPlayerManager,ReceiveMessages(),,240
