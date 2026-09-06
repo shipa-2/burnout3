@@ -457,3 +457,13 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001fc440,CB3NetworkPlayer,GetName() const,,240
 0023e850,CB3SoundCrashManager,CarCrash(GtMathPs2::CGtV3d,float),,224
 002a29a0,CB3BehaviourOffset,Construct(EB3BehaviourType,int),,224
+00135480,CB3Profile,UpdateProfile(EChallengeMedal,int),,208
+001360e0,CB3Profile,WillTrophyBeUnlockedAtTheEndOfTheRace(int),,208
+00137e60,CB3Profile,GetTimeStamp(),,208
+00137eb0,CB3Profile,SetTimeStamp(),,144
+00137f30,CB3Profile,GetCollectedTrophyCount(),,144
+00137f80,CB3Profile,GetFavouriteVehicleID(),,0
+00137ff0,CB3Profile,GetCollectedCarCount(),,0
+00138070,CB3Profile,GetCollectedCheatCount(),,192
+00138110,CB3Profile,IsSignatureTakedownComplete(int),,160
+00138190,CB3Profile,IsSpecialEventComplete(int),,0
