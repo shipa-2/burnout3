@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 317 PS2 methods across 204 classes, address-verified
+## Part 1: call-graph crawl — 327 PS2 methods across 214 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -24,7 +24,7 @@ invocation instead of one per address) and `DecompileAt2.java` (single-address v
 side-by-side comparisons). Both live only in the scratchpad from this session; worth adding to the
 repo's `research/tools/` if this work continues.
 
-**Result**: 317 confirmed `(real PS2 address → Class::method)` pairs across 204 distinct classes.
+**Result**: 327 confirmed `(real PS2 address → Class::method)` pairs across 214 distinct classes.
 Full table: [research/data/ps2-confirmed-callgraph.csv](../data/ps2-confirmed-callgraph.csv). New
 classes beyond what was already known (`CB3AsyncDataLoader`, `CB3InputManager`, `CB3DebugManager`,
 `CB3Game`, `CGtFSM`): `CB3AILane`, `CB3BehaviourOffset`, `CB3Bloom`, `CB3Burn`, `CB3ControllerMapping`,
@@ -144,6 +144,11 @@ The sixteenth pass adds race-position draw/prepare, traffic-lane fixup, track-ma
 sound-skid volume calculation, camera-attrib registration/release, table-select preparation, and
 network-replay retrieval. Nine fresh seeds were recorded; the duplicate online-results seed was
 omitted.
+
+The seventeenth pass adds traffic axle/lane helpers, inactive camera state, radial-blur and corona
+array lifecycle, vehicle-reflectivity release, body-part construction, behaviour-interpolation
+construction, online co-op crash preparation, and the hard-coded vehicle-name lookup. Ten seeds were
+new; the two mapped callees were already recorded.
 
 ## Part 2: binding attempts against Xbox — what worked, what didn't
 

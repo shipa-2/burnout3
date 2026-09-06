@@ -316,3 +316,13 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00378860,CB3PostEventRewardsState,"Action(EGtStateAction,void*,void*,void*)",,192
 003a0350,CB3MyBurnoutProgressPage,Prepare(),,208
 003c3550,CB3OnlineUploadResultsPage,Update(),,144
+0015a870,CB3TrafficAxle,InitalisePosition(CB3TrafficVehicle*),,176
+0015b400,CB3TrafficLane,"DoesNeighbourExist(int,ESegmentNeighbourTypes)",,208
+002a74b0,CB3PlayerCameraStateInactive,"Action(EGtStateAction,void*,void*,void*)",,208
+002b9900,CB3RadialBlur,"Downsample(unsigned long,unsigned long,unsigned long,unsigned long,int,int,int,int)",,144
+002c8140,CB3CoronaDynamicArray,EndUpdate(),,240
+002ca370,CB3VehicleReflectivityData,Release(),,192
+002ecf30,CB3BodyPartPhysics,Construct(),,208
+0032fe30,CB3BehaviourInterpolate,Construct(CB3PlayerCameraManager*),,208
+00349760,CB3OnlineCoOpCrashLogic,OnWorldPrepared(),,192
+0039b280,CB3HardCodedVehicleList,"GetRaceVehicleString(int,bool)",,256
