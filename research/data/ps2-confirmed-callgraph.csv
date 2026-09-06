@@ -216,3 +216,14 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 003479f0,CB3OfflineLapEliminatorLogic,"OnRaceCarStartNewLap(CB3RaceCar*)",,160
 0036fae0,CB3VOptionsSelectComponent,Release(),,256
 00385ce0,CB3HUDPrimaryMessageHandler,CreateScoreObject(int),,144
+0014af60,CB3Burn,Construct(),,208
+001578d0,CB3FinishedScore,Prepare(int),,176
+00251350,CB3SoundCrashedTraffic,StartBassVoices(),,256
+002adae0,CB3SoundRaceCarManager,RequestRaceCar(EB3RaceCarType),,240
+00319d70,CB3CrashCombo,"OnCrashStart(const CB3CrashStartInfo*)",,208
+00319ff0,CB3CrashCombo,UpdateCollidingPairs(),,208
+0031a1d0,CB3CrashCombo,ResetData(),,144
+00335150,CB3OnlineTrackRecordsMenuPage,Update(),,240
+0034e580,CB3OfflineStageLogic,Prepare(),,240
+00350130,CB3OnlineOpenLobbyPage,OnKeyboardCancel(),,240
+003765e0,CB3PostEventPage,Prepare(bool),,144
