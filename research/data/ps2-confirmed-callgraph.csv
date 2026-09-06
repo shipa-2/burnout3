@@ -773,3 +773,8 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001d9020,CGtUnicode,PrintReal(unsigned short*,float,int),,224
 001d91f0,CGtUnicode,PrintInt(unsigned short*,int,int),,256
 001d94c0,CGtUnicode,CopyN(unsigned short*,int,const unsigned short*),,160
+001d84f0,CGTFileSystem,FTell(void*),,208
+001d8620,CGTFileSystem,FFlush(void*),,0
+001d86f0,CGTFileSystem,FRead(void*,unsigned int,unsigned int,void*),,144
+001d89e0,CGTFileSystem,Init(unsigned int,const char*),,0
+001d8ab0,CGTFileSystem,SetAsDefaultFilesystem(),,0
