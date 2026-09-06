@@ -736,3 +736,8 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 002f4ec0,CGtLobbyPS2DirtySock,PersonaLoggedInCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*),,256
 002f5740,CGtLobbyPS2DirtySock,CheckGameStillExists(),,240
 002f63a0,CGtLobbyPS2DirtySock,ChatCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*),,160
+0024d2d0,CB3SoundAICar,StartBassVoices(),,176
+0024d430,CB3SoundAICar,Register(unsigned long),,160
+0024d4e0,CB3SoundAICar,Destruct(),,144
+0024d760,CB3SoundAICar,Prepare(unsigned long,int),,240
+0024d9b0,CB3SoundAICar,Construct(),,0
