@@ -721,3 +721,9 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00315d90,CGtBuddiesPS2DirtySock,ConvertHLBError(int),,0
 00316400,CGtBuddiesPS2DirtySock,BanBuddy(char*,void (*)(bool, void*),void*),,144
 00316970,CGtBuddiesPS2DirtySock,GetNumBuddies(),,224
+001e74c0,CB3GraphicsManager,GetVBlankCount(),,256
+001eb0b0,CB3GraphicsManager,OpenViewport(EB3ViewportSelection),,144
+001eb1c0,CB3GraphicsManager,RenderFullScreenSpecular(GtMathPs2::CGtV3d,float,bool),,208
+001eb550,CB3GraphicsManager,OpenRenderWare(),,224
+001eb700,CB3GraphicsManager,Prepare(),,208
+001eb800,CB3GraphicsManager,Construct(),,192
