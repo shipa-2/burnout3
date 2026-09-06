@@ -713,3 +713,11 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00361b40,CB3SatNavComponent,PrepareCustomLeadIn(),,224
 00362c10,CB3SatNavComponent,UpdateTrackIconsAnim(float),,176
 003644e0,CB3SatNavComponent,Construct(),,0
+003098a0,CB3TextComponent,Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,c,,208
+00309a70,CB3TextComponent,Construct(),,0
+00309d20,CB3TableSelectComponent,Construct(),,208
+0030a230,CB3ConnectionAnimationComponent,Construct(),,192
+00315b00,CGtBuddiesPS2DirtySock,BuddyInviteRevoke(char*,void (*)(bool, void*),void*),,192
+00315d90,CGtBuddiesPS2DirtySock,ConvertHLBError(int),,0
+00316400,CGtBuddiesPS2DirtySock,BanBuddy(char*,void (*)(bool, void*),void*),,144
+00316970,CGtBuddiesPS2DirtySock,GetNumBuddies(),,224
