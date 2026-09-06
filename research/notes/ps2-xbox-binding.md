@@ -162,6 +162,8 @@ seeds were retained. Two malformed addresses were rejected before recording afte
 they had been created by the batch script rather than independently present in Ghidra's function
 list.
 
+The twenty-third pass seeded CB3Game and CB3StageLogic lifecycle/state methods and found twelve additional named callees, including progression, async-loader, graphics, renderer, burn, and lobby callbacks.
+
 The twenty-second pass seeded the controller-mapping input state machine and reached four CGtInputManagerPS2Pad2 methods through verified callees. Eight fresh controller anchors plus one newly discovered input method were added after address deduplication.
 
 The twenty-first pass added profile locking, AICar range updates, GameData preparation,

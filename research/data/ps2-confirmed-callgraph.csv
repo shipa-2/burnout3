@@ -374,3 +374,25 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0012f720,CB3ControllerMapping,GetPadControl(EGtPS2DualShockDeviceControl,bool),,192
 0012f7d0,CB3ControllerMapping,AnyInput(),,192
 001d9eb0,CGtInputManagerPS2Pad2,SetPause(bool),,224
+001003a0,std,exception::what() const,,176
+001303f0,CB3DebugManager,Destruct(),,192
+00131300,CB3Game,IsInChampionship(),,192
+001314a0,CB3Game,IsSimulationPaused(),,192
+001314d0,CB3Game,UpdatePostSimulation(),,192
+00131600,CB3Game,UpdateSimulation(),,192
+001317a0,CB3Game,UpdatePreSimulation(),,192
+001319c0,CB3Game,Destruct(),,192
+00131ae0,CB3Game,Release(),,192
+00131b60,CB3Game,Update(),,192
+00133710,CB3StageLogic,IsRoadRage(),,0
+001337c0,CB3StageLogic,AllResultsAreIn(),,0
+001396c0,CB3ProgressionManager,Destruct(),,208
+001396d0,CB3ProgressionManager,Destruct(),,192
+00139f10,CB3AsyncDataLoader,Destruct(),,208
+0014af70,CB3Burn,Construct(),,192
+0016b050,CB3GraphicsManagerBase,SetDefaultLODSwitchDistances(),,176
+001e44f0,CB3VehicleRenderer,FrustumTestDamagedVehicle(CB3VehicleEssentialParams*,CB3VehicleParams*),,240
+001e46f0,CB3VehicleRenderer,FixUpVehicleData(CB3VehicleData*),,144
+00227690,CB3Bloom,SetRenderstates(),,144
+002422b0,CB3SoundCrashManager,DeformRoof(GtMathPs2::CGtV3d,float),,240
+002f12e0,CGtLobbyPS2DirtySock,_UsersStatsCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*),,256
