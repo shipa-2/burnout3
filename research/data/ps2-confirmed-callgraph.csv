@@ -338,6 +338,13 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00373d20,CB3ResultsPage,"RenderStylisedText(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned short*,const CGt2dFrame&,const void*)",,160
 0037c840,CB3BehaviourAftermath,"SetRigPosition(CGtCamera*,GtMathPs2::CGtV3d,float,bool)",,144
 0037c890,CB3BehaviourAftermath,IsFinished(),,0
+00146c60,CB3AITargetSpline,Prepare(CB3AICar*),,208
+001e46a0,CB3VehicleRenderer,FixUpVehicleData(CB3VehicleData*),,224
+00201e20,CB3Fog,GenerateClut(float,float),,176
+002ab8f0,CB3BehaviourFlyAround,"SetRaceCar(int,CGtCamera*)",,176
+0033f410,CB3Panel2dObject,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,bool,bool)",,176
+0037c680,CB3BehaviourAftermath,"StepForward(float*,CB3AILane**,unsigned short*,EAISegmentLinkType,float)",,176
+0038c460,CB3VehicleDeform,"Reset(CB3VehicleEssentialParams*,CB3VehicleParams*)",,192
 00146120,CB3AITargetSpline,CalculateSplineVectors(),,208
 00186fb0,CB3RaceCarPhysics,"ApplyNonSpinoutPositionedImpulse(GtMathPs2::CGtV3d,GtMathPs2::CGtV3d)",,160
 0022d2c0,CB3NetworkRaceUpdateMessage,"RetrieveCrashingTraffic(unsigned char*,GtMathPs2::CGtMatrix3x4*,GtMathPs2::CGtV3d*,GtMathPs2::CGtV3d*,unsigned char)",,240
