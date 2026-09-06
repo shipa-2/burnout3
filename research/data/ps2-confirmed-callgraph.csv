@@ -778,3 +778,6 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001d86f0,CGTFileSystem,FRead(void*,unsigned int,unsigned int,void*),,144
 001d89e0,CGTFileSystem,Init(unsigned int,const char*),,0
 001d8ab0,CGTFileSystem,SetAsDefaultFilesystem(),,0
+002cad40,CMemoryDevicePS2,GetRunStatus(int),,160
+002cb040,CMemoryDevicePS2,Format(),,160
+002cb0a0,CMemoryDevicePS2,Write(const char*,unsigned int,unsigned int),,224
