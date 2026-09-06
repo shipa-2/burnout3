@@ -674,3 +674,5 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00138ab0,CB3Profile,GetBurnoutPointTotal(),,176
 00138ac0,CB3Profile,IncreaseBurnoutPointTotal(unsigned int),,176
 00138ba0,CB3Profile,Prepare(),,208
+00199f70,CGtTimer,Stop(),,240
+00335090,CGtTimer,GetFrameCount(),,144
