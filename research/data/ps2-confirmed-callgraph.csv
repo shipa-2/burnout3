@@ -272,5 +272,16 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 003a0500,CB3MyBurnoutRecordsPage,Update(),,208
 003a7410,CB3RewardImageComponent,"GetUnlockedRewardString(EB3RewardImageType,int)",,224
 00332600,CB3CameraEditor,"LoadMungedKeyFrames(void*,EB3KeyFrameType)",,176
+002f10d0,CB3DemoTitleScreenPage,Prepare(),,240
+0031c2d0,CB3BuddyDisplayComponent,SendingMail(char*),,144
+003350d0,CB3ScrapeRenderer,Construct(),,192
+003478b0,CB3OfflineBurningLapLogic,Prepare(),,144
+0034c1a0,CB3OnlineTurnBasedCrashLogic,GetResultsPageType(),,240
+0034cc40,CB3OfflineSingleCrashLogic,StartReplay(),,144
+0037c490,CB3OPMDemoTitleScreenState,"Action(EGtStateAction,void*,void*,void*)",,240
+003a3610,CB3MyBurnoutSettingsControllerPage,Prepare(),,208
+003a3dc0,CB3MyBurnoutSettingsScreenPosPage,Prepare(),,144
+003a44c0,CB3MyBurnoutProfileCreateNewPage,OnKeyboardDone(),,208
+003a9e30,CB3OnlineCrashResultsPage,SetPrompts(unsigned int),,256
 003a0350,CB3MyBurnoutProgressPage,Prepare(),,208
 003c3550,CB3OnlineUploadResultsPage,Update(),,144
