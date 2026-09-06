@@ -754,3 +754,6 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00134730,CB3OnlineStage,Update(),,208
 00134920,CB3OnlineStage,Prepare(),,208
 00134c40,CB3OnlineStage,Construct(),,208
+00133bd0,CB3OnePlayerStage,Render(),,208
+001341c0,CB3OnePlayerStage,Update(),,208
+001344b0,CB3OnePlayerStage,Construct(),,176
