@@ -512,3 +512,14 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001f6920,CGtNetworkPlayerManager,ThrowAwayMessage(CGtNetworkMessage*,int,int),,256
 001f6c70,CGtNetworkPlayerManager,FinaliseNATData(float,float,int),,0
 001f6ef0,CGtNetworkPlayerManager,ReceiveMessages(),,240
+002f1300,CGtLobbyPS2DirtySock,_UsersStatsCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*),,224
+002f1510,CGtLobbyPS2DirtySock,_UsersCountryCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*),,224
+002f15e0,CGtLobbyPS2DirtySock,GetUsersCountry(const char*,bool (*)(bool, char*, void*),void*),,208
+002f1950,CGtLobbyPS2DirtySock,RetrieveRankingListUser(int,int,int,int),,160
+002f1a40,CGtLobbyPS2DirtySock,RetrieveRankingList(int,int,int,int,int),,224
+002f1b70,CGtLobbyPS2DirtySock,ReleaseRanking(),,208
+002f1c20,CGtLobbyPS2DirtySock,ConvertDirtySockError(int),,192
+002f24c0,CGtLobbyPS2DirtySock,GetCurrentLobbyName(),,144
+002f2660,CGtLobbyPS2DirtySock,SendChatMessage(char*),,0
+002f2810,CGtLobbyPS2DirtySock,GetPlayerParams(CGtLobbyJoinGameParams*),,144
+002f2ea0,CGtLobbyPS2DirtySock,JoinLobbyCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*),,256
