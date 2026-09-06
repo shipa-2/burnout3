@@ -625,3 +625,11 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001398a0,CB3TwoPlayerSplitScreenStage,Update(),,208
 00139b20,CB3TwoPlayerSplitScreenStage,Construct(),,192
 0016ca00,CB3HUDManager,Render(),,224
+001f21b0,CGtNATDataManager,UnregisterPlayer(int),,224
+001f22a0,CGtNATDataManager,RegisterNewPlayer(int),,192
+001f2430,CGtNATDataManager,GetEntry(int),,0
+001f28f0,CGtNATDataManager,RegisterMessageTypes(int),,192
+001f2a30,CGtNATDataManager,ResetFinaliseNATDataVariables(),,208
+001f2ae0,CGtNATDataManager,NATTestConnectionMessageDeliveredCallback(bool,CGtNetworkMessage*,void*),,240
+001f3370,CGtNATDataManager,SetUpAPortMapping(int,int),,240
+001f3390,CGtNATDataManager,SetUpAPortMapping(int,int),,208
