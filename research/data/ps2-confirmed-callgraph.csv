@@ -426,3 +426,15 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00249840,CB3HUDSoundManager,Shunt(GtMathPs2::CGtV3d,CB3RaceCarPhysics*,CB3RaceCarPhysics*),,160
 00249940,CB3HUDSoundManager,Release(),,208
 002499d0,CB3HUDSoundManager,Update(),,144
+00140c90,CB3AIDriver,CalcCatchupSpeed(float),,208
+00140e60,CB3AIDriver,CalcSpeedMatchSpeed(float),,208
+00141370,CB3AIDriver,GetCurrentMaxSpeed(),,208
+001414a0,CB3AIDriver,GetCurrentMinSpeed(),,208
+001415d0,CB3AIDriver,GenerateProfile(),,208
+00141940,CB3AIDriver,CalcDifficultyIndex(),,208
+00141ab0,CB3AIDriver,CalculateDesiredSpeed(),,208
+001422c0,CB3AIDriver,CheckForDrift(),,208
+001425a0,CB3AIDriver,Release(),,208
+001425d0,CB3AIDriver,Update(),,208
+0014b1d0,CB3GameData,GetNumLaps(),,208
+0016a3d0,CB3AIArbitrator,CalculateCatchup(),,224
