@@ -741,3 +741,8 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0024d4e0,CB3SoundAICar,Destruct(),,144
 0024d760,CB3SoundAICar,Prepare(unsigned long,int),,240
 0024d9b0,CB3SoundAICar,Construct(),,0
+0039a100,CB3HardCodedCrashStageList,GetNumUnlockedVariantsOnThisJunction(EB3TrackRegion,int,int),,144
+0039a120,CB3HardCodedCrashStageList,GetCrashStageTrackID(unsigned long),,0
+0039a3c0,CB3HardCodedCrashStageList,IsCorrectRegion(EB3TrackRegion,int),,208
+0039a540,CB3HardCodedCrashStageList,Prepare(),,192
+0039a5c0,CB3HardCodedCrashStageList,FindCrashStage(unsigned long),,0

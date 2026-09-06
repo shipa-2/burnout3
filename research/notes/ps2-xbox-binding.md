@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 742 PS2 methods across 245 classes, address-verified
+## Part 1: call-graph crawl — 747 PS2 methods across 246 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -161,6 +161,8 @@ behaviour-follow set-car, panel preparation, aftermath stepping, and vehicle-def
 seeds were retained. Two malformed addresses were rejected before recording after the check showed
 they had been created by the batch script rather than independently present in Ghidra's function
 list.
+
+The seventy-first pass crawled six CB3HardCodedCrashStageList lookup/region/prepare anchors (with one shared address kept as a single verified entry) and reached input/menu-choice helpers. Five fresh entries were retained after deduplication.
 
 The seventieth pass crawled five CB3SoundAICar bass-voice, registration, prepare, construct, and destructor methods and reached HUD sound, sound-manager, and ESM-high helpers. Five fresh entries were retained after deduplication.
 
