@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 731 PS2 methods across 245 classes, address-verified
+## Part 1: call-graph crawl — 728 PS2 methods across 244 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -162,7 +162,7 @@ seeds were retained. Two malformed addresses were rejected before recording afte
 they had been created by the batch script rather than independently present in Ghidra's function
 list.
 
-The sixty-seventh pass crawled six CB3GraphicsManager vblank, viewport, render, RenderWare, prepare, and construct methods and reached video-mode and controller helpers. Nine fresh entries were retained after deduplication.
+The sixty-seventh pass crawled six CB3GraphicsManager vblank, viewport, render, RenderWare, prepare, and construct methods and reached video-mode and controller helpers. Six fresh entries were retained after deduplication.
 
 The sixty-sixth pass crawled four CGtBuddiesPS2DirtySock invite, error, ban, and buddy-count methods and reached table/text/connection-animation, bloom, and graphics helpers. Eight fresh entries were retained after deduplication.
 
