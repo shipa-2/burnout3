@@ -567,3 +567,12 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0034f0a0,CB3StageLogic,DamageRaceCar(CB3RaceCar*,CB3RaceCar*,EB3DamageType),,192
 0034f180,CB3StageLogic,CarsBecomeFragileAfterBeingSlammed(),,224
 00133ab0,CB3GameMode,Construct(),,176
+0023bd00,CB3SoundCrashManager,SetPlayerCarSpeed(float),,208
+0023dfc0,CB3SoundCrashManager,DetachLargeBodyPart(GtMathPs2::CGtV3d,float),,256
+00242770,CB3SoundCrashManager,CarToCar(GtMathPs2::CGtV3d*,float,const CB3CollidingPair*),,144
+002429d0,CB3SoundCrashManager,BodyPartImpact(bool,EVehicleFlyingBit,GtMathPs2::CGtV3d,float),,0
+00242a50,CB3SoundCrashManager,PropImpact(bool,EB3PropType,GtMathPs2::CGtV3d,float),,192
+00242dd0,CB3SoundCrashManager,PayLoadImpact(bool,CB3BodyPartPhysics*,float),,0
+00243890,CB3SoundCrashManager,SmashWindscreen(GtMathPs2::CGtV3d,float,bool),,176
+002466e0,CB3SoundCrashManager,Release(),,240
+00334bb0,CB3ScrapeSystem,Release(),,224
