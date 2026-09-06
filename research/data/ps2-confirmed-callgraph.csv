@@ -787,3 +787,5 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00343ac0,CGtSoundStreamManager,Prepare(void*,int,int),,176
 00250bf0,CB3SoundTurboModel,Release(),,0
 00250f90,CB3SoundCrashedTraffic,UpdateSkidVoices(),,192
+002c46c0,CGtInputManagerPS2Keyboard,Construct(int,int),,224
+002c3e50,CB3ShadowMgr,RenderFrontEndShadow(int),,256
