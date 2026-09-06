@@ -438,3 +438,22 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001425d0,CB3AIDriver,Update(),,208
 0014b1d0,CB3GameData,GetNumLaps(),,208
 0016a3d0,CB3AIArbitrator,CalculateCatchup(),,224
+0013e580,CB3AICar,CalcSeparationAlongTrack(CB3RaceCar*),,208
+0013e660,CB3AICar,CalcSeparationAcrossTrack(CB3RaceCar*),,208
+0013e790,CB3AICar,OnSetActive(bool),,208
+0013e8e0,CB3AICar,ResetCarInSlice(int,GtMathPs2::CGtMatrix3x4*),,208
+0013ea30,CB3AICar,UpdateAICheckpoint(),,208
+0013eb80,CB3AICar,PrepareSound(),,208
+00140130,CB3AICar,SetAIInRange(),,208
+001401e0,CB3AICar,SetAIOutOfRange(),,176
+001407d0,CB3AICar,Release(),,208
+00140810,CB3AICar,Update(),,208
+0014cfa0,CB3RaceCar,OnSetActive(bool),,192
+0014d0b0,CB3RaceCar,SetActive(bool),,192
+0014ddd0,CB3RaceCar,PrepareSound(),,192
+0014e200,CB3RaceCar,Release(),,192
+001529d0,CB3Score,HandlePropHit(),,192
+0017d2c0,CB3PhysicsManager,WorldSafeBodyTranslations(CB3CollidingPair*,GtMathPs2::CGtV3d*,GtMathPs2::CGtV3d*),,240
+001fc440,CB3NetworkPlayer,GetName() const,,240
+0023e850,CB3SoundCrashManager,CarCrash(GtMathPs2::CGtV3d,float),,224
+002a29a0,CB3BehaviourOffset,Construct(EB3BehaviourType,int),,224
