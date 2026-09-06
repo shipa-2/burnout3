@@ -649,3 +649,5 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001d9f50,CGtInputManagerPS2Pad2,GetPadControls(EGtPS2InputPort),,192
 001d9ff0,CGtInputManagerPS2Pad2,GetConnectedDeviceID(EGtPS2InputPort),,160
 001da120,CGtInputManagerPS2Pad2,Prepare(),,160
+0016c990,CB3HUDManager,SetNumPlayers(int),,176
+0016ca70,CB3HUDManager,Release(),,224
