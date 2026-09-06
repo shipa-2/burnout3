@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 756 PS2 methods across 246 classes, address-verified
+## Part 1: call-graph crawl — 755 PS2 methods across 245 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -162,7 +162,7 @@ seeds were retained. Two malformed addresses were rejected before recording afte
 they had been created by the batch script rather than independently present in Ghidra's function
 list.
 
-The seventy-third pass verified three unique CB3OnlineStage update/prepare/construct anchors and reached CB3GameMode::Construct(); ambiguous shared GetNumLaps/StartReplay address was excluded. Four fresh entries were retained.
+The seventy-third pass verified three unique CB3OnlineStage update/prepare/construct anchors and reached CB3GameMode::Construct(); ambiguous shared GetNumLaps/StartReplay address was excluded. Three fresh entries were retained.
 
 The seventy-second pass crawled five CB3OnlineOptimatchMenuPage mode, table, release, sort, and network-game methods. No additional named callees were reached; all five anchors were independently verified.
 
@@ -222,13 +222,13 @@ The forty-fifth pass crawled seven CB3RacePosition rendering, lifecycle, and set
 
 The forty-fourth pass crawled eight CB3InputManager dead-input and menu-control methods. No additional named callees were reached; all eight anchors were independently verified.
 
-The forty-third pass crawled the three remaining CB3ControllerMapping update/setup methods and reached Gt2dRenderer filtering plus two CGtInputManagerPS2Pad2 queries. Four fresh entries were retained after deduplication.
+The forty-third pass crawled the three remaining CB3ControllerMapping update/setup methods and reached Gt2dRenderer filtering plus two CGtInputManagerPS2Pad2 queries. Three fresh entries were retained after deduplication.
 
 The forty-second pass crawled eight CB3SoundCrashManager impact and lifecycle methods and reached CB3ScrapeSystem::Release. Six fresh entries were retained; no Xbox labels were inferred from the vector-heavy bodies.
 
 The forty-first pass verified the remaining CB3GameMode::Construct() anchor and reached the already-known CB3GameData::GetNumLaps() helper; one fresh address was retained.
 
-The fortieth pass crawled four CB3StageLogic world, road-rage, damage, and fragility methods and reached ResetCarDamage. Four fresh entries were retained after deduplication.
+The fortieth pass crawled four CB3StageLogic world, road-rage, damage, and fragility methods and reached ResetCarDamage. Three fresh entries were retained after deduplication.
 
 The thirty-ninth pass crawled eight CB3OnlineLobbyPage image, car-class, NAT, page-mode, and chat methods and reached menu-choice, boost, and profile helpers. Five fresh entries were retained after deduplication.
 
@@ -244,7 +244,7 @@ The thirty-fourth pass crawled six CGtNetworkPlayerManager message and host-stat
 
 The thirty-third pass crawled nine CB3FrontEnd menu, video, audio, render, and update methods and reached seven named game-mode and online-page callees. Thirteen fresh entries were retained after deduplication.
 
-The thirty-second pass crawled four CB3RaceCar crash and lifecycle methods and reached CB3AICar::Construct and CB3FinishedScore::Prepare. Four fresh entries were retained after address verification.
+The thirty-second pass crawled four CB3RaceCar crash and lifecycle methods and reached CB3AICar::Construct and CB3FinishedScore::Prepare. Three fresh entries were retained after address verification.
 
 The thirty-first pass crawled ten CB3AILane segment and no-go queries and reached GetAvgForwardsVector through a verified lane-vector call. Five fresh entries were retained after address verification.
 
