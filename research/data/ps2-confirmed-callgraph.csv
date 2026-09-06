@@ -666,3 +666,11 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00138670,CB3Profile,GetLongestOncomingTrack(),,144
 001386c0,CB3Profile,UpdateLongestOncoming(float,unsigned long,unsigned long),,208
 00138890,CB3Profile,GetSlamTotal(bool),,176
+00138920,CB3Profile,IncreaseTakeDownTotal(unsigned int,unsigned long,unsigned long,bool),,208
+001389e0,CB3Profile,GetVehicleUsage(unsigned long),,208
+00138a30,CB3Profile,IncrementVehicleUsage(unsigned long),,208
+00138a80,CB3Profile,GetProfileName(),,256
+00138a90,CB3Profile,GetCrashDamageTotal(),,192
+00138ab0,CB3Profile,GetBurnoutPointTotal(),,176
+00138ac0,CB3Profile,IncreaseBurnoutPointTotal(unsigned int),,176
+00138ba0,CB3Profile,Prepare(),,208
