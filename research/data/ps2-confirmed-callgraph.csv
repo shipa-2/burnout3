@@ -262,5 +262,15 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0035cae0,CB3HUDCrashStyle,Update(float),,224
 0036df60,CB3ChampionshipChallenge,OnChallengeRestart(),,240
 00376be0,CB3PostEventRewardsPage,Update(),,160
+0016de80,CB3HUDScore,"ShowScore(CB3HUDScore::EScoreEvent,int)",,240
+001dfa50,CB3MenuInput,"Update(float,CB3ControllerMapping*)",,224
+002f1170,CB3DemoTitleScreenState,"Action(EGtStateAction,void*,void*,void*)",,192
+002fece0,CB3OnlineOpenConnectionState,"Action(EGtStateAction,void*,void*,void*)",,240
+0034b660,CB3OnlineStageLogic,UpdateWaitInitCountdownHost(),,224
+0035e5b0,CB3ReplaySymbolComponent,Release(),,160
+00386d90,CB3HUDImpactTime,Update(float),,240
+003a0500,CB3MyBurnoutRecordsPage,Update(),,208
+003a7410,CB3RewardImageComponent,"GetUnlockedRewardString(EB3RewardImageType,int)",,224
+00332600,CB3CameraEditor,"LoadMungedKeyFrames(void*,EB3KeyFrameType)",,176
 003a0350,CB3MyBurnoutProgressPage,Prepare(),,208
 003c3550,CB3OnlineUploadResultsPage,Update(),,144
