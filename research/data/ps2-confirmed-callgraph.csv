@@ -467,3 +467,14 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00138070,CB3Profile,GetCollectedCheatCount(),,192
 00138110,CB3Profile,IsSignatureTakedownComplete(int),,160
 00138190,CB3Profile,IsSpecialEventComplete(int),,0
+00145cc0,CB3AITarget,ResetTarget(),,144
+001469f0,CB3AITargetSpline,IsSquareCorner(),,192
+00146cf0,CB3AITarget,GetDesiredDirection(GtMathPs2::CGtV3d*) const,,208
+00146dc0,CB3AITarget,LanesAreSideBySide(const CB3AILane*,const CB3AILane*,unsigned short,unsigned short) const,,208
+00147070,CB3AITarget,LaneIsUndesirable(const CB3AILane*,unsigned short,unsigned short) const,,208
+00147450,CB3AITarget,GetCurrentFwdFrac() const,,208
+00147490,CB3AITarget,CalculateEdgePosition(unsigned short,unsigned short,int,GtMathPs2::CGtV3d*,unsigned char*,unsigned short*),,208
+00147b10,CB3AITarget,CalculateNearEdgePosition(unsigned short,unsigned short,int,GtMathPs2::CGtV3d*,unsigned char*,unsigned short*),,208
+00147f90,CB3AITarget,FindNextCorner(const CB3AILane*,unsigned short,unsigned short*,unsigned short*,unsigned short*,float*,float*,float,,208
+00148660,CB3AITarget,CalculateNextTargetPosition(),,208
+001490c0,CB3AITarget,FillInTargetPosition(),,208
