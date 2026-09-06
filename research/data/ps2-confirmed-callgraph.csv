@@ -588,3 +588,11 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001ee110,CB3InputManager,GetStartButton(bool,signed char),,224
 001ee1d0,CB3InputManager,GetMenuBuddies(signed char),,192
 001ee2b0,CB3InputManager,GetMenuLeft(signed char),,224
+0014f570,CB3RacePosition,DrawPositionMarker(GtMathPs2::CGtV3d,const unsigned short*,int,CB3RaceCar*,CB3RaceCar*,float,bool,bool,bool,fl,,192
+00150310,CB3RacePosition,DrawSingleVehicleValue(CB3VehiclePhysics*,int,int,float,bool),,192
+001504a0,CB3RacePosition,DrawTrafficValues(),,192
+00150900,CB3RacePosition,Destruct(),,192
+00150910,CB3RacePosition,Release(),,192
+00150b80,CB3RacePosition,Prepare(),,256
+00150c40,CB3RacePosition,Construct(),,192
+00156320,CB3Score,IsAheadOfRoadRage(CB3Score*),,224
