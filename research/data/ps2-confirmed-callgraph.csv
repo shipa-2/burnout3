@@ -254,3 +254,13 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 003a7600,CB3OnlineEndOfRaceState,"DealWithSecondResultsPageEvent(EGtStateAction,void*,void*,void*)",,208
 003a80b0,CB3OnlineEndOfRaceState,"Action(EGtStateAction,void*,void*,void*)",,256
 003c5f60,CB3MemCardControllerBase,"Save(unsigned int,unsigned short*,int)",,160
+0016fbb0,CB3HUDSpeedo,Update(float),,176
+00229550,CB3TrafficValve,"UpdateGeneration(int,int,unsigned short,float)",,208
+0024ced0,CB3SoundManager,Prepare(),,144
+002d0750,CB3OnlineLobbyState,HandleInLobbyEvents(EB3MenuFlowFSMEvents),,160
+00355c80,CB3EventSummaryComponent,"PrepareOnlineWaitForPlayers(bool,bool)",,224
+0035cae0,CB3HUDCrashStyle,Update(float),,224
+0036df60,CB3ChampionshipChallenge,OnChallengeRestart(),,240
+00376be0,CB3PostEventRewardsPage,Update(),,160
+003a0350,CB3MyBurnoutProgressPage,Prepare(),,208
+003c3550,CB3OnlineUploadResultsPage,Update(),,144

@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 255 PS2 methods across 150 classes, address-verified
+## Part 1: call-graph crawl — 265 PS2 methods across 160 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -24,7 +24,7 @@ invocation instead of one per address) and `DecompileAt2.java` (single-address v
 side-by-side comparisons). Both live only in the scratchpad from this session; worth adding to the
 repo's `research/tools/` if this work continues.
 
-**Result**: 255 confirmed `(real PS2 address → Class::method)` pairs across 150 distinct classes.
+**Result**: 265 confirmed `(real PS2 address → Class::method)` pairs across 160 distinct classes.
 Full table: [research/data/ps2-confirmed-callgraph.csv](../data/ps2-confirmed-callgraph.csv). New
 classes beyond what was already known (`CB3AsyncDataLoader`, `CB3InputManager`, `CB3DebugManager`,
 `CB3Game`, `CGtFSM`): `CB3AILane`, `CB3BehaviourOffset`, `CB3Bloom`, `CB3Burn`, `CB3ControllerMapping`,
@@ -116,6 +116,10 @@ The tenth pass covered isolated menu and state-machine entry points. It records 
 `CB3StageSelectPage`, `CB3ScoreBonus`, `CB3OnlineGameOptionsPage`,
 `CB3MemCardControllerBase`, and `CB3HeadingComponent`. No new mapped callee was reached, so this
 pass contributes exactly its ten independently entry-point-verified seeds.
+
+The eleventh pass covers `CB3TrafficValve`, online-lobby/upload/results state, progression and
+championship helpers, `CB3SoundManager`, and two HUD components. Their decompilations did not
+yield additional map-resolved callees; all ten entry-point-verified seed identities are retained.
 
 ## Part 2: binding attempts against Xbox — what worked, what didn't
 
