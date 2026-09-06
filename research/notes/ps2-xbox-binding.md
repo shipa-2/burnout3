@@ -205,3 +205,9 @@ as good as an actual behavioral comparison, not a coincidence of address arithme
 position). Good next candidates given they're large enough to have a real fingerprint and cover
 gameplay-central systems: `CB3TrafficVehicle::StartCrashing` (1148 bytes), `CB3RaceCar::Prepare`
 (1544 bytes), `CB3AILane::UpdateCurrentAILaneSegment`.
+
+An explicit check of the only same-name atlas candidate found so far, `CGtSoundManager::StopAll`,
+was negative. The PS2 body loops over sound slots, clears per-slot fields, writes `0x41200000` and
+`0x40800000`, then invokes one cleanup call; Xbox `0x001356a0` instead makes six unrelated-looking
+subsystem calls and has no matching slot loop. The Xbox name remains its prior community label and
+is not counted as a new cross-architecture confirmation.
