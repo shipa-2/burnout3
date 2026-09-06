@@ -729,3 +729,10 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001eb800,CB3GraphicsManager,Construct(),,192
 002e0b80,CGtVideoDecoder,Abort(),,160
 002e1620,CGtVideoDecoder,NodataCallback(sceMpeg*,sceMpegCbData*,void*),,192
+002f4050,CGtLobbyPS2DirtySock,EndGame(),,176
+002f4240,CGtLobbyPS2DirtySock,GameLeaveCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*),,240
+002f42d0,CGtLobbyPS2DirtySock,JoinGame(CGtLobbyJoinGameParams*),,208
+002f4cb0,CGtLobbyPS2DirtySock,DeletePersona(char*),,0
+002f4ec0,CGtLobbyPS2DirtySock,PersonaLoggedInCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*),,256
+002f5740,CGtLobbyPS2DirtySock,CheckGameStillExists(),,240
+002f63a0,CGtLobbyPS2DirtySock,ChatCallback(DirtySock::LobbyApiRefT*,DirtySock::LobbyApiMsgT*,void*),,160
