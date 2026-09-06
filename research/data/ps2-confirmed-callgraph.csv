@@ -769,3 +769,7 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001dc860,CGtInputDevicePS2DualShock,Construct(),,256
 001dc870,CGtInputDevicePS2DualShock,IsConnected(),,224
 0034a130,CB3OnlineRoadRageRaceLogic,OnPostCrashReset(CB3RaceCarPhysics*),,224
+0016fa30,CGtUnicode,PrintString<i,PUs>(unsigned short*,const unsigned short*,const int&,unsigned short*const&),,224
+001d9020,CGtUnicode,PrintReal(unsigned short*,float,int),,224
+001d91f0,CGtUnicode,PrintInt(unsigned short*,int,int),,256
+001d94c0,CGtUnicode,CopyN(unsigned short*,int,const unsigned short*),,160
