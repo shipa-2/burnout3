@@ -12,13 +12,18 @@ worth cross-referencing against Burnout 3's own Xbox binary.
 No `GTASSERT`/source-path strings, no symbol table — stripped the same way every other
 non-debug build checked so far has been (see [prototype-builds-inventory.md](prototype-builds-inventory.md)).
 What *does* survive, because it's needed at runtime for an in-game debug tuning menu even in a demo
-build: **198 human-readable tuning-parameter category paths** — things like
+build: **human-readable tuning-parameter category paths** — things like
 `Physics/Race Car/Body Roll`, `Score/Boost/Boost Start`, `AI/Aggressive Driving/Slam`,
-`Body Part Deformation/Glass Strengths`, `Crash Breakers/Type 9`. Full list:
-[research/data/burnout-revenge-xbox-tuning-tree.txt](../data/burnout-revenge-xbox-tuning-tree.txt).
+`Body Part Deformation/Glass Strengths`, `Crash Breakers/Type 9`. Full list (merged across every
+Xbox Revenge build checked — three 2005 demos plus a full retail disc, 233 entries after
+deduplication): [research/data/burnout-revenge-xbox-tuning-tree.txt](../data/burnout-revenge-xbox-tuning-tree.txt).
 
 Top-level categories: `AI`, `Body Part Deformation`, `Camera`, `Crash`, `Crash Breakers`,
-`FakePhysics`, `Modes`, `Physics`, `Rumble`, `Score`, `Sound`, `VehicleAudio`.
+`FakePhysics`, `Modes`, `Physics`, `Rumble`, `Score`, `Sound`, `Surround`, `VehicleAudio`. The
+retail disc (checked later than the three demos) added `Surround/*` (surround-mix tuning: Bass,
+Big Landing, Boost, Crash Streams, Explosion...), `Sound/Pyro/*`, `Sound/Crash/Focus`, and
+`Rumble/LaunchControl` — none of the demos carried these, presumably because the relevant systems
+weren't finished yet at demo time.
 
 Checked whether Burnout 3's own retail binary has the same kind of strings — it doesn't. Burnout 3
 only has ordinary file-path strings (`Data/GlobalIt.bin` etc.), no tuning-tree labels survive there.

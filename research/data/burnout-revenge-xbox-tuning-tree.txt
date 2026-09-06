@@ -12,6 +12,7 @@ Body Part Deformation/Glass Strengths
 Body Part Deformation/Part Strengths
 Body Part Deformation/Random Crumpling Limits
 Body Part Deformation/Wheels
+Bootup Load/Create
 Camera/Bumper/
 Camera/Follow/
 Camera/Look Back/
@@ -46,6 +47,19 @@ Data/HeadJa.bin
 Data/HeadSp.bin
 Data/HeadSw.bin
 Data/HeadUs.bin
+data/Mem/danish.loc
+data/Mem/devlog-realmemcard.txt
+data/Mem/dutch.loc
+data/Mem/english.loc
+data/Mem/finnish.loc
+data/Mem/french.loc
+data/Mem/german.loc
+data/Mem/italian.loc
+data/Mem/japanese.loc
+data/Mem/korean.loc
+data/Mem/portugue.loc
+data/Mem/spanish.loc
+data/Mem/swedish.loc
 Data/PrgData.bin
 Data/stagehed.bin
 Data/vdb.bin
@@ -60,6 +74,11 @@ FakePhysics/Gear6
 FakePhysics/Gear7
 FakePhysics/Gear8
 FakePhysics/Gear9
+FE/TexDic/Detroit.txd
+FE/TexDic/HongKong.txd
+FE/TexDic/Tokyo.txd
+FE/TexDic/WorldMap.txd
+FLM/A1
 InGame/Effect/Burnout/Angular/
 InGame/Effect/Burnout/Position/
 InGame/Effect/Shake/Angular/
@@ -73,8 +92,8 @@ InGame/Effect/Slam/Position/
 Language/Fonts/Big.bin
 Language/Fonts/digital.bin
 Language/Fonts/small.bin
+Language/Strings/Cred%s.bin
 Language/Strings/Main%s.bin
-Left/Right Scale
 Modes/Aggressive Driving
 Modes/Boosting
 Modes/Checking Traffic
@@ -125,6 +144,7 @@ Rumble/Collision/CarVTraffic
 Rumble/Collision/CarVWorld
 Rumble/Collision/Crash
 Rumble/Collision/Revenge
+Rumble/LaunchControl
 Rumble/Menu
 Score/Boost/Aggressive
 Score/Boost/Air
@@ -154,6 +174,8 @@ Sound/CheckingTraffic/
 Sound/CheckingTraffic/Skids/
 Sound/Crash
 Sound/Crash/Any car to car
+Sound/Crash/Focus
+Sound/CrashingTraffic/PostCrash
 Sound/CrashingTraffic/Skids/Large
 Sound/CrashingTraffic/Skids/Small
 Sound/Crash/Race car to world
@@ -168,6 +190,7 @@ Sound/Glass/Windows
 Sound/Glass/Windscreen
 Sound/Hud/Aggressive Driving
 Sound/Hud/General
+Sound/Jellycopter
 Sound/L Train/
 Sound/Misc
 Sound/Misc/Vehicle Volume Tailoff
@@ -177,7 +200,10 @@ Sound/Nudge/Checking Traffic
 Sound/Prop/Body parts
 Sound/Prop/Props
 Sound/Pyro/Air rams
+Sound/Pyro/Car explosion (CM only)
+Sound/Pyro/Crashbreaker
 Sound/Pyro/Explosions
+Sound/Pyro/Lorry explosion (CM only)
 Sound/Radio
 Sound/Remove
 Sound/Scrapes/Car
@@ -192,7 +218,16 @@ Sound/Static Passes/Boost
 Sound/Static Passes/Global Car Wind
 Sound/Static Passes/Normal
 Sound/Traffic
+Sound/Usage targets (255 MAX!)
 Sound/Voice
+Surround/Bass
+Surround/Big Landing
+Surround/Big Landng
+Surround/Boost
+Surround/Crash Streams
+Surround/Explosion
+Surround/High ESM
+Surround/Static Pass
+Surround/Traffic Pass
 Tracks/tlist.bin
 VehicleAudio/Turbo
-Wu/j QP

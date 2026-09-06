@@ -15,11 +15,19 @@ what made it worth checking, which is enough to recognize "yes, we already looke
 | 7 | Original Xbox (not 360) | **Burnout Revenge** demo, 2005 — one game after Burnout 3, one year before Revenge's known Xbox 360 beta | The only other Revenge material previously checked was Xbox 360 (wrong architecture) — this one shares Burnout 3's actual ISA, worth checking properly | No `GTASSERT`/source paths, but **198 surviving human-readable tuning-parameter category strings** (`Physics/Race Car/Body Roll`, `Score/Boost/Boost Start`, `AI/Aggressive Driving/Slam`, etc.) — a runtime debug tuning menu's labels, not stripped even in this demo build. Burnout 3's own retail binary was checked for the same kind of string and doesn't have any. | **Semantic corroboration, not new names.** Full writeup: [burnout-revenge-xbox-tuning.md](burnout-revenge-xbox-tuning.md). Lines up with four already-known `*RegisterStaticVariables`/`*Register` functions on the Xbox side (`Rumble`↔`CB3RumbleAttribs`, `AI`↔`CB3AIAttribs`, `Score`↔`CB3Score`) — a reasonable prior for what those functions likely register, not a rename. |
 
 Two more original-Xbox Revenge demos exist beyond #7: one dated about three weeks earlier, one a
-European retail-style release build. Different hashes, sizes, and (for one of them) even a different
+European demo release. Different hashes, sizes, and (for one of them) even a different
 title ID — checked both, same story each time: no source paths, and tuning trees (205–206 entries)
 essentially identical to #7's 198 (differences are a handful of memory-card debug-log strings, no
 new categories). Not worth their own rows; recorded here so they don't get re-checked expecting
 something new.
+
+A **full retail disc** (Taiwan release, original Xbox, different hash/size from every demo) was
+also checked, and unlike the two extra demos above, it *did* add something: a bigger tuning tree
+(the merged file is now 233 entries) with genuinely new top-level material the demos didn't carry —
+`Surround/*` (surround-mix tuning), `Sound/Pyro/*`, `Sound/Crash/Focus`, `Rumble/LaunchControl` —
+presumably because those systems weren't finished yet at demo time. Merged into the same data file
+and note as #7 rather than given its own row, since it's the same kind of finding, just more
+complete.
 
 ## What this means practically
 
