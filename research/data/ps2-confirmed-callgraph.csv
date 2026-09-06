@@ -416,3 +416,13 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 001521c0,CB3Score,GetCarAtRelativeRacePosition(int),,192
 00152220,CB3Score,ConfirmGrinding(CB3RaceCar*,CB3RaceCar*),,192
 001523e0,CB3Score,ConfirmTradePaint(CB3RaceCarPhysics*,CB3RaceCarPhysics*,float,bool),,192
+00248ba0,CB3HUDSoundManager,CrashModeBonusDollar(),,176
+00248bb0,CB3HUDSoundManager,CrashModeMultiplier(),,208
+00248d30,CB3HUDSoundManager,FEScanningLines(),,144
+00248de0,CB3HUDSoundManager,FEIconPulse(),,208
+00248e90,CB3HUDSoundManager,FeMapZoom(),,176
+00248f30,CB3HUDSoundManager,FeMenuTextIn(),,160
+00249210,CB3HUDSoundManager,FEKeyboardSel(),,144
+00249840,CB3HUDSoundManager,Shunt(GtMathPs2::CGtV3d,CB3RaceCarPhysics*,CB3RaceCarPhysics*),,160
+00249940,CB3HUDSoundManager,Release(),,208
+002499d0,CB3HUDSoundManager,Update(),,144
