@@ -14,6 +14,11 @@ what made it worth checking, which is enough to recognize "yes, we already looke
 | 6 | Xbox | A distinct, restricted-content demo build (different hash, different size from every other Xbox build checked) | Yet another build target — worth the same check as #3 | No `GTASSERT`/source-path strings, no `.pdb`/`.map`/`.dbg` files anywhere. String count comparable to retail. Restricted content confirms it's a public/press demo, not a dev build: only 4 of the full vehicle-class roster present, many localized language variants bundled (more than retail ships). | **No debug-symbol value.** Same stripped configuration as retail; nothing further to check here. |
 | 7 | Original Xbox (not 360) | **Burnout Revenge** demo, 2005 — one game after Burnout 3, one year before Revenge's known Xbox 360 beta | The only other Revenge material previously checked was Xbox 360 (wrong architecture) — this one shares Burnout 3's actual ISA, worth checking properly | No `GTASSERT`/source paths, but **198 surviving human-readable tuning-parameter category strings** (`Physics/Race Car/Body Roll`, `Score/Boost/Boost Start`, `AI/Aggressive Driving/Slam`, etc.) — a runtime debug tuning menu's labels, not stripped even in this demo build. Burnout 3's own retail binary was checked for the same kind of string and doesn't have any. | **Semantic corroboration, not new names.** Full writeup: [burnout-revenge-xbox-tuning.md](burnout-revenge-xbox-tuning.md). Lines up with four already-known `*RegisterStaticVariables`/`*Register` functions on the Xbox side (`Rumble`↔`CB3RumbleAttribs`, `AI`↔`CB3AIAttribs`, `Score`↔`CB3Score`) — a reasonable prior for what those functions likely register, not a rename. |
 
+A second original-Xbox Revenge demo exists, dated about three weeks before #7 — different hash, size,
+and even title ID, but checked and it's the same story: no source paths, and a 206-entry tuning tree
+essentially identical to #7's 198 (the only additions are a handful of memory-card debug-log
+strings). Not worth its own row; recorded here so it doesn't get re-checked expecting something new.
+
 ## What this means practically
 
 - Sources #2, #3, #4, #6 (four separate Xbox prototype/demo builds) are **checked off** — no further
