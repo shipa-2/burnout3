@@ -493,3 +493,16 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0014dfc0,CB3RaceCar,StopCrashing(),,176
 0014dff0,CB3RaceCar,StartCrashing(CB3CrashStartInfo*),,144
 0014f510,CB3RaceCar,Construct(),,192
+00130690,CB3FrontEnd,SetInitialMenu(unsigned long),,176
+001306a0,CB3FrontEnd,SetCurrentVideo(EB3Video),,176
+001306d0,CB3FrontEnd,Destruct(),,144
+00130780,CB3FrontEnd,PrepareVideo(),,192
+00130840,CB3FrontEnd,PrepareAudio(),,192
+00130950,CB3FrontEnd,Release(),,192
+00130af0,CB3FrontEnd,Render(),,192
+00130bc0,CB3FrontEnd,Update(),,192
+001311f0,CB3FrontEnd,Construct(),,192
+00133830,CB3GameMode,Update(),,208
+00133a90,CB3GameMode,Construct(),,208
+002d4610,CB3OnlineLobbyPage,Release(),,224
+00337160,CB3OnlineRecordsDisplayMenuPage,UpdateWaitForCurrentUserCountry(),,192
