@@ -764,3 +764,7 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00144af0,CB3AILane,GetTotalWidth(unsigned short,unsigned short) const,,208
 00145030,CB3AILane,IsInSegment(GtMathPs2::CGtV3d,unsigned short,float) const,,208
 001453c0,CB3AILane,FindClosestDriveableAILaneSegment(CB3AILane**,unsigned short*,signed char*,GtMathPs2::CGtV3d,signed char),,208
+001dc400,CGtInputDevicePS2DualShock,DeadzoneAxis(float,float),,144
+001dc5f0,CGtInputDevicePS2DualShock,SetPause(bool),,192
+001dc860,CGtInputDevicePS2DualShock,Construct(),,256
+001dc870,CGtInputDevicePS2DualShock,IsConnected(),,224
