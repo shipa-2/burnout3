@@ -534,3 +534,12 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0034e060,CB3OfflineStageLogic,OnTakedown(CB3RaceCar*,CB3RaceCar*),,160
 0034e570,CB3OfflineStageLogic,Prepare(),,256
 0034e930,CB3StageLogic,OnPostCrashReset(CB3RaceCarPhysics*),,176
+0013a1f0,CB3AIAvoidanceMap,CalculateCarPositionInMap(bool),,208
+0013a9e0,CB3AIAvoidanceMap,CalcRiskOfPosition(const CB3AILane*,unsigned short,GtMathPs2::CGtV3d,float*,float*,float*) const,,208
+0013ac10,CB3AIAvoidanceMap,CheckNoGoZones(),,208
+0013b5a0,CB3AIAvoidanceMap,CheckCrashingTraffic(),,208
+0013b9b0,CB3AIAvoidanceMap,CheckTraffic(),,208
+0013bb30,CB3AIAvoidanceMap,CheckRaceCar(),,208
+0013bce0,CB3AIAvoidanceMap,CheckVehicle(const GtMathPs2::CGtMatrix3x4&,GtMathPs2::CGtV3d,bool,bool,EAIAvoidanceRisk,const CGtAxisAligne,,208
+0013c190,CB3AIAvoidanceMap,AddCarToMap(EAIAvoidanceRisk,float,float,float,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathPs2::CGtV3d,GtMathP,,208
+0013d4a0,CB3AIAvoidanceMap,Update(bool),,208
