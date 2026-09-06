@@ -151,3 +151,21 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0036a130,CB3GlobeComponent,Update(float),,240
 00377230,CB3AwardPresentationPage,PrepareTrackRecords(int),,176
 003783a0,CB3EventFinishedState,"Action(EGtStateAction,void*,void*,void*)",,144
+00130680,CB3FrontEnd,SetInitialMenu(unsigned long),,192
+001342c0,CB3OnePlayerStage,Prepare(),,208
+00134c70,CB3Player,ResetLastInputTime(),,208
+00139950,CB3TwoPlayerSplitScreenStage,Prepare(),,208
+001409a0,CB3AICar,Prepare(),,208
+00142840,CB3AIDriver,Prepare(),,208
+0016c880,CB3HUD,Update(float),,0
+002485e0,CB3SoundScrape,UpdateScrape(int),,160
+0024ab20,CB3SoundESMHigh,"Prepare(unsigned long,int)",,192
+0024ad00,CB3SoundESMHigh,Construct(),,224
+0024ad70,CB3SoundESM,"ModulateRpm(CB3SoundESMGraphInputs&,const CB3RaceCar*)",,176
+0024d5b0,CB3SoundAICar,"Update(const CB3RaceCar*)",,176
+002c32c0,CB3StreamedTrack,UpdateStreamHighFSM(),,160
+002c36d0,CB3StreamedTrack,"Prepare(bool,int)",,240
+002cb630,CB3BoostEffectParams,"SetViewportEffects(CB3ViewportParams*,CB3PlayerCar*)",,208
+002ffce0,CB3OnlineSelNetConfigPage,Prepare(),,0
+00300540,CB3OnlineConnectingPage,Prepare(int),,192
+00361f10,CB3SatNavComponent,UpdatePanel(float),,192

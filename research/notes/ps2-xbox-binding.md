@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 152 PS2 methods across 76 classes, address-verified
+## Part 1: call-graph crawl — 170 PS2 methods across 87 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -24,7 +24,7 @@ invocation instead of one per address) and `DecompileAt2.java` (single-address v
 side-by-side comparisons). Both live only in the scratchpad from this session; worth adding to the
 repo's `research/tools/` if this work continues.
 
-**Result**: 152 confirmed `(real PS2 address → Class::method)` pairs across 76 distinct classes.
+**Result**: 170 confirmed `(real PS2 address → Class::method)` pairs across 87 distinct classes.
 Full table: [research/data/ps2-confirmed-callgraph.csv](../data/ps2-confirmed-callgraph.csv). New
 classes beyond what was already known (`CB3AsyncDataLoader`, `CB3InputManager`, `CB3DebugManager`,
 `CB3Game`, `CGtFSM`): `CB3AILane`, `CB3BehaviourOffset`, `CB3Bloom`, `CB3Burn`, `CB3ControllerMapping`,
@@ -66,6 +66,14 @@ A third UI/audio-oriented pass added `CB3BehaviourTrackSide::Prepare`,
 `CB3OnlineGameCreateOptionsPage::{UpdateScroll,OnKeyboardCancel}`. The `Construct` callee for
 `CB3ConnectionAnimationComponent` had no profiling stub: its call target itself equals the map
 address and is an existing Ghidra function entry, so it is recorded with offset zero.
+
+The fourth pass seeded sound, stage, streamed-track, online, and AI preparation routines. Its new
+results include `CB3FrontEnd::SetInitialMenu`, `CB3Player::ResetLastInputTime`,
+`CB3AIDriver::Prepare`, and `CB3BoostEffectParams::SetViewportEffects`, together with first
+coverage for `CB3OnePlayerStage`, `CB3TwoPlayerSplitScreenStage`, `CB3AICar`, `CB3HUD`,
+`CB3SoundScrape`, `CB3SoundESMHigh`, `CB3SoundESM`, `CB3SoundAICar`, `CB3StreamedTrack`,
+`CB3OnlineConnectingPage`, and `CB3SatNavComponent`. Nine callees already in the table were
+deliberately deduplicated; this pass contributes 18 new address/name pairs.
 
 ## Part 2: binding attempts against Xbox — what worked, what didn't
 
