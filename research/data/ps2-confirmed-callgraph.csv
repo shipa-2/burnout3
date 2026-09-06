@@ -227,3 +227,20 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0034e580,CB3OfflineStageLogic,Prepare(),,240
 00350130,CB3OnlineOpenLobbyPage,OnKeyboardCancel(),,240
 003765e0,CB3PostEventPage,Prepare(bool),,144
+0012ed00,CB3ControllerMapping,GetLookBack(),,192
+0013d5d0,CB3AIAvoidanceMap,Prepare(CB3AICar*),,208
+00140400,CB3AICar,UpdateAttributes(),,208
+00140780,CB3AICar,StopCrashing(),,208
+00145c80,CB3AITarget,ResetTarget(),,208
+00149d10,CB3AITarget,ResetCornerStatus(),,208
+0014cae0,CB3PlayerCar,StopCrashing(),,192
+0014cde0,CB3PlayerCar,Prepare(),,192
+0014dfb0,CB3RaceCar,StopCrashing(),,192
+0016c260,CB3HUDSpriteUVs,"Construct(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned int)",,208
+0016cba0,CB3HUDManager,PrepareCrashComponents(),,144
+0024d910,CB3SoundPlayerCar,"UpdateRoadNoise(const CB3RaceCar*)",,208
+002ee7f0,CB3DemoRaceInfoPage,Prepare(),,160
+0033f990,CB3DPad2dObject,"Prepare(const GtMathPs2::CGtV2d&,const GtMathPs2::CGtV2d&,unsigned int)",,160
+0037e2d0,CB3CrashScore,CalcPlayerMultiplier(int),,256
+0037e460,CB3CrashScore,CalcCrashCarsScore(int),,240
+0039e6f0,CB3MyBurnoutProfileSavePage,OnKeyboardDone(),,208
