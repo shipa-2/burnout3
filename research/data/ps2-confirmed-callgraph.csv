@@ -488,3 +488,8 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00143720,CB3AILane,FindSideLane(unsigned short*,EAISegmentLinkType),,208
 00144170,CB3AILane,GetDistFromStartOfSegment(GtMathPs2::CGtV3d,unsigned short) const,,208
 00144760,CB3AILane,GetAvgRightwardsVector(unsigned short,GtMathPs2::CGtV3d*) const,,208
+00140b60,CB3AICar,Construct(int),,208
+0014cea0,CB3RaceCar,UpdateLastPositions(),,240
+0014dfc0,CB3RaceCar,StopCrashing(),,176
+0014dff0,CB3RaceCar,StartCrashing(CB3CrashStartInfo*),,144
+0014f510,CB3RaceCar,Construct(),,192
