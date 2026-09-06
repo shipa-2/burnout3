@@ -478,3 +478,13 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00147f90,CB3AITarget,FindNextCorner(const CB3AILane*,unsigned short,unsigned short*,unsigned short*,unsigned short*,float*,float*,float,,208
 00148660,CB3AITarget,CalculateNextTargetPosition(),,208
 001490c0,CB3AITarget,FillInTargetPosition(),,208
+00142b60,CB3AILane,GetFwdFrac(unsigned short,GtMathPs2::CGtV3d) const,,208
+00142cf0,CB3AILane,WalkDrivableLanesToFindPosition(unsigned short*,GtMathPs2::CGtV3d),,208
+00143250,CB3AILane,GetTotalLeftFrac(unsigned short,GtMathPs2::CGtV3d) const,,208
+00143360,CB3AILane,GetSidePosition(unsigned short,int,GtMathPs2::CGtV3d*) const,,208
+00143540,CB3AILane,FindHardNoGo(unsigned short*,EAISegmentLinkType),,208
+00143590,CB3AILane,FindNoGo(unsigned short*,EAISegmentLinkType),,208
+001435e0,CB3AILane,FindNoGo(unsigned short,EAISegmentLinkType,unsigned char*,unsigned short*,bool),,208
+00143720,CB3AILane,FindSideLane(unsigned short*,EAISegmentLinkType),,208
+00144170,CB3AILane,GetDistFromStartOfSegment(GtMathPs2::CGtV3d,unsigned short) const,,208
+00144760,CB3AILane,GetAvgRightwardsVector(unsigned short,GtMathPs2::CGtV3d*) const,,208
