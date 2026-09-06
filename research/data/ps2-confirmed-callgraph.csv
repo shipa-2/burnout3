@@ -580,3 +580,11 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0012f910,CB3ControllerMapping,Prepare(),,192
 0012f920,CB3ControllerMapping,Construct(unsigned int),,192
 001dd1c0,Gt2dRenderer,SetTextureFilterMode(Gt2dRenderer::EGt2dRendererFilter),,240
+001ed980,CB3InputManager,ResetDeadInputTime(signed char),,160
+001edb50,CB3InputManager,GenericConstruct(),,192
+001ede20,CB3InputManager,GetMenuButton(CB3MenuInput::EMenuControls,signed char),,160
+001ede80,CB3InputManager,GetMenuPageDown(signed char),,240
+001ee030,CB3InputManager,GetMenuKeyboardShift(signed char),,192
+001ee110,CB3InputManager,GetStartButton(bool,signed char),,224
+001ee1d0,CB3InputManager,GetMenuBuddies(signed char),,192
+001ee2b0,CB3InputManager,GetMenuLeft(signed char),,224
