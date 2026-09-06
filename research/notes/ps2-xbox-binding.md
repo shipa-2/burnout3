@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 170 PS2 methods across 87 classes, address-verified
+## Part 1: call-graph crawl — 185 PS2 methods across 101 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -24,7 +24,7 @@ invocation instead of one per address) and `DecompileAt2.java` (single-address v
 side-by-side comparisons). Both live only in the scratchpad from this session; worth adding to the
 repo's `research/tools/` if this work continues.
 
-**Result**: 170 confirmed `(real PS2 address → Class::method)` pairs across 87 distinct classes.
+**Result**: 185 confirmed `(real PS2 address → Class::method)` pairs across 101 distinct classes.
 Full table: [research/data/ps2-confirmed-callgraph.csv](../data/ps2-confirmed-callgraph.csv). New
 classes beyond what was already known (`CB3AsyncDataLoader`, `CB3InputManager`, `CB3DebugManager`,
 `CB3Game`, `CGtFSM`): `CB3AILane`, `CB3BehaviourOffset`, `CB3Bloom`, `CB3Burn`, `CB3ControllerMapping`,
@@ -74,6 +74,15 @@ coverage for `CB3OnePlayerStage`, `CB3TwoPlayerSplitScreenStage`, `CB3AICar`, `C
 `CB3SoundScrape`, `CB3SoundESMHigh`, `CB3SoundESM`, `CB3SoundAICar`, `CB3StreamedTrack`,
 `CB3OnlineConnectingPage`, and `CB3SatNavComponent`. Nine callees already in the table were
 deliberately deduplicated; this pass contributes 18 new address/name pairs.
+
+The fifth pass covered online/menu, crash, demo, static-track, and audio entry points. It added
+`CB3Game::RequestNewGameMode`, `CB3ProfileInGameData::CacheCurrentProfile`,
+`CGtSoundManager::StopAll`, and the state/action methods for `CB3DemoPauseState`,
+`CB3DemoRaceResultsPage`, `CB3AwardPresentationState`, and `CB3PartyCrashSetupState`. It also
+provides first method coverage for `CB3StaticTrack`, `CB3RaceFinishedPage`,
+`CB3OnlineLoginToLobbyState`, `CB3CrashAnalyser`, `CB3OnlineOptimatchMenuPage`,
+`CB3Button2dObject`, `CB3SoundDSPDataBlock`, and `CB3SparkRenderer`; 15 previously unseen
+address/name pairs survived deduplication.
 
 ## Part 2: binding attempts against Xbox — what worked, what didn't
 

@@ -169,3 +169,18 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 002ffce0,CB3OnlineSelNetConfigPage,Prepare(),,0
 00300540,CB3OnlineConnectingPage,Prepare(int),,192
 00361f10,CB3SatNavComponent,UpdatePanel(float),,192
+00131450,CB3Game,RequestNewGameMode(CB3GameMode*),,192
+001392e0,CB3ProfileInGameData,CacheCurrentProfile(CB3Profile*),,208
+00225320,CB3SparkRenderer,"UploadStaticDataAndCallCode(const CB3SparkArray*,bool)",,0
+002bae70,CB3SoundDSPDataBlock,"ProcessB2Distortion(short*,short*)",,240
+002eb880,CB3StaticTrack,Prepare(),,160
+002eeca0,CB3DemoPauseState,"Action(EGtStateAction,void*,void*,void*)",,144
+002efb40,CB3DemoRaceResultsPage,Update(),,208
+002fc8d0,CB3RaceFinishedPage,PrepareTable(),,256
+003028e0,CB3OnlineLoginToLobbyState,ShowNetworkError(),,144
+0030ad30,CB3CrashAnalyser,Update(float),,192
+0033a1b0,CB3OnlineOptimatchMenuPage,BuildListOfGames(),,208
+00340160,CB3Button2dObject,Construct(),,240
+00342060,CGtSoundManager,StopAll(),,192
+00379480,CB3AwardPresentationState,"Action(EGtStateAction,void*,void*,void*)",,0
+0037be20,CB3PartyCrashSetupState,"Action(EGtStateAction,void*,void*,void*)",,176
