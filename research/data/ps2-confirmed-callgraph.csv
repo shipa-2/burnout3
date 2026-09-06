@@ -613,3 +613,9 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 002ce700,CB3MenuPageManager,Prepare(),,160
 002ce7e0,CB3MenuPageManager,Construct(),,192
 002ead60,CB3ChatDisplayComponent,Construct(),,208
+00318e90,CB3CrashCombo,UpdateCurrentCombo(),,240
+00319760,CB3CrashCombo,GetNextItem(),,208
+003198f0,CB3CrashCombo,AddPickupToCombo(),,240
+00319aa0,CB3CrashCombo,CalcStylePercentage(),,0
+0031a380,CB3CrashCombo,Update(),,144
+0031a3b0,CB3CrashCombo,Release(),,208
