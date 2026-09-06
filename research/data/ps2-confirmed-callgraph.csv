@@ -701,3 +701,9 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 002e90d0,CB3AIAggressionBehaviour,Update(),,0
 002e9fb0,CB3AIAggressionBehaviour,Prepare(CB3AICar*),,256
 003a80d0,CB3OnlineEndOfRaceState,Action(EGtStateAction,void*,void*,void*),,224
+00342f80,CGtSoundStream,IsPreparing(),,208
+00342fb0,CGtSoundStream,IsStopped(),,176
+003431a0,CGtSoundStream,SetVolume(float,int),,208
+003431f0,CGtSoundStream,SetMediaBuffer(void*,int),,208
+00343380,CGtSoundStream,Update(),,0
+00343650,CGtSoundStream,AttachMedia(const char*),,0
