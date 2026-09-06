@@ -658,3 +658,11 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 00130430,CB3DebugManager,Update(),,192
 00134c80,CB3Player,ResetLastInputTime(),,192
 00134d80,CB3Player,Construct(int),,192
+00138210,CB3Profile,GetUSAMedalCount(EChallengeMedal,EMedalEventType),,208
+00138300,CB3Profile,GetChallengeMedal(int,bool),,160
+00138350,CB3Profile,SetChallengeMedalPending(EChallengeMedal,int,bool),,208
+00138440,CB3Profile,GetCrashCount(bool),,144
+001384e0,CB3Profile,UpdateLongestDrift(float,unsigned long,unsigned long),,208
+00138670,CB3Profile,GetLongestOncomingTrack(),,144
+001386c0,CB3Profile,UpdateLongestOncoming(float,unsigned long,unsigned long),,208
+00138890,CB3Profile,GetSlamTotal(bool),,176
