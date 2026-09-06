@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 125 PS2 methods across 55 classes, address-verified
+## Part 1: call-graph crawl — 152 PS2 methods across 76 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -24,7 +24,7 @@ invocation instead of one per address) and `DecompileAt2.java` (single-address v
 side-by-side comparisons). Both live only in the scratchpad from this session; worth adding to the
 repo's `research/tools/` if this work continues.
 
-**Result**: 125 confirmed `(real PS2 address → Class::method)` pairs across 55 distinct classes.
+**Result**: 152 confirmed `(real PS2 address → Class::method)` pairs across 76 distinct classes.
 Full table: [research/data/ps2-confirmed-callgraph.csv](../data/ps2-confirmed-callgraph.csv). New
 classes beyond what was already known (`CB3AsyncDataLoader`, `CB3InputManager`, `CB3DebugManager`,
 `CB3Game`, `CGtFSM`): `CB3AILane`, `CB3BehaviourOffset`, `CB3Bloom`, `CB3Burn`, `CB3ControllerMapping`,
@@ -46,6 +46,26 @@ Ghidra's function list after subtracting their observed profiling stubs (`0x90`�
 `CB3StageSelectState::Action`, `CB3MyBurnoutProfileLoadPage::SetMenuOptions`, and the outward
 callee `CB3ImageVignette2dObject::_Render`. The crawl also reconfirmed
 `CB3Bloom::SetRenderstates`, which was already present in the table.
+
+The next pass added `CB3AIAvoidance::GenerateTarget`, `CB3RaceCar::SetFinished`,
+`CB3Score::SetFinished`, `CB3SoundGameModeManager::Prepare`, `CB3SoundListener::Update`,
+`CB3EndOfRaceState::AddRaceTimes`, `CB3OnlineSelNetConfigPage::Update`,
+`CB3CrashCameraDirector::UpdateCrashMode`, `CB3OnlineRankingsState::Action`,
+`CB3OnlineLobbySelectPage::Update`, `CB3OnlineGameCreateOptionsPage::Prepare`, and
+`CB3RoadRageResultsPage::PrepareTable`. These ten seeds were again accepted only where the
+map-minus-stub address was an independently existing Ghidra function entry; their two outward
+callees extend the previously named `CB3RaceCar` and `CB3Score` classes.
+
+A third UI/audio-oriented pass added `CB3BehaviourTrackSide::Prepare`,
+`CB3SoundSkidModel::{Construct,Prepare}`, `CB3GlobeComponent::Update`,
+`CB3AwardPresentationPage::PrepareTrackRecords`, `CB3ConnectionAnimationComponent::{Update,Construct}`,
+`CB3SoundDistortion::CalculateGainPair`, `CB3StageLogic::UpdateCarDamage`,
+`CB3EventFinishedState::Action`, `CB3HUDSoundManager::Construct`,
+`CB3NetworkPlayer::BandwidthIsAvailableForCrashingTraffic`,
+`CB3BoostEffectParams::GetRadialBlurParams`, and
+`CB3OnlineGameCreateOptionsPage::{UpdateScroll,OnKeyboardCancel}`. The `Construct` callee for
+`CB3ConnectionAnimationComponent` had no profiling stub: its call target itself equals the map
+address and is an existing Ghidra function entry, so it is recorded with offset zero.
 
 ## Part 2: binding attempts against Xbox — what worked, what didn't
 

@@ -124,3 +124,30 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0031e1e0,CB3StageSelectState,"Action(EGtStateAction,void*,void*,void*)",,256
 0035ea00,CB3ImageVignette2dObject,"_Render(const CGt2dObject::CGt2dObjectSpace&,const void*)",,208
 0039cf40,CB3MyBurnoutProfileLoadPage,"SetMenuOptions(CB3MyBurnoutProfileLoadPage::EMenuOptions,int)",,224
+0013d680,CB3AIAvoidance,GenerateTarget(),,208
+0014dde0,CB3RaceCar,SetFinished(EB3ScoreFinishState),,192
+00151a20,CB3Score,SetFinished(EB3ScoreFinishState),,192
+0024c040,CB3SoundGameModeManager,Prepare(),,240
+0024c5b0,CB3SoundListener,Update(),,208
+002fc4e0,CB3EndOfRaceState,"AddRaceTimes(CB3ResultsPage*,bool)",,176
+002ff7f0,CB3OnlineSelNetConfigPage,Update(),,256
+0030d520,CB3CrashCameraDirector,UpdateCrashMode(float),,256
+0031ffb0,CB3OnlineRankingsState,"Action(EGtStateAction,void*,void*,void*)",,176
+003403c0,CB3OnlineLobbySelectPage,Update(),,144
+00352100,CB3OnlineGameCreateOptionsPage,Prepare(),,240
+0036d1d0,CB3RoadRageResultsPage,PrepareTable(),,208
+001fcb60,CB3NetworkPlayer,BandwidthIsAvailableForCrashingTraffic(),,208
+00249cd0,CB3HUDSoundManager,Construct(),,224
+0024fc20,CB3SoundSkidModel,Prepare(),,224
+0024fda0,CB3SoundSkidModel,Construct(),,160
+002bb230,CB3SoundDistortion,"CalculateGainPair(float,float,bool,float*,float*)",,224
+002bf070,CB3BehaviourTrackSide,Prepare(void*),,176
+002cb800,CB3BoostEffectParams,"GetRadialBlurParams(CB3RadialBlurParams*,CB3PlayerCar*,CB3PlayerCameraManager*) const",,144
+00309e60,CB3ConnectionAnimationComponent,Update(float),,160
+0030a2f0,CB3ConnectionAnimationComponent,Construct(),,0
+0034ec50,CB3StageLogic,UpdateCarDamage(),,256
+003513f0,CB3OnlineGameCreateOptionsPage,OnKeyboardCancel(),,192
+003515e0,CB3OnlineGameCreateOptionsPage,UpdateScroll(),,160
+0036a130,CB3GlobeComponent,Update(float),,240
+00377230,CB3AwardPresentationPage,PrepareTrackRecords(int),,176
+003783a0,CB3EventFinishedState,"Action(EGtStateAction,void*,void*,void*)",,144
