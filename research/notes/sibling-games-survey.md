@@ -22,6 +22,15 @@ recorded here, only findings from studying them.
 
 ## Findings
 
+### Burnout (original) — confirmed no `CB<N>` prefix yet
+
+Checked for `GTASSERT`/source-path strings directly (same method as every other build in
+[prototype-builds-inventory.md](prototype-builds-inventory.md)) — none found, fully stripped, only
+9,126 total strings (consistent with a smaller, earlier game). One class name does leak through a
+runtime error string (not a source path): `CAICar::Init: Failed to find which car we are!!!` —
+confirms the class-naming convention at this point is plain `C<Name>`, with no `CB<N>` generation
+number yet. That numbering scheme starts at Burnout 2 (see below).
+
 ### Burnout 2: Point of Impact — useful
 
 Confirms the `CB<N>` class-naming convention (`CB2RIDV`, `CB2...`) predates Burnout 3's `CB3*`
