@@ -365,3 +365,12 @@ ps2_real_address,class,method_signature,source_file,profiling_offset
 0030eba0,CB3BehaviourCluster,Interpolate(float),,192
 00333740,CB3BehaviourKeyFrame,"Update(CGtCamera*,float)",,176
 003949b0,CB3VehicleDeform,"DeformBumperLikeThing(EVehicleFlyingBit,EVirtualBoneIndex,EVirtualBoneIndex,EVirtualBoneIndex,float)",,208
+0012ebf0,CB3ControllerMapping,ResetControllerDeadTime(),,192
+0012ec00,CB3ControllerMapping,GetControllerDeadTime(),,192
+0012ec30,CB3ControllerMapping,WheelIsValid(),,176
+0012eda0,CB3ControllerMapping,GetCameraSwitch(),,192
+0012efe0,CB3ControllerMapping,GetGearUp(),,0
+0012f660,CB3ControllerMapping,GetStartButton(bool),,192
+0012f720,CB3ControllerMapping,GetPadControl(EGtPS2DualShockDeviceControl,bool),,192
+0012f7d0,CB3ControllerMapping,AnyInput(),,192
+001d9eb0,CGtInputManagerPS2Pad2,SetPause(bool),,224

@@ -6,7 +6,7 @@ build inlines, at a variable offset — usually `0xc0`–`0xd0` but not fixed). 
 next step: growing the confirmed PS2 name list via call-graph crawling, and the attempts (successful
 and not) to bind those names to specific unnamed Xbox addresses.
 
-## Part 1: call-graph crawl — 366 PS2 methods across 233 classes, address-verified
+## Part 1: call-graph crawl — 376 PS2 methods across 236 classes, address-verified
 
 **Method**: starting from a small set of already-cross-verified anchors
 (`CB3AsyncDataLoader::Update`/`Construct`, `CB3Game::Construct`/`Prepare`), decompile each, extract
@@ -161,6 +161,8 @@ behaviour-follow set-car, panel preparation, aftermath stepping, and vehicle-def
 seeds were retained. Two malformed addresses were rejected before recording after the check showed
 they had been created by the batch script rather than independently present in Ghidra's function
 list.
+
+The twenty-second pass seeded the controller-mapping input state machine and reached four CGtInputManagerPS2Pad2 methods through verified callees. Eight fresh controller anchors plus four newly discovered input methods were added after address deduplication.
 
 The twenty-first pass added profile locking, AICar range updates, GameData preparation,
 GraphicsManager video/spheremap setup, network host keepalive, crash-sound preparation, VOptions
